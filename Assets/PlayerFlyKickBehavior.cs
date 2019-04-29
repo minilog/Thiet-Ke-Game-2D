@@ -6,8 +6,6 @@ public class PlayerFlyKickBehavior : StateMachineBehaviour
 {
     float prepareTime;
     [SerializeField] PlayerController playerController;
-    public float SpeedGoingUpWhenPrepare;
-    public float SpeedWhenKicking;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -24,13 +22,13 @@ public class PlayerFlyKickBehavior : StateMachineBehaviour
         prepareTime -= Time.deltaTime;
 
         if (prepareTime >= 0)
-            animator.transform.Translate(new Vector3(0, SpeedGoingUpWhenPrepare * Time.deltaTime, 0));
+            animator.transform.Translate(new Vector3(0, playerController.FlyKichPrepare * Time.deltaTime, 0));
         else
         {
             if (playerController.isFacingRight)
-                animator.transform.Translate(new Vector3(SpeedWhenKicking * Time.deltaTime, 0, 0));
+                animator.transform.Translate(new Vector3(playerController.FlyKichAttack * Time.deltaTime, 0, 0));
             else
-                 animator.transform.Translate(new Vector3(-SpeedWhenKicking * Time.deltaTime, 0, 0));
+                 animator.transform.Translate(new Vector3(-playerController.FlyKichAttack * Time.deltaTime, 0, 0));
         }
     }
 

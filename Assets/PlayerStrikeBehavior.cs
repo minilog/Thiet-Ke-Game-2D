@@ -5,11 +5,8 @@ using UnityEngine;
 public class PlayerStrikeBehavior : StateMachineBehaviour
 {
     public PlayerController playerController;
-    public float StrikeTime;
     float strikeTimeCount;
-    private float prepareTime;
-    public float PrepareSpeedGoingUp;
-    public float StrikeSpeed;
+    float prepareTime;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -18,8 +15,8 @@ public class PlayerStrikeBehavior : StateMachineBehaviour
             playerController = animator.gameObject.GetComponent<PlayerController>();
 
         prepareTime = stateInfo.length * 2f / 5f;
-        strikeTimeCount = StrikeTime;
-        animator.SetFloat("StrikeTime", StrikeTime);
+        strikeTimeCount = playerController.StrikeTime;
+        animator.SetFloat("StrikeTime", playerController.StrikeTime);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -28,13 +25,13 @@ public class PlayerStrikeBehavior : StateMachineBehaviour
         prepareTime -= Time.deltaTime;
 
         if (prepareTime >= 0)
-            animator.transform.Translate(new Vector3(0, PrepareSpeedGoingUp * Time.deltaTime, 0));
+            animator.transform.Translate(new Vector3(0, playerController.StrikePrepareTranslate * Time.deltaTime, 0));
         else
         {
             if (playerController.isFacingRight)
-                animator.transform.Translate(StrikeSpeed * Time.deltaTime, 0, 0);
+                animator.transform.Translate(playerController.StrikeAttackTranslate * Time.deltaTime, 0, 0);
             else
-                animator.transform.Translate(-StrikeSpeed * Time.deltaTime, 0, 0);
+                animator.transform.Translate(-playerController.StrikeAttackTranslate * Time.deltaTime, 0, 0);
 
             strikeTimeCount -= Time.deltaTime;
             animator.SetFloat("StrikeTime", strikeTimeCount);

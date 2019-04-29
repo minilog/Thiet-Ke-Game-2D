@@ -16,6 +16,11 @@ public class PlayerController : MonoBehaviour
     public float JumpForce;
     public float JumpSpeed;
     private bool readyForDoubleJump;
+    public float FlyKichPrepare;
+    public float FlyKichAttack;
+    public float StrikePrepareTranslate;
+    public float StrikeAttackTranslate;
+    public float StrikeTime;
     public float AttackDamage { get; private set; }
     [Space]
     // Keycode

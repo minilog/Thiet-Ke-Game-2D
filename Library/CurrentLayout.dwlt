@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 348}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -112,10 +112,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 771
-  m_MinSize: {x: 679, y: 348}
-  m_MaxSize: {x: 12004, y: 8048}
+  m_MinSize: {x: 583, y: 298}
+  m_MaxSize: {x: 12008, y: 8048}
   vertical: 0
-  controlID: 31
+  controlID: 64
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,7 +137,7 @@ MonoBehaviour:
     y: 0
     width: 846
     height: 771
-  m_MinSize: {x: 202, y: 348}
+  m_MinSize: {x: 102, y: 248}
   m_MaxSize: {x: 4002, y: 8048}
   vertical: 1
   controlID: 32
@@ -160,16 +160,16 @@ MonoBehaviour:
     y: 0
     width: 846
     height: 497
-  m_MinSize: {x: 202, y: 224}
+  m_MinSize: {x: 102, y: 124}
   m_MaxSize: {x: 4002, y: 4024}
-  m_ActualView: {fileID: 14}
+  m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 14}
   - {fileID: 15}
   - {fileID: 16}
   - {fileID: 13}
-  m_Selected: 0
-  m_LastSelected: 2
+  m_Selected: 2
+  m_LastSelected: 0
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_MinSize: {x: 277, y: 298}
   m_MaxSize: {x: 4002, y: 8048}
   vertical: 1
-  controlID: 91
+  controlID: 65
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -267,8 +267,8 @@ MonoBehaviour:
     y: 0
     width: 486
     height: 477
-  m_MinSize: {x: 277, y: 74}
-  m_MaxSize: {x: 4002, y: 4024}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -295,8 +295,8 @@ MonoBehaviour:
     y: 477
     width: 486
     height: 294
-  m_MinSize: {x: 202, y: 224}
-  m_MaxSize: {x: 4002, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 23}
   m_Panes:
   - {fileID: 23}
@@ -468,14 +468,14 @@ MonoBehaviour:
     - {fileID: 1107973198564021134, guid: bd5eb67ac729de14fa67ef6f17d6a84f, type: 2}
     - {fileID: 1107915584394803810, guid: 4e14e0345bea7a84fb1bb0635468fd49, type: 2}
     m_ValueSerializationHelper:
-    - e00: 0.98199993
+    - e00: 0.5126102
       e01: 0
       e02: 0
-      e03: 426.57602
+      e03: 177.20401
       e10: 0
-      e11: 0.98199993
+      e11: 0.5126102
       e12: 0
-      e13: 182.682
+      e13: 209.8445
       e20: 0
       e21: 0
       e22: 1
@@ -569,7 +569,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 31}
     m_SelectedIDs: 6a260000
     m_LastClickedID: 9834
-    m_ExpandedIDs: 000000006a2600000a27000058270000c4270000c0280000fa2800000e2900007229000080290000642b00006c2b0000922c0000a82c00002e2d0000b22d0000362e0000482f000032300000e230000042330000be330000d433000088340000f23400002635000054360000e2370000e4370000
+    m_ExpandedIDs: 000000006a2600000a27000058270000c4270000c0280000fa2800000e2900007229000080290000642b00006c2b0000922c0000a82c00002e2d0000b22d0000362e0000482f000032300000e230000042330000be330000d433000088340000f23400002635000054360000e0370000e2370000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -597,7 +597,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 60}
     m_SelectedIDs: 72710000
     m_LastClickedID: 29042
-    m_ExpandedIDs: 000000006a2600000a27000058270000c4270000c0280000fa2800000e2900007229000080290000642b00006c2b0000922c0000a82c00002e2d0000b22d0000362e0000482f000032300000e230000042330000be330000d433000088340000f23400002635000054360000e2370000e4370000
+    m_ExpandedIDs: 000000006a2600000a27000058270000c4270000c0280000fa2800000e2900007229000080290000642b00006c2b0000922c0000a82c00002e2d0000b22d0000362e0000482f000032300000e230000042330000be330000d433000088340000f23400002635000054360000e0370000e2370000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -707,8 +707,8 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d6360000
-      m_LastClickedID: 14038
+      m_SelectedIDs: 
+      m_LastClickedID: 0
       m_ExpandedIDs: d4fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
