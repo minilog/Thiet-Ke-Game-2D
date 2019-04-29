@@ -370,6 +370,9 @@ MonoBehaviour:
   JumpKeyCode: 32
   CrouchKeyCode: 115
   AttackKeyCode: 323
+  StrikeKeyCode: 101
+  FlyKickKeyCode: 102
+  isFacingRight: 1
 --- !u!61 &351719228
 BoxCollider2D:
   m_ObjectHideFlags: 0

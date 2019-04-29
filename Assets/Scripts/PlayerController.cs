@@ -18,17 +18,19 @@ public class PlayerController : MonoBehaviour
     public float Gravity;
     private bool readyForDoubleJump;
     public float AttackDamage { get; private set; }
-
     [Space]
     // Keycode
     public KeyCode JumpKeyCode,
                    CrouchKeyCode,
-                   AttackKeyCode;
+                   AttackKeyCode,
+                   StrikeKeyCode,
+                   FlyKickKeyCode;
 
     // Use for animation
     float horizontalAxis;
 
-    // About Change State
+    // About Flip
+    public bool isFacingRight = true;
         
     private void OnValidate()
     {
@@ -82,6 +84,8 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsGrounded", checkGround.IsGrounded);
         animator.SetBool("Walking", horizontalAxis != 0);
         animator.SetBool("Attack", Input.GetKey(AttackKeyCode));
+        animator.SetBool("Strike", Input.GetKeyDown(StrikeKeyCode));
+        animator.SetBool("FlyKick", Input.GetKeyDown(FlyKickKeyCode));
 
         // On Character State
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player Walk"))
@@ -96,18 +100,22 @@ public class PlayerController : MonoBehaviour
             rb2D.velocity = new Vector2(0f, rb2D.velocity.y);
         else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player Jump Attack"))
             rb2D.velocity = new Vector2(horizontalAxis * JumpSpeed * Time.deltaTime, rb2D.velocity.y);
+        // movement of Strike Animation is too difficult, so I put them in Behavior
+               
     }
 
     private void CheckFlip()
     {
-        if (horizontalAxis < 0 && transform.localScale.x > 0)
+        if (horizontalAxis < 0 && isFacingRight)
         {
+            isFacingRight = false;
             Vector3 scale = transform.localScale;
             scale.x = -scale.x;
             transform.localScale = scale;
         }
-        else if (horizontalAxis > 0 && transform.localScale.x < 0)
+        else if (horizontalAxis > 0 && !isFacingRight)
         {
+            isFacingRight = true;
             Vector3 scale = transform.localScale;
             scale.x = -scale.x;
             transform.localScale = scale;

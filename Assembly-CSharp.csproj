@@ -62,8 +62,10 @@
   <ItemGroup>
     <Compile Include="Assets\PlayerAttackBehavior.cs" />
     <Compile Include="Assets\PlayerCrouchAttackBehavior.cs" />
+    <Compile Include="Assets\PlayerFlyKickBehavior.cs" />
     <Compile Include="Assets\PlayerIblast.cs" />
     <Compile Include="Assets\PlayerJumpAttack.cs" />
+    <Compile Include="Assets\PlayerStrikeBehavior.cs" />
     <Compile Include="Assets\Scripts\CheckGround.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerCrounchBehavior.cs" />
