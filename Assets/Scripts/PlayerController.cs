@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
     public float WalkSpeed;
     public float JumpForce;
     public float JumpSpeed;
-    public float Gravity;
     private bool readyForDoubleJump;
     public float AttackDamage { get; private set; }
     [Space]
@@ -59,7 +58,7 @@ public class PlayerController : MonoBehaviour
             readyForDoubleJump = true;
             if (Input.GetKeyDown(JumpKeyCode))
             {
-                rb2D.velocity = new Vector2(rb2D.velocity.x, JumpForce);
+                rb2D.AddForce(new Vector2(0f, JumpForce));
             }
         }
         else if (readyForDoubleJump)
@@ -69,15 +68,13 @@ public class PlayerController : MonoBehaviour
                 if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Player Jump Attack"))
                     animator.Play("Player Jump", 0, 0f);
                 readyForDoubleJump = false;
-                rb2D.velocity = new Vector2(rb2D.velocity.x, JumpForce);
+                rb2D.velocity = new Vector2(0, 0);
+                rb2D.AddForce(new Vector2(0f, JumpForce));
             }
         }
 
         // Check Flip game Object
         CheckFlip();
-
-        // Apply gravity
-        rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y - Gravity * Time.deltaTime);
 
         // Set Animation Parameters
         animator.SetBool("Crouching", Input.GetKey(CrouchKeyCode));
@@ -89,19 +86,19 @@ public class PlayerController : MonoBehaviour
 
         // On Character State
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player Walk"))
-            rb2D.velocity = new Vector2(horizontalAxis * WalkSpeed * Time.deltaTime, rb2D.velocity.y);
+            transform.Translate(new Vector3(horizontalAxis * WalkSpeed * Time.deltaTime, 0, 0));
         else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player Idle"))
-            rb2D.velocity = new Vector2(0f, rb2D.velocity.y);
+        { }
         else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player Jump"))
-            rb2D.velocity = new Vector2(horizontalAxis * JumpSpeed * Time.deltaTime, rb2D.velocity.y);
+            transform.Translate(new Vector3(horizontalAxis * JumpSpeed * Time.deltaTime, 0, 0));
         else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player Crouch"))
-            rb2D.velocity = new Vector2(0f, rb2D.velocity.y);
+        { }
         else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player Attack"))
-            rb2D.velocity = new Vector2(0f, rb2D.velocity.y);
+        { }
         else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player Jump Attack"))
-            rb2D.velocity = new Vector2(horizontalAxis * JumpSpeed * Time.deltaTime, rb2D.velocity.y);
+            transform.Translate(new Vector3(horizontalAxis * JumpSpeed * Time.deltaTime, 0, 0));
         // movement of Strike Animation is too difficult, so I put them in Behavior
-               
+
     }
 
     private void CheckFlip()

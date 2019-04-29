@@ -5,8 +5,7 @@ using UnityEngine;
 public class PlayerStrikeBehavior : StateMachineBehaviour
 {
     public PlayerController playerController;
-    public Rigidbody2D rb2D;
-    public float StrikeTime = 1f;
+    public float StrikeTime;
     float strikeTimeCount;
     private float prepareTime;
     public float PrepareSpeedGoingUp;
@@ -17,30 +16,29 @@ public class PlayerStrikeBehavior : StateMachineBehaviour
     {
         if (playerController == null)
             playerController = animator.gameObject.GetComponent<PlayerController>();
-        if (rb2D == null)
-            rb2D = animator.gameObject.gameObject.GetComponent<Rigidbody2D>();
 
         prepareTime = stateInfo.length * 2f / 5f;
         strikeTimeCount = StrikeTime;
-        animator.SetFloat("StrikeTime", strikeTimeCount);
+        animator.SetFloat("StrikeTime", StrikeTime);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        strikeTimeCount -= Time.deltaTime;
         prepareTime -= Time.deltaTime;
+
         if (prepareTime >= 0)
-            rb2D.velocity = new Vector2(0f, PrepareSpeedGoingUp * Time.deltaTime);
+            animator.transform.Translate(new Vector3(0, PrepareSpeedGoingUp * Time.deltaTime, 0));
         else
         {
             if (playerController.isFacingRight)
-                rb2D.velocity = new Vector2(StrikeSpeed * Time.deltaTime, 0f);
+                animator.transform.Translate(StrikeSpeed * Time.deltaTime, 0, 0);
             else
-                rb2D.velocity = new Vector2(-StrikeSpeed * Time.deltaTime, 0f);
-        }
+                animator.transform.Translate(-StrikeSpeed * Time.deltaTime, 0, 0);
 
-        animator.SetFloat("StrikeTime", strikeTimeCount);
+            strikeTimeCount -= Time.deltaTime;
+            animator.SetFloat("StrikeTime", strikeTimeCount);
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

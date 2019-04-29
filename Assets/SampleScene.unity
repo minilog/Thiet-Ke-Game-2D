@@ -312,7 +312,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 2.5
   m_Material: {fileID: 6200000, guid: 8ec4560bf356b4149b4bb6abd6c6b124, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -363,10 +363,9 @@ MonoBehaviour:
   crouchBoxCollider: {fileID: 351719228}
   FireBallPrefab: {fileID: 6774005154464680321, guid: 5418074815433f04d996f7f53fa74d78,
     type: 3}
-  WalkSpeed: 450
-  JumpForce: 17
-  JumpSpeed: 250
-  Gravity: 45
+  WalkSpeed: 10
+  JumpForce: 5
+  JumpSpeed: 8
   JumpKeyCode: 32
   CrouchKeyCode: 115
   AttackKeyCode: 323
