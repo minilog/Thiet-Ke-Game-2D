@@ -29,7 +29,6 @@ public class PlayerController : MonoBehaviour
     public float FlyKickPrepareVelocity;
     public float FlyKickAttackVelocity;
 
-    public float AttackDamage { get; private set; }
     [Space]
     // Keycode
     public KeyCode JumpKeyCode,
@@ -43,7 +42,7 @@ public class PlayerController : MonoBehaviour
 
     // About Flip
     public bool isFacingRight = true;
-    
+
     private void OnValidate()
     {
         rb2D = GetComponent<Rigidbody2D>();
@@ -72,6 +71,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("Attack", Input.GetKey(AttackKeyCode));
         animator.SetBool("Strike", Input.GetKeyDown(StrikeKeyCode));
         animator.SetBool("FlyKick", Input.GetKeyDown(FlyKickKeyCode));
+        
 
         CheckJump();
 
@@ -102,6 +102,12 @@ public class PlayerController : MonoBehaviour
             rb2D.velocity = new Vector2(0, rb2D.velocity.y);
         // Strike & Fly Kick is so complex, so I put it in Behavior
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("AI"))
+            Debug.Log("Player: TriggerEnter AI");
     }
 
     private void CheckJump()
