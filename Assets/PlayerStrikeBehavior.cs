@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerStrikeBehavior : StateMachineBehaviour
 {
     public PlayerController playerController;
+    public Rigidbody2D rb2D;
     float strikeTimeCount;
     float prepareTime;
 
@@ -13,6 +14,8 @@ public class PlayerStrikeBehavior : StateMachineBehaviour
     {
         if (playerController == null)
             playerController = animator.gameObject.GetComponent<PlayerController>();
+        if (rb2D == null)
+            rb2D = animator.gameObject.GetComponent<Rigidbody2D>();
 
         prepareTime = stateInfo.length * 2f / 5f;
         strikeTimeCount = playerController.StrikeTime;
@@ -25,13 +28,13 @@ public class PlayerStrikeBehavior : StateMachineBehaviour
         prepareTime -= Time.deltaTime;
 
         if (prepareTime >= 0)
-            animator.transform.Translate(new Vector3(0, playerController.StrikePrepareTranslate * Time.deltaTime, 0));
+            rb2D.velocity = new Vector2(0, playerController.StrikePrepareVelocity);
         else
         {
             if (playerController.isFacingRight)
-                animator.transform.Translate(playerController.StrikeAttackTranslate * Time.deltaTime, 0, 0);
+                rb2D.velocity = new Vector2(playerController.StrikeAttackVelocity, 0);
             else
-                animator.transform.Translate(-playerController.StrikeAttackTranslate * Time.deltaTime, 0, 0);
+                rb2D.velocity = new Vector2(-playerController.StrikeAttackVelocity, 0);
 
             strikeTimeCount -= Time.deltaTime;
             animator.SetFloat("StrikeTime", strikeTimeCount);

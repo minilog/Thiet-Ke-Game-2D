@@ -18,7 +18,8 @@ public class PlayerIblast : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Shootable"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Shootable") ||
+            collision.gameObject.layer == LayerMask.NameToLayer("AI"))
             Destroy(gameObject);
     }
 

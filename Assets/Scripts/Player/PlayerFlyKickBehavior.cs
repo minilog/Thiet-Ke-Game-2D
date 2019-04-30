@@ -6,12 +6,15 @@ public class PlayerFlyKickBehavior : StateMachineBehaviour
 {
     float prepareTime;
     [SerializeField] PlayerController playerController;
+    [SerializeField] Rigidbody2D rb2D;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if (playerController == null)
             playerController = animator.gameObject.GetComponent<PlayerController>();
+        if (rb2D == null)
+            rb2D = animator.gameObject.GetComponent<Rigidbody2D>();
 
         prepareTime = stateInfo.length * 2f / 6f;
     }
@@ -22,13 +25,13 @@ public class PlayerFlyKickBehavior : StateMachineBehaviour
         prepareTime -= Time.deltaTime;
 
         if (prepareTime >= 0)
-            animator.transform.Translate(new Vector3(0, playerController.FlyKichPrepare * Time.deltaTime, 0));
+            rb2D.velocity = new Vector2(0, playerController.FlyKickPrepareVelocity);
         else
         {
             if (playerController.isFacingRight)
-                animator.transform.Translate(new Vector3(playerController.FlyKichAttack * Time.deltaTime, 0, 0));
+                rb2D.velocity = new Vector2(playerController.FlyKickAttackVelocity, 0);
             else
-                 animator.transform.Translate(new Vector3(-playerController.FlyKichAttack * Time.deltaTime, 0, 0));
+                rb2D.velocity = new Vector2(-playerController.FlyKickAttackVelocity, 0);
         }
     }
 
