@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] BoxCollider2D normalBoxCollider;
     [SerializeField] BoxCollider2D crouchBoxCollider;
     public GameObject FireBallPrefab;
+
     [Space]
     public GameObject DashWindPrefab;
     [SerializeField] Transform dashWindTransform;
@@ -35,7 +36,19 @@ public class PlayerController : MonoBehaviour
                    CrouchKeyCode,
                    AttackKeyCode,
                    StrikeKeyCode,
-                   FlyKickKeyCode;
+                   FlyKickKeyCode,
+                   DashKeyCode = KeyCode.LeftShift;
+
+    [Space]
+    // For trailing
+    [SerializeField] TrailRenderer trailRenderer;
+    public bool IsTrailing;
+
+    //[Space]
+    //// For Dash State
+    //public float DashStateTime = 0.8f;
+    //public float DashStateCount;
+    //public float DashStateVelocity = 20f;
 
     // Use for animation
     float horizontalAxis;
@@ -74,10 +87,6 @@ public class PlayerController : MonoBehaviour
 
         CheckJump();
 
-        // Check flip game Object
-        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Player Strike") &&
-            !animator.GetCurrentAnimatorStateInfo(0).IsName("Player Fly Kick"))
-            CheckFlip();
 
         // Movement on simple player state
         // Idle
@@ -101,6 +110,46 @@ public class PlayerController : MonoBehaviour
             rb2D.velocity = new Vector2(0, rb2D.velocity.y);
         // Strike & Fly Kick is so complex, so I put it in Behavior
 
+        // Check flip game Object
+        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Player Strike") &&
+            !animator.GetCurrentAnimatorStateInfo(0).IsName("Player Fly Kick") &&
+            !animator.GetCurrentAnimatorStateInfo(0).IsName("Player Die"))
+        {
+            CheckFlip();
+        }
+
+        CheckTrailing();
+
+        //// Dash State Input
+        //if (Input.GetKeyDown(DashKeyCode))
+        //{
+        //    DashStateCount = DashStateTime;
+        //}
+
+        //DashStateCount -= Time.deltaTime;
+        //if (DashStateCount > 0)
+        //{
+        //    rb2D.velocity = new Vector2(transform.localScale.x * DashStateVelocity, 0);
+        //    isTrailing = true;
+        //}
+        //else
+        //    isTrailing = false;
+
+        //CheckTrailing();
+    }
+
+    private void CheckTrailing()
+    {
+        // Trailing
+        if (IsTrailing)
+        {
+            trailRenderer.time = 0.25f;
+        }
+        else
+        {
+            if (trailRenderer.time > 0)
+                trailRenderer.time -= Time.deltaTime;
+        }
     }
 
     private void CheckJump()
