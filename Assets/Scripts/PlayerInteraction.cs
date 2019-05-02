@@ -18,11 +18,32 @@ public class PlayerInteraction : MonoBehaviour
 
     private void OnValidate()
     {
-        animator = gameObject.GetComponent<Animator>();
-        rb2D = gameObject.GetComponent<Rigidbody2D>();
-        healthSlider.maxValue = Health;
-        healthSlider.value = Health;
-        playerController = gameObject.GetComponent<PlayerController>();
+        if (animator == null)
+            animator = gameObject.GetComponent<Animator>();
+        if (rb2D == null)
+            rb2D = gameObject.GetComponent<Rigidbody2D>();
+        if (healthSlider == null)
+        {
+            healthSlider.maxValue = Health;
+            healthSlider.value = Health;
+        }
+        if (playerController == null)
+            playerController = gameObject.GetComponent<PlayerController>();
+    }
+
+    private void Start()
+    {
+        if (animator == null)
+            animator = gameObject.GetComponent<Animator>();
+        if (rb2D == null)
+            rb2D = gameObject.GetComponent<Rigidbody2D>();
+        if (healthSlider == null)
+        {
+            healthSlider.maxValue = Health;
+            healthSlider.value = Health;
+        }
+        if (playerController == null)
+            playerController = gameObject.GetComponent<PlayerController>();
     }
 
     private void Update()
@@ -38,6 +59,7 @@ public class PlayerInteraction : MonoBehaviour
             // At the end this Behavior, destroy gameObject
             animator.Play("Player Die");
         else
+            // Change to animation Hurt
             animator.SetFloat("CanNotTakeDamage", canNotTakeDamageTime);
     }
 
@@ -45,9 +67,13 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (CanTakeDamage())
         {
+            // Push Force use for Player Hurt Behavior
             pushForceXWhenTakeDamage = pushForeX;
+            // set Animation Player Hurt
             animator.SetTrigger("TakeDamage");
+            // Set Time for animation Player Flicker
             canNotTakeDamageTime = TimeBtwTakeDamages;
+            // Lost Health
             Health -= damage;
             healthSlider.value = Health;
         }
@@ -55,8 +81,7 @@ public class PlayerInteraction : MonoBehaviour
 
     public bool CanTakeDamage()
     {
-        return (canNotTakeDamageTime <= 0 && !animator.GetCurrentAnimatorStateInfo(0).IsName("Player Strike"));
-            //&&
-            //playerController.DashStateCount < 0);
+        return (canNotTakeDamageTime <= 0 && !animator.GetCurrentAnimatorStateInfo(0).IsName("Player Strike") &&
+            !animator.GetCurrentAnimatorStateInfo(0).IsName("Player Dash"));
     }
 }

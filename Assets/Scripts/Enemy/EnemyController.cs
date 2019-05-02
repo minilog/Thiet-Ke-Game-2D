@@ -6,23 +6,46 @@ public class EnemyController : MonoBehaviour
 {
     public PlayerInteraction playerInteraction;
     public float AttackDamage;
-    bool playerOnTriggerStay = false;
 
     private void OnValidate()
     {
-        playerInteraction = FindObjectOfType<PlayerInteraction>();
+        if (playerInteraction == null)
+            playerInteraction = FindObjectOfType<PlayerInteraction>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (playerInteraction == null)
+            playerInteraction = FindObjectOfType<PlayerInteraction>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (playerOnTriggerStay && playerInteraction.CanTakeDamage())
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            float pushForceX = 0;
+
+            if (playerInteraction.transform.position.x < transform.position.x)
+                pushForceX = -1;
+            else
+                pushForceX = 1;
+
+            pushForceX *= 10f;
+            playerInteraction.CheckTakeDamage(AttackDamage, pushForceX);
+
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
         {
             float pushForceX = 0;
             if (playerInteraction.transform.position.x < transform.position.x)
@@ -32,22 +55,6 @@ public class EnemyController : MonoBehaviour
 
             pushForceX *= 10f;
             playerInteraction.CheckTakeDamage(AttackDamage, pushForceX);
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
-        {
-            playerOnTriggerStay = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
-        {
-            playerOnTriggerStay = false;
         }
     }
 }

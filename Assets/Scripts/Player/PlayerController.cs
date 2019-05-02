@@ -14,10 +14,6 @@ public class PlayerController : MonoBehaviour
     public GameObject FireBallPrefab;
 
     [Space]
-    public GameObject DashWindPrefab;
-    [SerializeField] Transform dashWindTransform;
-
-    [Space]
     public float WalkSpeed;
     public float JumpVelocity;
     public float JumpSpeed;
@@ -29,6 +25,7 @@ public class PlayerController : MonoBehaviour
     [Space]
     public float FlyKickPrepareVelocity;
     public float FlyKickAttackVelocity;
+    public float DashStateVelocity = 20f;
 
     [Space]
     // Keycode
@@ -44,12 +41,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] TrailRenderer trailRenderer;
     public bool IsTrailing;
 
-    //[Space]
-    //// For Dash State
-    //public float DashStateTime = 0.8f;
-    //public float DashStateCount;
-    //public float DashStateVelocity = 20f;
-
     // Use for animation
     float horizontalAxis;
 
@@ -58,12 +49,19 @@ public class PlayerController : MonoBehaviour
 
     private void OnValidate()
     {
-        rb2D = GetComponent<Rigidbody2D>();
+        if (rb2D == null)
+            rb2D = GetComponent<Rigidbody2D>();
+        if (animator == null)
         animator = GetComponent<Animator>();
     }
 
     private void Start()
     {
+        if (rb2D == null)
+            rb2D = GetComponent<Rigidbody2D>();
+        if (animator == null)
+            animator = GetComponent<Animator>();
+
         animator.speed = 0.66f;
     }
 
@@ -82,8 +80,23 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsGrounded", checkGround.IsGrounded);
         animator.SetBool("Walking", horizontalAxis != 0);
         animator.SetBool("Attack", Input.GetKey(AttackKeyCode));
-        animator.SetBool("Strike", Input.GetKeyDown(StrikeKeyCode));
-        animator.SetBool("FlyKick", Input.GetKeyDown(FlyKickKeyCode));
+
+        // Check flip & Dash, Strike, FlyKick
+        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Player Strike") &&
+            !animator.GetCurrentAnimatorStateInfo(0).IsName("Player Fly Kick") &&
+            !animator.GetCurrentAnimatorStateInfo(0).IsName("Player Die") &&
+            !animator.GetCurrentAnimatorStateInfo(0).IsName("Player Dash"))
+        {
+            CheckFlip();
+
+            // ALway true in this States;
+            animator.SetBool("Strike", Input.GetKeyDown(StrikeKeyCode));
+            animator.SetBool("FlyKick", Input.GetKeyDown(FlyKickKeyCode));
+            animator.SetBool("Dash", Input.GetKeyDown(DashKeyCode));
+        }
+
+
+        CheckTrailing();
 
         CheckJump();
 
@@ -110,32 +123,7 @@ public class PlayerController : MonoBehaviour
             rb2D.velocity = new Vector2(0, rb2D.velocity.y);
         // Strike & Fly Kick is so complex, so I put it in Behavior
 
-        // Check flip game Object
-        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Player Strike") &&
-            !animator.GetCurrentAnimatorStateInfo(0).IsName("Player Fly Kick") &&
-            !animator.GetCurrentAnimatorStateInfo(0).IsName("Player Die"))
-        {
-            CheckFlip();
-        }
 
-        CheckTrailing();
-
-        //// Dash State Input
-        //if (Input.GetKeyDown(DashKeyCode))
-        //{
-        //    DashStateCount = DashStateTime;
-        //}
-
-        //DashStateCount -= Time.deltaTime;
-        //if (DashStateCount > 0)
-        //{
-        //    rb2D.velocity = new Vector2(transform.localScale.x * DashStateVelocity, 0);
-        //    isTrailing = true;
-        //}
-        //else
-        //    isTrailing = false;
-
-        //CheckTrailing();
     }
 
     private void CheckTrailing()
@@ -205,17 +193,5 @@ public class PlayerController : MonoBehaviour
     {
         normalBoxCollider.enabled = false;
         crouchBoxCollider.enabled = true;
-    }
-
-    private void InstantiateDashWind()
-    {
-        GameObject wind = Instantiate(DashWindPrefab, dashWindTransform.position, Quaternion.identity);
-        Vector3 scale;
-        if (!isFacingRight)
-        {
-            scale = wind.transform.localScale;
-            scale.x = -scale.x;
-            wind.transform.localScale = scale;
-        }   
     }
 }

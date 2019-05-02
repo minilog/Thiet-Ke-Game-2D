@@ -12,6 +12,7 @@ public class PlayerDieBehavior : StateMachineBehaviour
         rb2D = animator.gameObject.GetComponent<Rigidbody2D>();
 
         rb2D.velocity = new Vector2(0, 0);
+        animator.SetBool("Die", true);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
