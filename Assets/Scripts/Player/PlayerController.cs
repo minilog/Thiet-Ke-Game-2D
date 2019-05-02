@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] TrailRenderer trailRenderer;
     public bool IsTrailing;
 
+
     // Use for animation
     float horizontalAxis;
 
@@ -100,7 +101,6 @@ public class PlayerController : MonoBehaviour
 
         CheckJump();
 
-
         // Movement on simple player state
         // Idle
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player Idle"))
@@ -122,8 +122,6 @@ public class PlayerController : MonoBehaviour
         else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player Crouch Attack"))
             rb2D.velocity = new Vector2(0, rb2D.velocity.y);
         // Strike & Fly Kick is so complex, so I put it in Behavior
-
-
     }
 
     private void CheckTrailing()
