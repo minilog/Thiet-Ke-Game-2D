@@ -140,7 +140,6 @@ GameObject:
   - component: {fileID: 6774005154464680350}
   - component: {fileID: 6774005154464680351}
   - component: {fileID: 6774005154464680348}
-  - component: {fileID: 5607888732704220557}
   m_Layer: 11
   m_Name: Iblast
   m_TagString: Untagged
@@ -207,16 +206,6 @@ MonoBehaviour:
   ExplosionFXPrefab: {fileID: 8230089621446362605, guid: f653eb471ab7e0645a071176070fcc8a,
     type: 3}
   ExplosionTransfrom: {fileID: 6031864522648865766}
---- !u!114 &5607888732704220557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6774005154464680321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1da4f4c6b28542f4c9f1c5e3bdd11c57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimeAlive: 2
+  ExplosionAudio: {fileID: 8300000, guid: e93d5cbd4a12fe540a2b627c99c00b85, type: 3}
+  ExplosionVolume: 1
+  TimeAlive: 1

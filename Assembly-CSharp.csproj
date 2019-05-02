@@ -60,7 +60,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CameraController.cs" />
+    <Compile Include="Assets\Audio\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
+    <Compile Include="Assets\Explosion.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Destroy\DestroyMe.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyController.cs" />
     <Compile Include="Assets\Scripts\Player\CheckGround.cs" />
@@ -76,6 +78,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerInteraction.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerJumpAttack.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStrikeBehavior.cs" />
+    <Compile Include="Assets\SoundTrackController.cs" />
     <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_sketch.shader" />
     <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_refraction.shader" />
     <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_mosaic.shader" />
@@ -90,6 +93,7 @@
     <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\Configs\Default\windows\License.txt" />
     <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_shockwave.shader" />
     <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_LED.shader" />
+    <None Include="Assets\Audio\explosionsoundslite\readme.txt" />
     <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_wave.shader" />
     <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_thermal.shader" />
     <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\yymanifest.xml" />

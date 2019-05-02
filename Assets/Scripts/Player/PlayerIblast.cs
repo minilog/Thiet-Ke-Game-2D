@@ -8,6 +8,12 @@ public class PlayerIblast : MonoBehaviour
     public float Damage = 10;
     public GameObject ExplosionFXPrefab;
     public Transform ExplosionTransfrom;
+    public float TimeAlive;
+
+    private void Start()
+    {
+        Invoke("DestroyGameObject", TimeAlive);
+    }
 
     private void Update()
     {

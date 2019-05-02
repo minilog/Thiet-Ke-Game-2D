@@ -9,6 +9,7 @@ public class EnemyController : MonoBehaviour
     public float AttackDamage;
     public float PushForce = 10;
 
+    public float MaxHealth = 10000;
     float _health;
     public float Health
     {
@@ -33,8 +34,8 @@ public class EnemyController : MonoBehaviour
         if (playerInteraction == null)
             playerInteraction = FindObjectOfType<PlayerInteraction>();
 
-        healthSlider.maxValue = 100;
-        Health = 100;
+        healthSlider.maxValue = MaxHealth;
+        Health = MaxHealth;
 
     }
 
