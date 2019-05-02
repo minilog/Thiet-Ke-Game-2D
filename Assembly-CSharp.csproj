@@ -61,7 +61,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CameraController.cs" />
-    <Compile Include="Assets\PlayerDashBehavior.cs" />
     <Compile Include="Assets\Scripts\Destroy\DestroyMe.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyController.cs" />
     <Compile Include="Assets\Scripts\Player\CheckGround.cs" />
@@ -69,13 +68,14 @@
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerCrouchAttackBehavior.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerCrounchBehavior.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerDashBehavior.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerDieBehavior.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerFlyKickBehavior.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerHurtBehavior.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerIblast.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerInteraction.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerJumpAttack.cs" />
-    <Compile Include="Assets\Scripts\PlayerDieBehavior.cs" />
-    <Compile Include="Assets\Scripts\PlayerHurtBehavior.cs" />
-    <Compile Include="Assets\Scripts\PlayerInteraction.cs" />
-    <Compile Include="Assets\Scripts\PlayerStrikeBehavior.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerStrikeBehavior.cs" />
     <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_sketch.shader" />
     <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_refraction.shader" />
     <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_mosaic.shader" />

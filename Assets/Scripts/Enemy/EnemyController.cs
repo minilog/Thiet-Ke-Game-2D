@@ -1,11 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyController : MonoBehaviour
 {
     public PlayerInteraction playerInteraction;
     public float AttackDamage;
+    public float PushForce = 10;
+
+    float _health;
+    public float Health
+    {
+        get { return _health; }
+        set
+        {
+            _health = value;
+            healthSlider.value = _health;
+        }
+    }
+    [SerializeField] Slider healthSlider;
 
     private void OnValidate()
     {
@@ -18,12 +32,17 @@ public class EnemyController : MonoBehaviour
     {
         if (playerInteraction == null)
             playerInteraction = FindObjectOfType<PlayerInteraction>();
+
+        healthSlider.maxValue = 100;
+        Health = 100;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (Health <= 0)
+            DestroyGameObject();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -53,8 +72,18 @@ public class EnemyController : MonoBehaviour
             else
                 pushForceX = 1;
 
-            pushForceX *= 10f;
+            pushForceX *= PushForce;
             playerInteraction.CheckTakeDamage(AttackDamage, pushForceX);
         }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        Health -= damage;
+    }
+
+    void DestroyGameObject()
+    {
+        Destroy(gameObject);
     }
 }

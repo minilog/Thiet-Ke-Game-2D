@@ -15,10 +15,10 @@ TagManager:
   - 
   - 
   - Ground
-  - Shootable
-  - AI
-  - Player
-  - AICollider
+  - EnemyInteraction
+  - EnvironmentCollider
+  - PlayerInteraction
+  - 
   - 
   - 
   - 
