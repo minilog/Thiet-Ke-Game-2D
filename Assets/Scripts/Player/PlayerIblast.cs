@@ -9,10 +9,15 @@ public class PlayerIblast : MonoBehaviour
     public GameObject ExplosionFXPrefab;
     public Transform ExplosionTransfrom;
     public float TimeAlive;
+    public AudioClip FireAudioCip;
+    public float Volume = 1;
+
 
     private void Start()
     {
-        Invoke("DestroyGameObject", TimeAlive);
+        //Invoke("DestroyGameObject", TimeAlive);
+        Destroy(gameObject, TimeAlive);
+        Camera.main.GetComponent<AudioSource>().PlayOneShot(FireAudioCip, Volume);
     }
 
     private void Update()
@@ -33,6 +38,6 @@ public class PlayerIblast : MonoBehaviour
     private void DestroyGameObject()
     {
         Destroy(gameObject);
-        Instantiate(ExplosionFXPrefab, ExplosionTransfrom.position + new Vector3(0, 0.5f, 0) , Quaternion.identity);
+        Instantiate(ExplosionFXPrefab, ExplosionTransfrom.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
     }
 }

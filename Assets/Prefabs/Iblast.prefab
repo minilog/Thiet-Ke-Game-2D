@@ -206,6 +206,6 @@ MonoBehaviour:
   ExplosionFXPrefab: {fileID: 8230089621446362605, guid: f653eb471ab7e0645a071176070fcc8a,
     type: 3}
   ExplosionTransfrom: {fileID: 6031864522648865766}
-  ExplosionAudio: {fileID: 8300000, guid: e93d5cbd4a12fe540a2b627c99c00b85, type: 3}
-  ExplosionVolume: 1
-  TimeAlive: 1
+  TimeAlive: 1.5
+  FireAudioCip: {fileID: 8300000, guid: 8ec32e085dc500243a1df3680f164189, type: 3}
+  Volume: 0.1

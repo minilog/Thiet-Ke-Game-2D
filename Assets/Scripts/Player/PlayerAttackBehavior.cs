@@ -10,9 +10,11 @@ public class PlayerAttackBehavior : StateMachineBehaviour
     float StartTimeBtwShots;
     public PlayerController playerController;
 
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+
         if (ShootPoint == null)
         {
             ShootPoint = animator.transform.Find("ShootPoint");

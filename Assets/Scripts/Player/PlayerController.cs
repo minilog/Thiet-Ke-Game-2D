@@ -48,20 +48,29 @@ public class PlayerController : MonoBehaviour
     // About Flip
     public bool isFacingRight = true;
 
+    [Space]
+    [SerializeField] AudioSource audioSource;
+    public AudioClip jumpAudio;
+    public float JumpVolume = 1;
+
     private void OnValidate()
     {
         if (rb2D == null)
             rb2D = GetComponent<Rigidbody2D>();
         if (animator == null)
-        animator = GetComponent<Animator>();
+            animator = GetComponent<Animator>();
     }
 
     private void Start()
     {
+        
         if (rb2D == null)
             rb2D = GetComponent<Rigidbody2D>();
         if (animator == null)
             animator = GetComponent<Animator>();
+        if (audioSource == null)
+            audioSource = Camera.main.GetComponent<AudioSource>();
+
 
         animator.speed = 0.66f;
     }
@@ -146,6 +155,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(JumpKeyCode))
             {
                 rb2D.velocity = new Vector2(0, JumpVelocity);
+                audioSource.PlayOneShot(jumpAudio, JumpVolume);
                 //InstantiateDashWind();
             }
         }
@@ -155,6 +165,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Player Jump Attack"))
                     animator.Play("Player Jump", 0, 0f);
+                audioSource.PlayOneShot(jumpAudio, JumpVolume);
                 readyForDoubleJump = false;
                 rb2D.velocity = new Vector2(0, JumpVelocity);
                 //InstantiateDashWind();

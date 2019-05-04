@@ -61,10 +61,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Audio\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
-    <Compile Include="Assets\Explosion.cs" />
+    <Compile Include="Assets\NewScene.cs" />
+    <Compile Include="Assets\OpenTheDoor.cs" />
+    <Compile Include="Assets\PlayerJumpBehavior.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Destroy\DestroyMe.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyController.cs" />
+    <Compile Include="Assets\Scripts\Explosion.cs" />
     <Compile Include="Assets\Scripts\Player\CheckGround.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAttackBehavior.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
@@ -78,32 +81,17 @@
     <Compile Include="Assets\Scripts\Player\PlayerInteraction.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerJumpAttack.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStrikeBehavior.cs" />
-    <Compile Include="Assets\SoundTrackController.cs" />
-    <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_sketch.shader" />
-    <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_refraction.shader" />
-    <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_mosaic.shader" />
-    <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_invert.shader" />
-    <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_greyscale.shader" />
-    <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_sepia.shader" />
+    <Compile Include="Assets\Scripts\SoundTrackController.cs" />
+    <None Include="Assets\Environment\(use6)\opp5_castle_tiles\environment\tiles\readme guides IMPORTANT.txt" />
     <None Include="Assets\Assets\Ninja Files\Read Me.txt" />
-    <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_ripple.shader" />
-    <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\yymanifest.xml" />
-    <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_gaussian_horizontal.shader.shader" />
-    <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_gaussian_vertical.shader.shader" />
-    <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\Configs\Default\windows\License.txt" />
-    <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_shockwave.shader" />
-    <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_LED.shader" />
+    <None Include="Assets\Environment\(5)\Free Pixel Art Forest\Contact.txt" />
     <None Include="Assets\Audio\explosionsoundslite\readme.txt" />
-    <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_wave.shader" />
-    <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_thermal.shader" />
-    <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\yymanifest.xml" />
-    <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_emboss.shader" />
-    <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_magnify.shader" />
-    <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_posterization.shader" />
-    <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_scanlines.shader" />
-    <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_radial_blur.shader" />
+    <None Include="Assets\Audio\Monster SFX - 111518\Notes.txt" />
+    <None Include="Assets\Music\Packs\Into the Fire\Into_the_Fire_ReadMe.txt" />
+    <None Include="Assets\Environment\(5)\Free Pixel Art Forest\readme.txt" />
+    <None Include="Assets\Environment\(use3)\Free Pixel Art plataformer painted style\readme.txt" />
     <None Include="Assets\Assets\Dragon Warrior Files\Read Me.txt" />
-    <None Include="Assets\Assets\MakingGames101_TopDownEp26-27\extensions\Free Shaders\Assets\Shaders\shd_bright_contrast.shader" />
+    <None Include="Assets\Environment\(use3)\Free Pixel Art plataformer painted style\Contact.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Unity/Thiết Kế Game 2D/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

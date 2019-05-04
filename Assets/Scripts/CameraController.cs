@@ -15,5 +15,6 @@ public class CameraController : MonoBehaviour
         Vector2 delta = Target.position - transform.position;
         //if (Mathf.Abs(delta.x) > 1 || Mathf.Abs(delta.y) > 1)
             rb2D.velocity = new Vector2(delta.x * SmoothHorizontal, delta.y * SmoothVertical);
+
     }
 }
