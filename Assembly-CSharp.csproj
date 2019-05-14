@@ -83,14 +83,12 @@
     <Compile Include="Assets\Scripts\Player\PlayerStrikeBehavior.cs" />
     <Compile Include="Assets\Scripts\SoundTrackController.cs" />
     <None Include="Assets\Environment\(use6)\opp5_castle_tiles\environment\tiles\readme guides IMPORTANT.txt" />
-    <None Include="Assets\Assets\Ninja Files\Read Me.txt" />
-    <None Include="Assets\Environment\(5)\Free Pixel Art Forest\Contact.txt" />
+    <None Include="Assets\Assets\Used in Game\Ninja Files\Read Me.txt" />
     <None Include="Assets\Audio\explosionsoundslite\readme.txt" />
     <None Include="Assets\Audio\Monster SFX - 111518\Notes.txt" />
     <None Include="Assets\Music\Packs\Into the Fire\Into_the_Fire_ReadMe.txt" />
-    <None Include="Assets\Environment\(5)\Free Pixel Art Forest\readme.txt" />
     <None Include="Assets\Environment\(use3)\Free Pixel Art plataformer painted style\readme.txt" />
-    <None Include="Assets\Assets\Dragon Warrior Files\Read Me.txt" />
+    <None Include="Assets\Assets\Used in Game\Dragon Warrior Files\Read Me.txt" />
     <None Include="Assets\Environment\(use3)\Free Pixel Art plataformer painted style\Contact.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Unity/Thiết Kế Game 2D/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
