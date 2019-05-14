@@ -1862,5 +1862,15 @@ PrefabInstance:
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 592158295}
+    - target: {fileID: 3083673009248574744, guid: 0f55da5f9c79671448bd1a3849ae046e,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3083673009248574744, guid: 0f55da5f9c79671448bd1a3849ae046e,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f55da5f9c79671448bd1a3849ae046e, type: 3}

@@ -9,6 +9,7 @@ public class OpenTheDoor : MonoBehaviour
     public string NewSceneName;
     public KeyCode OpenDoorKeyCode;
     public float TimeForNewScene;
+    [SerializeField] Vector3 positionInNewScene;
 
     bool playerInRange = false;
 
@@ -20,6 +21,7 @@ public class OpenTheDoor : MonoBehaviour
             {
                 Invoke("NewScene", TimeForNewScene);
                 animator.SetTrigger("Open");
+                Invoke("CanvasBlacking", TimeForNewScene / 2);
             }
         }
     }
@@ -39,5 +41,16 @@ public class OpenTheDoor : MonoBehaviour
     void NewScene()
     {
         SceneManager.LoadScene(NewSceneName);
+        GameObject player = FindObjectOfType<PlayerController>().gameObject;
+        player.transform.position = positionInNewScene;
+
+        CanvasController canvas = FindObjectOfType<CanvasController>();
+        canvas.ImageWhiting();
+    }
+
+    void CanvasBlacking()
+    {
+        CanvasController canvas = FindObjectOfType<CanvasController>();
+        canvas.ImageBlacking();
     }
 }

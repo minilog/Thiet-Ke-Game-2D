@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 3602864775676356825}
   - component: {fileID: 3602864775676356824}
   - component: {fileID: 3602864775676356827}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: SNinja
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -507,8 +507,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3602864776827364135}
   - component: {fileID: 3602864776827364134}
-  m_Layer: 10
-  m_Name: EnvironmentCollider
+  m_Layer: 8
+  m_Name: CollideWithEnvironment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

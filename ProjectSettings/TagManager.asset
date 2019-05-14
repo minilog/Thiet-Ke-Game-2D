@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -14,10 +15,10 @@ TagManager:
   - UI
   - 
   - 
-  - Ground
-  - EnemyInteraction
-  - EnvironmentCollider
-  - PlayerInteraction
+  - CollideWithEnvironment
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -39,11 +40,11 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Trail
-    uniqueID: 3790085479
-    locked: 0
   - name: Background
     uniqueID: 2580090827
+    locked: 0
+  - name: Trail
+    uniqueID: 3790085479
     locked: 0
   - name: Default
     uniqueID: 0

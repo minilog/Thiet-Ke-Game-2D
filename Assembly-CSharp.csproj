@@ -61,26 +61,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Audio\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
+    <Compile Include="Assets\CanvasController.cs" />
     <Compile Include="Assets\NewScene.cs" />
     <Compile Include="Assets\OpenTheDoor.cs" />
     <Compile Include="Assets\PlayerJumpBehavior.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Destroy\DestroyMe.cs" />
+    <Compile Include="Assets\Scripts\DontDestroyOnLoad.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyController.cs" />
     <Compile Include="Assets\Scripts\Explosion.cs" />
+    <Compile Include="Assets\Scripts\Player\Behavior\PlayerAttackBehavior.cs" />
+    <Compile Include="Assets\Scripts\Player\Behavior\PlayerCrouchAttackBehavior.cs" />
+    <Compile Include="Assets\Scripts\Player\Behavior\PlayerCrounchBehavior.cs" />
+    <Compile Include="Assets\Scripts\Player\Behavior\PlayerDashBehavior.cs" />
+    <Compile Include="Assets\Scripts\Player\Behavior\PlayerDieBehavior.cs" />
+    <Compile Include="Assets\Scripts\Player\Behavior\PlayerFlyKickBehavior.cs" />
+    <Compile Include="Assets\Scripts\Player\Behavior\PlayerHurtBehavior.cs" />
+    <Compile Include="Assets\Scripts\Player\Behavior\PlayerJumpAttack.cs" />
+    <Compile Include="Assets\Scripts\Player\Behavior\PlayerStrikeBehavior.cs" />
     <Compile Include="Assets\Scripts\Player\CheckGround.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerAttackBehavior.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerCrouchAttackBehavior.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerCrounchBehavior.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerDashBehavior.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerDieBehavior.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerFlyKickBehavior.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerHurtBehavior.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerIblast.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInteraction.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerJumpAttack.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerStrikeBehavior.cs" />
     <Compile Include="Assets\Scripts\SoundTrackController.cs" />
     <None Include="Assets\Environment\(use6)\opp5_castle_tiles\environment\tiles\readme guides IMPORTANT.txt" />
     <None Include="Assets\Assets\Used in Game\Ninja Files\Read Me.txt" />

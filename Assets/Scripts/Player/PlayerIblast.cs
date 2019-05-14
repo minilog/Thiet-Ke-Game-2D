@@ -27,7 +27,7 @@ public class PlayerIblast : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("EnemyInteraction"))
+        if (collision.tag == "Enemy")
         {
             EnemyController enemyController = collision.gameObject.GetComponent<EnemyController>();
             enemyController.TakeDamage(Damage);
