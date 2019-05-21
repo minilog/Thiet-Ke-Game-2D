@@ -61,15 +61,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Audio\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
-    <Compile Include="Assets\CanvasController.cs" />
-    <Compile Include="Assets\NewScene.cs" />
-    <Compile Include="Assets\OpenTheDoor.cs" />
-    <Compile Include="Assets\PlayerJumpBehavior.cs" />
+    <Compile Include="Assets\Bounds.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\CanvasController.cs" />
     <Compile Include="Assets\Scripts\Destroy\DestroyMe.cs" />
     <Compile Include="Assets\Scripts\DontDestroyOnLoad.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyController.cs" />
     <Compile Include="Assets\Scripts\Explosion.cs" />
+    <Compile Include="Assets\Scripts\NewScene.cs" />
+    <Compile Include="Assets\Scripts\OpenTheDoor.cs" />
     <Compile Include="Assets\Scripts\Player\Behavior\PlayerAttackBehavior.cs" />
     <Compile Include="Assets\Scripts\Player\Behavior\PlayerCrouchAttackBehavior.cs" />
     <Compile Include="Assets\Scripts\Player\Behavior\PlayerCrounchBehavior.cs" />
@@ -83,15 +83,14 @@
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerIblast.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInteraction.cs" />
+    <Compile Include="Assets\Scripts\PlayerJumpBehavior.cs" />
     <Compile Include="Assets\Scripts\SoundTrackController.cs" />
     <None Include="Assets\Environment\(use6)\opp5_castle_tiles\environment\tiles\readme guides IMPORTANT.txt" />
     <None Include="Assets\Assets\Used in Game\Ninja Files\Read Me.txt" />
     <None Include="Assets\Audio\explosionsoundslite\readme.txt" />
     <None Include="Assets\Audio\Monster SFX - 111518\Notes.txt" />
     <None Include="Assets\Music\Packs\Into the Fire\Into_the_Fire_ReadMe.txt" />
-    <None Include="Assets\Environment\(use3)\Free Pixel Art plataformer painted style\readme.txt" />
     <None Include="Assets\Assets\Used in Game\Dragon Warrior Files\Read Me.txt" />
-    <None Include="Assets\Environment\(use3)\Free Pixel Art plataformer painted style\Contact.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Unity/Thiết Kế Game 2D/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -106,6 +105,12 @@
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
       <HintPath>D:/Unity/Thiết Kế Game 2D/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>D:/Unity/Thiết Kế Game 2D/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>D:/Unity/Thiết Kế Game 2D/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

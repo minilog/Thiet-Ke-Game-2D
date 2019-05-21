@@ -4,25 +4,26 @@ public class DontDestroyOnLoad : MonoBehaviour
 {
     private static bool alreadyExist;
 
-    [SerializeField] GameObject player;
-    [SerializeField] GameObject canvas;
-    [SerializeField] GameObject camera;
+    [SerializeField] GameObject[] gameObjects;
 
     private void Start()
     {
         if (!alreadyExist)
         {
             alreadyExist = true;
-            DontDestroyOnLoad(player);
-            DontDestroyOnLoad(canvas);
-            DontDestroyOnLoad(camera);
+            foreach (GameObject gameObject in gameObjects)
+            {
+                DontDestroyOnLoad(gameObject);
+            }
             DontDestroyOnLoad(gameObject);
+
         }
         else
         {
-            Destroy(player);
-            Destroy(canvas);
-            Destroy(camera);
+            foreach(GameObject gameObject in gameObjects)
+            {
+                Destroy(gameObject);
+            }
             Destroy(gameObject);
         }
     }
