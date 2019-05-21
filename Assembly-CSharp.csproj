@@ -60,6 +60,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Assets\Assets\Scripts\cameraFollow2DPlatformer.cs" />
+    <Compile Include="Assets\Assets\Assets\Scripts\closeApplication.cs" />
+    <Compile Include="Assets\Assets\Assets\Scripts\destroyMe.cs" />
+    <Compile Include="Assets\Assets\Assets\Scripts\enemyHealth.cs" />
+    <Compile Include="Assets\Assets\Assets\Scripts\enemyMovementController.cs" />
+    <Compile Include="Assets\Assets\Assets\Scripts\fallThrough.cs" />
+    <Compile Include="Assets\Assets\Assets\Scripts\projectileController.cs" />
+    <Compile Include="Assets\Assets\Assets\Scripts\restartGame.cs" />
+    <Compile Include="Assets\Assets\Assets\Scripts\rocketHit.cs" />
+    <Compile Include="Assets\Assets\Assets\Scripts\shootSpore.cs" />
+    <Compile Include="Assets\Assets\Assets\Scripts\spawnDoor.cs" />
+    <Compile Include="Assets\Assets\Assets\Scripts\sporeController.cs" />
     <Compile Include="Assets\Audio\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
     <Compile Include="Assets\Bounds.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
@@ -91,6 +103,9 @@
     <None Include="Assets\Audio\Monster SFX - 111518\Notes.txt" />
     <None Include="Assets\Music\Packs\Into the Fire\Into_the_Fire_ReadMe.txt" />
     <None Include="Assets\Assets\Used in Game\Dragon Warrior Files\Read Me.txt" />
+    <Reference Include="Cinemachine">
+      <HintPath>D:/Unity/Thiết Kế Game 2D/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Unity/Thiết Kế Game 2D/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -100,17 +115,14 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>D:/Unity/Thiết Kế Game 2D/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>D:/Unity/Thiết Kế Game 2D/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/Unity/Thiết Kế Game 2D/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
       <HintPath>D:/Unity/Thiết Kế Game 2D/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>D:/Unity/Thiết Kế Game 2D/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>D:/Unity/Thiết Kế Game 2D/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
