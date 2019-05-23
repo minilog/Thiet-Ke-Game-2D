@@ -4,31 +4,22 @@ using UnityEngine;
 
 public class PlayerDashBehavior : StateMachineBehaviour
 {
-    PlayerController playerController;
-    Rigidbody2D rb2D;
-    public float DashVelocity = 25;
-
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (playerController == null)
-            playerController = animator.gameObject.GetComponent<PlayerController>();
-        if (rb2D == null)
-            rb2D = animator.gameObject.GetComponent<Rigidbody2D>();
-
-        playerController.IsTrailing = true;
+        ObjectsInGame.PlayerController.IsTrailing = true;
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
 
-        if (playerController.isFacingRight)
-            rb2D.velocity = new Vector2(DashVelocity, 0);
+        if (ObjectsInGame.PlayerController.IsFacingRight)
+            ObjectsInGame.PlayerController.Rb2D.velocity = new Vector2(ObjectsInGame.PlayerController.DashXVelocity, 0);
         else
-            rb2D.velocity = new Vector2(-DashVelocity, 0);
+            ObjectsInGame.PlayerController.Rb2D.velocity = new Vector2(-ObjectsInGame.PlayerController.DashXVelocity, 0);
     }
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        playerController.IsTrailing = false;
+        ObjectsInGame.PlayerController.IsTrailing = false;
     }
 }

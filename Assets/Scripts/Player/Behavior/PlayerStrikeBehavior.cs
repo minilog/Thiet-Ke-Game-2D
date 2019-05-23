@@ -4,22 +4,14 @@ using UnityEngine;
 
 public class PlayerStrikeBehavior : StateMachineBehaviour
 {
-    public PlayerController playerController;
-    public Rigidbody2D rb2D;
     float strikeTimeCount;
     float prepareTime;
 
-    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (playerController == null)
-            playerController = animator.gameObject.GetComponent<PlayerController>();
-        if (rb2D == null)
-            rb2D = animator.gameObject.GetComponent<Rigidbody2D>();
-
         prepareTime = stateInfo.length * 2f / 5f;
-        strikeTimeCount = playerController.StrikeTime;
-        animator.SetFloat("StrikeTime", playerController.StrikeTime);
+        strikeTimeCount = ObjectsInGame.PlayerController.StrikeTime;
+        animator.SetFloat("StrikeTime", ObjectsInGame.PlayerController.StrikeTime);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -28,36 +20,24 @@ public class PlayerStrikeBehavior : StateMachineBehaviour
         prepareTime -= Time.deltaTime;
 
         if (prepareTime >= 0)
-            rb2D.velocity = new Vector2(0, playerController.StrikePrepareVelocity);
+            ObjectsInGame.PlayerController.Rb2D.velocity = new Vector2(0, ObjectsInGame.PlayerController.StrikePrepareYVelocity);
         else
         {
-            if (playerController.isFacingRight)
-                rb2D.velocity = new Vector2(playerController.StrikeAttackVelocity, 0);
+            if (ObjectsInGame.PlayerController.IsFacingRight)
+                ObjectsInGame.PlayerController.Rb2D.velocity = new Vector2(ObjectsInGame.PlayerController.StrikeAttackXVelocity, 0);
             else
-                rb2D.velocity = new Vector2(-playerController.StrikeAttackVelocity, 0);
+                ObjectsInGame.PlayerController.Rb2D.velocity = new Vector2(-ObjectsInGame.PlayerController.StrikeAttackXVelocity, 0);
 
             strikeTimeCount -= Time.deltaTime;
             animator.SetFloat("StrikeTime", strikeTimeCount);
 
-            playerController.IsTrailing = true;
+            ObjectsInGame.PlayerController.IsTrailing = true;
         }
     }
 
-    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        playerController.IsTrailing = false;
+        ObjectsInGame.PlayerController.IsTrailing = false;
     }
 
-    // OnStateMove is called right after Animator.OnAnimatorMove()
-    //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that processes and affects root motion
-    //}
-
-    // OnStateIK is called right after Animator.OnAnimatorIK()
-    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that sets up animation IK (inverse kinematics)
-    //}
 }

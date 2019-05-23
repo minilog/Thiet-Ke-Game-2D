@@ -4,28 +4,11 @@ using UnityEngine;
 
 public class PlayerCrouchAttackBehavior : StateMachineBehaviour
 {
-    GameObject IblastPrefab;
-    public Transform ShootPoint;
     float timeBtwShots;
     float StartTimeBtwShots;
-    public PlayerController playerController;
 
-    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (ShootPoint == null)
-        {
-            ShootPoint = animator.transform.Find("CrouchShootPoint");
-        }
-        if (playerController == null)
-        {
-            playerController = animator.gameObject.GetComponent<PlayerController>();
-        }
-        if (IblastPrefab == null)
-        {
-            IblastPrefab = playerController.FireBallPrefab;
-        }
-
         StartTimeBtwShots = stateInfo.length;
         timeBtwShots = StartTimeBtwShots / 1.45f;
     }
@@ -37,11 +20,12 @@ public class PlayerCrouchAttackBehavior : StateMachineBehaviour
         if (timeBtwShots <= 0)
         {
             Vector3 angle;
-            if (animator.transform.localScale.x == 1)
+            if (animator.transform.localScale.x > 0)
                 angle = new Vector3(animator.transform.rotation.x, animator.transform.rotation.y, animator.transform.rotation.z - 90);
             else
                 angle = new Vector3(animator.transform.rotation.x, animator.transform.rotation.y, animator.transform.rotation.z + 90);
-            Instantiate(IblastPrefab, ShootPoint.position, Quaternion.Euler(angle));
+
+            Instantiate(ObjectsInGame.PlayerDamage.Projectile, ObjectsInGame.PlayerDamage.CrouchShootPoint.position, Quaternion.Euler(angle));
             timeBtwShots += StartTimeBtwShots;
         }
     }

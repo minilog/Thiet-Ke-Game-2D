@@ -18,7 +18,7 @@ public class enemyMovementController : MonoBehaviour
     // attacking
     public float chargeTime;
     float startChargeTime;
-    bool charging;
+    bool charging;  
     Rigidbody2D enemyRB;
 
     // Start is called before the first frame update

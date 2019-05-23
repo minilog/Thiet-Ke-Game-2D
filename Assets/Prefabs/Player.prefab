@@ -69,10 +69,11 @@ GameObject:
   - component: {fileID: 7665044319471023119}
   - component: {fileID: 7665044319471023105}
   - component: {fileID: 7665044319471023106}
+  - component: {fileID: 7665044319471023108}
   - component: {fileID: 7665044319471023118}
   - component: {fileID: 7665044319471023107}
-  - component: {fileID: 7665044319471023108}
   - component: {fileID: 7665044319471023109}
+  - component: {fileID: 5051282331572235383}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -89,7 +90,7 @@ Transform:
   m_GameObject: {fileID: 7665044319471023117}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.49, y: -2.84, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 7665044320946478934}
   - {fileID: 7665044320144635751}
@@ -194,6 +195,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.73644686, y: 1.1782141}
   m_EdgeRadius: 0
+--- !u!61 &7665044319471023108
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7665044319471023117}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.057758808, y: -0.81169605}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 2.56}
+    newSize: {x: 5.12, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7364807, y: 0.7985883}
+  m_EdgeRadius: 0
 --- !u!95 &7665044319471023118
 Animator:
   serializedVersion: 3
@@ -225,60 +252,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 555e867aab1651148a6e6a97caef46f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb2D: {fileID: 7665044319471023105}
+  Rb2D: {fileID: 7665044319471023105}
   animator: {fileID: 7665044319471023118}
   checkGround: {fileID: 7665044320946478935}
   normalBoxCollider: {fileID: 7665044319471023106}
   crouchBoxCollider: {fileID: 7665044319471023108}
-  FireBallPrefab: {fileID: 6774005154464680321, guid: 5418074815433f04d996f7f53fa74d78,
-    type: 3}
-  WalkSpeed: 5.5
-  JumpVelocity: 14.5
-  JumpSpeed: 5.5
+  trailRenderer: {fileID: 7665044320105907681}
+  WalkXVelocity: 5.5
+  JumpXVelocity: 5.5
+  JumpYVelocity: 14.5
   StrikeTime: 0.42
-  StrikePrepareVelocity: 9
-  StrikeAttackVelocity: 18
-  FlyKickPrepareVelocity: 5
-  FlyKickAttackVelocity: 13
-  DashStateVelocity: 20
+  StrikePrepareYVelocity: 9
+  StrikeAttackXVelocity: 18
+  FlyKickYPrepareVelocity: 5
+  FlyKickAttackXVelocity: 13
+  DashXVelocity: 25
   JumpKeyCode: 32
   CrouchKeyCode: 115
   AttackKeyCode: 323
   StrikeKeyCode: 101
   FlyKickKeyCode: 102
   DashKeyCode: 324
-  trailRenderer: {fileID: 7665044320105907681}
-  IsTrailing: 0
-  isFacingRight: 1
-  audioSource: {fileID: 0}
-  jumpAudio: {fileID: 8300000, guid: b55b63d4fd215f34aafcb32786805d69, type: 3}
-  JumpVolume: 0.2
---- !u!61 &7665044319471023108
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7665044319471023117}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.057758808, y: -0.81169605}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 2.56}
-    newSize: {x: 5.12, y: 2.56}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.7364807, y: 0.7985883}
-  m_EdgeRadius: 0
 --- !u!114 &7665044319471023109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,11 +286,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 7665044319471023118}
-  rb2D: {fileID: 7665044319471023105}
   healthSlider: {fileID: 0}
-  playerController: {fileID: 7665044319471023107}
-  TimeBtwTakeDamages: 1
-  pushForceXWhenTakeDamage: 0
+  cantTakeDamageTime: 1
+--- !u!114 &5051282331572235383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7665044319471023117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4d49adf3f8458341bce273746e81d7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Projectile: {fileID: 6774005154464680321, guid: 5418074815433f04d996f7f53fa74d78,
+    type: 3}
+  ShootPoint: {fileID: 7665044320144635751}
+  CrouchShootPoint: {fileID: 7665044320979156581}
 --- !u!1 &7665044320105907695
 GameObject:
   m_ObjectHideFlags: 0

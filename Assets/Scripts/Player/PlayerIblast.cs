@@ -9,15 +9,12 @@ public class PlayerIblast : MonoBehaviour
     public GameObject ExplosionFXPrefab;
     public Transform ExplosionTransfrom;
     public float TimeAlive;
-    public AudioClip FireAudioCip;
-    public float Volume = 1;
-
 
     private void Start()
     {
         //Invoke("DestroyGameObject", TimeAlive);
         Destroy(gameObject, TimeAlive);
-        Camera.main.GetComponent<AudioSource>().PlayOneShot(FireAudioCip, Volume);
+        ObjectsInGame.SoundManager.PlayPlayerAttackAudioClip();
     }
 
     private void Update()
@@ -29,8 +26,8 @@ public class PlayerIblast : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            EnemyController enemyController = collision.gameObject.GetComponent<EnemyController>();
-            enemyController.TakeDamage(Damage);
+            EnemyHealth enemyHealth = collision.GetComponent<EnemyHealth>();
+            enemyHealth.TakeDamage(Damage);
             DestroyGameObject();
         }
     }

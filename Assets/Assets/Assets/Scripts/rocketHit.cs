@@ -38,8 +38,8 @@ public class rocketHit : MonoBehaviour
 
             if (other.tag == "Enemy")
             {
-                enemyHealth hurtEnemy = other.gameObject.GetComponent<enemyHealth>();
-                hurtEnemy.addDamage(weaponDamage);
+                //enemyHealth hurtEnemy = other.gameObject.GetComponent<enemyHealth>();
+                //hurtEnemy.addDamage(weaponDamage);
             }
         }
     }
@@ -56,8 +56,8 @@ public class rocketHit : MonoBehaviour
 
             if (other.tag == "Enemy")
             {
-                enemyHealth hurtEnemy = other.gameObject.GetComponent<enemyHealth>();
-                hurtEnemy.addDamage(weaponDamage);
+                //enemyHealth hurtEnemy = other.gameObject.GetComponent<enemyHealth>();
+                //hurtEnemy.addDamage(weaponDamage);
             }
         }
     }

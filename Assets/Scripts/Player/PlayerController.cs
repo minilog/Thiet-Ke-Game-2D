@@ -5,27 +5,25 @@ using UnityEngine;
 // Movement & Animation
 public class PlayerController : MonoBehaviour
 {
-    // RIGIDBODY is always effected by Time.deltaTime
-    [SerializeField] Rigidbody2D rb2D;
+    public Rigidbody2D Rb2D;
     [SerializeField] Animator animator;
     [SerializeField] CheckGround checkGround;
     [SerializeField] BoxCollider2D normalBoxCollider;
     [SerializeField] BoxCollider2D crouchBoxCollider;
-    public GameObject FireBallPrefab;
+    [SerializeField] TrailRenderer trailRenderer;
 
     [Space]
-    public float WalkSpeed;
-    public float JumpVelocity;
-    public float JumpSpeed;
+    public float WalkXVelocity;
+    public float JumpXVelocity;
+    public float JumpYVelocity; 
+
     private bool readyForDoubleJump;
-    [Space]
     public float StrikeTime;
-    public float StrikePrepareVelocity;
-    public float StrikeAttackVelocity;
-    [Space]
-    public float FlyKickPrepareVelocity;
-    public float FlyKickAttackVelocity;
-    public float DashStateVelocity = 20f;
+    public float StrikePrepareYVelocity;
+    public float StrikeAttackXVelocity;
+    public float FlyKickYPrepareVelocity;
+    public float FlyKickAttackXVelocity;
+    public float DashXVelocity = 20f;
 
     [Space]
     // Keycode
@@ -36,42 +34,23 @@ public class PlayerController : MonoBehaviour
                    FlyKickKeyCode,
                    DashKeyCode = KeyCode.LeftShift;
 
-    [Space]
-    // For trailing
-    [SerializeField] TrailRenderer trailRenderer;
-    public bool IsTrailing;
-
+    public bool IsTrailing { get; set; } = false;
 
     // Use for animation
     float horizontalAxis;
 
     // About Flip
-    public bool isFacingRight = true;
+    public bool IsFacingRight { get; private set; } = false;
 
-    [Space]
-    [SerializeField] AudioSource audioSource;
-    public AudioClip jumpAudio;
-    public float JumpVolume = 1;
-
-    private void OnValidate()
+    private void Awake()
     {
-        if (rb2D == null)
-            rb2D = GetComponent<Rigidbody2D>();
-        if (animator == null)
-            animator = GetComponent<Animator>();
+        // To reuse in game
+        ObjectsInGame.PlayerController = this;
     }
 
     private void Start()
     {
-        
-        if (rb2D == null)
-            rb2D = GetComponent<Rigidbody2D>();
-        if (animator == null)
-            animator = GetComponent<Animator>();
-        if (audioSource == null)
-            audioSource = Camera.main.GetComponent<AudioSource>();
-
-
+        // Slower animation
         animator.speed = 0.66f;
     }
 
@@ -113,23 +92,23 @@ public class PlayerController : MonoBehaviour
         // Movement on simple player state
         // Idle
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player Idle"))
-            rb2D.velocity = new Vector2(0, rb2D.velocity.y);
+            Rb2D.velocity = new Vector2(0, Rb2D.velocity.y);
         else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player Attack"))
-            rb2D.velocity = new Vector2(0, rb2D.velocity.y);
+            Rb2D.velocity = new Vector2(0, Rb2D.velocity.y);
         // Walk
         else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player Walk"))
-            rb2D.velocity = new Vector2(horizontalAxis * WalkSpeed, rb2D.velocity.y);
+            Rb2D.velocity = new Vector2(horizontalAxis * WalkXVelocity, Rb2D.velocity.y);
         // Jump
         else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player Jump"))
-            rb2D.velocity = new Vector2(horizontalAxis * JumpSpeed, rb2D.velocity.y);
+            Rb2D.velocity = new Vector2(horizontalAxis * JumpXVelocity, Rb2D.velocity.y);
         // Jump Attack
         else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player Jump Attack"))
-            rb2D.velocity = new Vector2(horizontalAxis * JumpSpeed, rb2D.velocity.y);
+            Rb2D.velocity = new Vector2(horizontalAxis * JumpXVelocity, Rb2D.velocity.y);
         // Crouch
         else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player Crouch"))
-            rb2D.velocity = new Vector2(0, rb2D.velocity.y);
+            Rb2D.velocity = new Vector2(0, Rb2D.velocity.y);
         else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player Crouch Attack"))
-            rb2D.velocity = new Vector2(0, rb2D.velocity.y);
+            Rb2D.velocity = new Vector2(0, Rb2D.velocity.y);
         // Strike & Fly Kick is so complex, so I put it in Behavior
     }
 
@@ -154,9 +133,8 @@ public class PlayerController : MonoBehaviour
             readyForDoubleJump = true;
             if (Input.GetKeyDown(JumpKeyCode))
             {
-                rb2D.velocity = new Vector2(0, JumpVelocity);
-                audioSource.PlayOneShot(jumpAudio, JumpVolume);
-                //InstantiateDashWind();
+                Rb2D.velocity = new Vector2(0, JumpYVelocity);
+                ObjectsInGame.SoundManager.PlayPlayerJumpAudioClip();
             }
         }
         else if (readyForDoubleJump)
@@ -165,26 +143,25 @@ public class PlayerController : MonoBehaviour
             {
                 if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Player Jump Attack"))
                     animator.Play("Player Jump", 0, 0f);
-                audioSource.PlayOneShot(jumpAudio, JumpVolume);
+                ObjectsInGame.SoundManager.PlayPlayerJumpAudioClip();
                 readyForDoubleJump = false;
-                rb2D.velocity = new Vector2(0, JumpVelocity);
-                //InstantiateDashWind();
+                Rb2D.velocity = new Vector2(0, JumpYVelocity);
             }
         }
     }
 
     private void CheckFlip()
     {
-        if (horizontalAxis < 0 && isFacingRight)
+        if (horizontalAxis < 0 && IsFacingRight)
         {
-            isFacingRight = false;
+            IsFacingRight = false;
             Vector3 scale = transform.localScale;
             scale.x = -scale.x;
             transform.localScale = scale;
         }
-        else if (horizontalAxis > 0 && !isFacingRight)
+        else if (horizontalAxis > 0 && !IsFacingRight)
         {
-            isFacingRight = true;
+            IsFacingRight = true;
             Vector3 scale = transform.localScale;
             scale.x = -scale.x;
             transform.localScale = scale;
