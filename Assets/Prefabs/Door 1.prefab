@@ -196,8 +196,7 @@ MonoBehaviour:
   animator: {fileID: 5623060437173054394}
   NewSceneName: Lv.02
   OpenDoorKeyCode: 119
-  TimeForNewScene: 0.8
-  positionInNewScene: {x: 9.27, y: -1.79, z: 0}
+  TimeForNewScene: 0.1
 --- !u!61 &5623060437173054392
 BoxCollider2D:
   m_ObjectHideFlags: 0

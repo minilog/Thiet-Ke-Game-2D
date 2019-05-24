@@ -72,14 +72,14 @@
     <Compile Include="Assets\Assets\Assets\Scripts\spawnDoor.cs" />
     <Compile Include="Assets\Assets\Assets\Scripts\sporeController.cs" />
     <Compile Include="Assets\Audio\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
-    <Compile Include="Assets\BoarChaseBehavior.cs" />
-    <Compile Include="Assets\BoarIdleBehavior.cs" />
-    <Compile Include="Assets\BoarsChaseZone.cs" />
     <Compile Include="Assets\Scripts\Bounds.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraController.cs" />
     <Compile Include="Assets\Scripts\Destroy\DestroyMe.cs" />
     <Compile Include="Assets\Scripts\Effect\Explosion.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Boar\BoarChaseBehavior.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Boar\BoarIdleBehavior.cs" />
     <Compile Include="Assets\Scripts\Enemy\Boar\BoarMovement.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Boar\BoarsChaseZone.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyDamage.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\Enemy\NinjaMovement.cs" />
@@ -102,6 +102,7 @@
     <Compile Include="Assets\Scripts\Sound\BackgroundMusic.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\Tran Scenes\CanvasController.cs" />
+    <Compile Include="Assets\Scripts\Tran Scenes\ChangeSceneManager.cs" />
     <Compile Include="Assets\Scripts\Tran Scenes\DontDestroyOnLoad.cs" />
     <Compile Include="Assets\Scripts\Tran Scenes\NewScene.cs" />
     <Compile Include="Assets\Scripts\Tran Scenes\OpenTheDoor.cs" />

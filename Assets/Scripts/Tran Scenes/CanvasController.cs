@@ -8,41 +8,55 @@ public class CanvasController : MonoBehaviour
     [SerializeField] Image image;
 
     private float a;
-    public float speedChangeColor;
+    private float timeChangeColor;
 
+    private float speedOfChanging;
     private bool Blacking;
+
+    private bool Changing = false;
 
     private void Update()
     {
-        if (Blacking)
+        if (Changing)
         {
-
-
-            if (a < 255)
-                a += speedChangeColor * Time.deltaTime;
+            if (Blacking)
+            {
+                if (a < 1)
+                    a += speedOfChanging * Time.unscaledDeltaTime;
+                else
+                {
+                    a = 1;
+                    Changing = false;
+                }
+            }
             else
-                a = 255;
-        }
-        else
-        {
-            if (a > 0)
-                a -= speedChangeColor * Time.deltaTime;
-            else
-                a = 0;  
-        }
+            {
+                if (a > 0)
+                    a -= speedOfChanging * Time.unscaledDeltaTime;
+                else
+                {
+                    a = 0;
+                    Changing = false;
+                }
+            }
 
-        Color c = image.color;
-        c.a = a;
-        image.color = c;
+            Color c = image.color;
+            c.a = a;
+            image.color = c;
+        }
     }
 
-    public void ImageBlacking()
+    public void ImageBlacking(float time)
     {
         Blacking = true;
+        speedOfChanging = 1f / time + 0.05f;
+        Changing = true;
     }
 
-    public void ImageWhiting()
+    public void ImageWhiting(float time)
     {
         Blacking = false;
+        speedOfChanging = 1f / time + 0.05f;
+        Changing = true;
     }
 }

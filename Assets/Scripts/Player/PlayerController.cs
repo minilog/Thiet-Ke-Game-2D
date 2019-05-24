@@ -57,10 +57,11 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         // Time Scale
-        if (Input.GetKey(KeyCode.Q))
-            Time.timeScale = 0.1f;
-        else
-            Time.timeScale = 1f;
+        //if (Input.GetKey(KeyCode.Q))
+        //    Time.timeScale = 0.1f;
+        //else
+        //    Time.timeScale = 1f;
+
 
         horizontalAxis = Input.GetAxis("Horizontal");
 
