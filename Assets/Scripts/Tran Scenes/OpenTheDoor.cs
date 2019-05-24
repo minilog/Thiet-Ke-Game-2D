@@ -9,6 +9,8 @@ public class OpenTheDoor : MonoBehaviour
     public string NewSceneName;
     public KeyCode OpenDoorKeyCode;
     public float TimeForNewScene;
+    [Space]
+    public int PlayerApearPoint;
 
     bool playerInRange = false;
 
@@ -20,6 +22,7 @@ public class OpenTheDoor : MonoBehaviour
             {
                 //ObjectsInGame.ChangeSceneManager.ChangeToNextScene(NewSceneName);
                 StartCoroutine(ChangeToNextScene(NewSceneName, TimeForNewScene));
+
                 animator.SetTrigger("Open");
             }
         }
@@ -42,5 +45,9 @@ public class OpenTheDoor : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         ObjectsInGame.ChangeSceneManager.ChangeToNextScene(name);
+
+
+        Vector3 offset = ObjectsInGame.PlayerController.transform.position - transform.position;
+        PositionInNewScene.SetValueForNewScene(PlayerApearPoint, offset);
     }
 }
