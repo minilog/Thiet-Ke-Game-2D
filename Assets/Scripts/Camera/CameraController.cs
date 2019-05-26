@@ -6,7 +6,6 @@ public class CameraController : MonoBehaviour
 {
     // FOLLOW PLAYER
     [SerializeField] GameObject followTarget;
-    [SerializeField] float moveSpeed;
     public float boundX = 2.0f;
     public float boundY = 1.5f;
 
@@ -46,35 +45,37 @@ public class CameraController : MonoBehaviour
     {
         Vector3 targetPos = new Vector3(followTarget.transform.position.x, followTarget.transform.position.y, transform.position.z);
 
-        Vector3 delta = Vector2.zero;
+        //Vector3 delta = Vector2.zero;
 
-        float dx = targetPos.x - transform.position.x;
-        if (dx > boundX || dx < -boundX)
-        {
-            if (transform.position.x < targetPos.x)
-            {
-                delta.x = dx - boundX;
-            }
-            else
-            {
-                delta.x = dx + boundX;
-            }
-        }
+        //float dx = targetPos.x - transform.position.x;
+        //if (dx > boundX || dx < -boundX)
+        //{
+        //    if (transform.position.x < targetPos.x)
+        //    {
+        //        delta.x = dx - boundX;
+        //    }
+        //    else
+        //    {
+        //        delta.x = dx + boundX;
+        //    }
+        //}
 
-        float dy = targetPos.y - transform.position.y;
-        if (dy > boundY || dy < -boundY)
-        {
-            if (transform.position.y < targetPos.y)
-            {
-                delta.y = dy - boundY;
-            }
-            else
-            {
-                delta.y = dy + boundY;
-            }
-        }
+        //float dy = targetPos.y - transform.position.y;
+        //if (dy > boundY || dy < -boundY)
+        //{
+        //    if (transform.position.y < targetPos.y)
+        //    {
+        //        delta.y = dy - boundY;
+        //    }
+        //    else
+        //    {
+        //        delta.y = dy + boundY;
+        //    }
+        //}
 
-        transform.position = transform.position + delta;
+        //transform.position = transform.position + delta;
+
+        transform.position = targetPos;
     }
 
     private void FindBounds()

@@ -1008,6 +1008,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 401588692880684253, guid: 39c0115f13ef675458691961e4443837,
+        type: 3}
+      propertyPath: m_Text
+      value: loked door
+      objectReference: {fileID: 0}
     - target: {fileID: 401588692880684242, guid: 39c0115f13ef675458691961e4443837,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1017,11 +1022,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -25.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 401588692880684253, guid: 39c0115f13ef675458691961e4443837,
-        type: 3}
-      propertyPath: m_Text
-      value: loked door
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39c0115f13ef675458691961e4443837, type: 3}

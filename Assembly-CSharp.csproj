@@ -72,7 +72,6 @@
     <Compile Include="Assets\Assets\Assets\Scripts\spawnDoor.cs" />
     <Compile Include="Assets\Assets\Assets\Scripts\sporeController.cs" />
     <Compile Include="Assets\Audio\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
-    <Compile Include="Assets\PositionInNewScene.cs" />
     <Compile Include="Assets\Scripts\Bounds.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraController.cs" />
     <Compile Include="Assets\Scripts\Destroy\DestroyMe.cs" />
@@ -99,6 +98,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerDamage.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerIblast.cs" />
+    <Compile Include="Assets\Scripts\PositionInNewScene.cs" />
     <Compile Include="Assets\Scripts\SaveValueOverTime\ObjectsInGame.cs" />
     <Compile Include="Assets\Scripts\Sound\BackgroundMusic.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
