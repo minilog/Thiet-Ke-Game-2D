@@ -12,6 +12,12 @@ public class CheckGround : MonoBehaviour
             IsGrounded = true;
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "Ground")
+            IsGrounded = true;
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Ground")

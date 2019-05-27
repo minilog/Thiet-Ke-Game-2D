@@ -486,7 +486,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &199340648
 BoxCollider2D:
@@ -1835,7 +1835,7 @@ Transform:
   - {fileID: 15004563}
   - {fileID: 531944729}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &531944727
 GameObject:
@@ -1912,7 +1912,7 @@ Transform:
   - {fileID: 94999324}
   - {fileID: 1013191059}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &566985534
 MonoBehaviour:
@@ -2015,7 +2015,7 @@ PrefabInstance:
     - target: {fileID: 664137289441799453, guid: cc8f34003335b854e9d41a45734578c5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.84
+      value: -3.8
       objectReference: {fileID: 0}
     - target: {fileID: 664137289441799453, guid: cc8f34003335b854e9d41a45734578c5,
         type: 3}
@@ -2045,7 +2045,7 @@ PrefabInstance:
     - target: {fileID: 664137289441799453, guid: cc8f34003335b854e9d41a45734578c5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 664137289441799453, guid: cc8f34003335b854e9d41a45734578c5,
         type: 3}
@@ -2093,7 +2093,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &752492231
 MonoBehaviour:
@@ -2484,7 +2484,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1099291140
 MonoBehaviour:
@@ -2622,7 +2622,7 @@ Transform:
   - {fileID: 1555788532}
   - {fileID: 1321461450}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1272584334
 PrefabInstance:
@@ -2699,6 +2699,11 @@ PrefabInstance:
     - target: {fileID: 7665044319471023107, guid: 0f55da5f9c79671448bd1a3849ae046e,
         type: 3}
       propertyPath: JumpYVelocity
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665044319471023107, guid: 0f55da5f9c79671448bd1a3849ae046e,
+        type: 3}
+      propertyPath: FlyKickAttackXVelocity
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7665044319464903637, guid: 0f55da5f9c79671448bd1a3849ae046e,
@@ -3474,7 +3479,7 @@ PrefabInstance:
     - target: {fileID: 5623060437173054396, guid: f8d940b8a19b7af44adc8c6e53e9bf95,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5623060437173054396, guid: f8d940b8a19b7af44adc8c6e53e9bf95,
         type: 3}

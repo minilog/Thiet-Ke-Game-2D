@@ -35,7 +35,7 @@ public class ChangeSceneManager : MonoBehaviour
         if (goingToNewScene)
         {
             chagingSceneCounter -= Time.unscaledDeltaTime;
-            if (chagingSceneCounter <= 0)
+            if (chagingSceneCounter <= 0.5f)
             {
                 goingToNewScene = false;
                 Time.timeScale = 1;
