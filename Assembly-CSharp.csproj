@@ -60,7 +60,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ArrowMovement.cs" />
     <Compile Include="Assets\Assets\Assets\Scripts\cameraFollow2DPlatformer.cs" />
     <Compile Include="Assets\Assets\Assets\Scripts\closeApplication.cs" />
     <Compile Include="Assets\Assets\Assets\Scripts\destroyMe.cs" />
@@ -73,20 +72,26 @@
     <Compile Include="Assets\Assets\Assets\Scripts\spawnDoor.cs" />
     <Compile Include="Assets\Assets\Assets\Scripts\sporeController.cs" />
     <Compile Include="Assets\Audio\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
-    <Compile Include="Assets\GoblinAttackBehabvior.cs" />
-    <Compile Include="Assets\GoblinIdleBehabvior.cs" />
-    <Compile Include="Assets\GoblinWalkBehabvior.cs" />
+    <Compile Include="Assets\BatAttackBehavior.cs" />
+    <Compile Include="Assets\BatChaseBehavior.cs" />
+    <Compile Include="Assets\BatFlyBehavior.cs" />
+    <Compile Include="Assets\BatRetreatBehavior.cs" />
     <Compile Include="Assets\Scripts\Bounds.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraController.cs" />
     <Compile Include="Assets\Scripts\Destroy\DestroyMe.cs" />
     <Compile Include="Assets\Scripts\Effect\Explosion.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Bat\BatMovement.cs" />
     <Compile Include="Assets\Scripts\Enemy\Boar\BoarChaseBehavior.cs" />
     <Compile Include="Assets\Scripts\Enemy\Boar\BoarIdleBehavior.cs" />
     <Compile Include="Assets\Scripts\Enemy\Boar\BoarMovement.cs" />
     <Compile Include="Assets\Scripts\Enemy\Boar\EnemyZone.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyDamage.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Goblin\ArrowMovement.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Goblin\GoblinAttackBehabvior.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Goblin\GoblinIdleBehabvior.cs" />
     <Compile Include="Assets\Scripts\Enemy\Goblin\GoblinMovement.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Goblin\GoblinWalkBehabvior.cs" />
     <Compile Include="Assets\Scripts\Enemy\NinjaMovement.cs" />
     <Compile Include="Assets\Scripts\Player\Behavior\PlayerAttackBehavior.cs" />
     <Compile Include="Assets\Scripts\Player\Behavior\PlayerCrouchAttackBehavior.cs" />

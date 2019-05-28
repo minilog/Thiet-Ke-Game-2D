@@ -13,20 +13,6 @@ public class GoblinMovement : MonoBehaviour
 
     public float AttackDelay = 0.5f;
 
-    Animator animator;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        animator = GetComponentInChildren<Animator>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
 
     public void Flip()
     {
