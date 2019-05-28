@@ -30,6 +30,10 @@ public class PlayerIblast : MonoBehaviour
             enemyHealth.TakeDamage(Damage);
             DestroyGameObject();
         }
+        else if (collision.tag == "Ground")
+        {
+            DestroyGameObject();
+        }
     }
 
     private void DestroyGameObject()

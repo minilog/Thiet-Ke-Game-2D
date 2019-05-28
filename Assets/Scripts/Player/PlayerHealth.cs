@@ -70,7 +70,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    private bool CanTakeDamage()
+    public bool CanTakeDamage()
     {
         return (cantTakeDamageCounter <= 0 && !animator.GetCurrentAnimatorStateInfo(0).IsName("Player Strike") &&
             !animator.GetCurrentAnimatorStateInfo(0).IsName("Player Dash"));

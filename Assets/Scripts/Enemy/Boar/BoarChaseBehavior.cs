@@ -6,7 +6,7 @@ public class BoarChaseBehavior : StateMachineBehaviour
 {
     private BoarMovement boarMovement;
     private Rigidbody2D rb2D;
-    private BoarsChaseZone boarsChaseZone;
+    private EnemyZone boarsChaseZone;
 
     private bool outOfRange = false;
     private float chaseCounter;
@@ -19,7 +19,7 @@ public class BoarChaseBehavior : StateMachineBehaviour
         if (rb2D == null)
             rb2D = animator.GetComponentInParent<Rigidbody2D>();
         if (boarsChaseZone == null)
-            boarsChaseZone = animator.transform.parent.GetChild(2).GetComponent<BoarsChaseZone>();
+            boarsChaseZone = animator.transform.parent.GetChild(2).GetComponent<EnemyZone>();
         if (boarMovement.IsPlayerOnTheRightSide())
             rb2D.velocity = new Vector2(boarMovement.ChaseSpeed, rb2D.velocity.y);
         else
@@ -32,7 +32,7 @@ public class BoarChaseBehavior : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (!boarsChaseZone.PlayerInChaseZone)
+        if (!boarsChaseZone.PlayerInZone)
             outOfRange = true;
 
         if (boarMovement.IsFacingRight && !boarMovement.IsPlayerOnTheRightSide())

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] Slider healthSlider;
+    [SerializeField] GameObject DeathFX;
 
     public float MaxHealth;
  
@@ -27,12 +28,24 @@ public class EnemyHealth : MonoBehaviour
     {
         healthSlider.maxValue = MaxHealth;
         Health = MaxHealth;
+        healthSlider.gameObject.SetActive(false);
     }
 
     public void TakeDamage(float damage)
     {
         Health -= damage;
         if (Health <= 0)
-           transform.parent.gameObject.SetActive(false);
+        {
+            transform.parent.gameObject.SetActive(false);
+            if (DeathFX != null)
+                Instantiate(DeathFX, transform.position, DeathFX.transform.rotation);
+        }
+        healthSlider.gameObject.SetActive(true);
+        //Invoke("HideHealthSlider", 1f);
+    }
+
+    void HideHealthSlider()
+    {
+        //healthSlider.gameObject.SetActive(false);
     }
 }

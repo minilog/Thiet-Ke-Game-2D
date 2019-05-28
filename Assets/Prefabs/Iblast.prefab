@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 6774005154464680350}
   - component: {fileID: 6774005154464680351}
   - component: {fileID: 6774005154464680348}
+  - component: {fileID: 5989785233203483490}
   m_Layer: 0
   m_Name: Iblast
   m_TagString: Untagged
@@ -207,5 +208,24 @@ MonoBehaviour:
     type: 3}
   ExplosionTransfrom: {fileID: 6031864522648865766}
   TimeAlive: 1.5
-  FireAudioCip: {fileID: 8300000, guid: 8ec32e085dc500243a1df3680f164189, type: 3}
-  Volume: 0.1
+--- !u!50 &5989785233203483490
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6774005154464680321}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 1
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
