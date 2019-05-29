@@ -207,7 +207,7 @@ MonoBehaviour:
   ExplosionFXPrefab: {fileID: 8230089621446362605, guid: f653eb471ab7e0645a071176070fcc8a,
     type: 3}
   ExplosionTransfrom: {fileID: 6031864522648865766}
-  TimeAlive: 1.5
+  TimeAlive: 0.55
 --- !u!50 &5989785233203483490
 Rigidbody2D:
   serializedVersion: 4
