@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraController1 : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
     // FOLLOW PLAYER
     [SerializeField] GameObject followTarget;
