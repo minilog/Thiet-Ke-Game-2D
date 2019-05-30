@@ -6,9 +6,11 @@ public class EnemyDamage : MonoBehaviour
 {
     public float Damage = 10;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    bool playerInRange = false;
+
+    private void Update()
     {
-        if (collision.tag == "Player")
+        if (playerInRange)
         {
             bool isFromTheRightSide;
 
@@ -18,6 +20,39 @@ public class EnemyDamage : MonoBehaviour
                 isFromTheRightSide = false;
 
             ObjectsInGame.PlayerHealth.CheckTakeDamage(Damage, isFromTheRightSide);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            playerInRange = true;
+
+            bool isFromTheRightSide;
+
+            if (ObjectsInGame.PlayerHealth.transform.position.x < transform.position.x)
+                isFromTheRightSide = true;
+            else
+                isFromTheRightSide = false;
+
+            ObjectsInGame.PlayerHealth.CheckTakeDamage(Damage, isFromTheRightSide);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            playerInRange = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            playerInRange = false;
         }
     }
 }

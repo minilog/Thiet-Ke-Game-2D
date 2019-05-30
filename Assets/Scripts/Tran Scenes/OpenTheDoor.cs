@@ -14,16 +14,31 @@ public class OpenTheDoor : MonoBehaviour
 
     bool playerInRange = false;
 
+    [Space]
+    public bool RequireKey = false;
+
     private void Update()
     {
         if (playerInRange)
         {
             if (Input.GetKeyDown(OpenDoorKeyCode))
             {
-                //ObjectsInGame.ChangeSceneManager.ChangeToNextScene(NewSceneName);
-                StartCoroutine(ChangeToNextScene(NewSceneName, TimeForNewScene));
+                if (!RequireKey)
+                {
+                    //ObjectsInGame.ChangeSceneManager.ChangeToNextScene(NewSceneName);
+                    StartCoroutine(ChangeToNextScene(NewSceneName, TimeForNewScene));
 
-                animator.SetTrigger("Open");
+                    animator.SetTrigger("Open");
+                }
+                else
+                {
+                    if (ObjectsInGame.CanvasController.HaveKey)
+                    {
+                        StartCoroutine(ChangeToNextScene(NewSceneName, TimeForNewScene));
+
+                        animator.SetTrigger("Open");
+                    }
+                }
             }
         }
     }

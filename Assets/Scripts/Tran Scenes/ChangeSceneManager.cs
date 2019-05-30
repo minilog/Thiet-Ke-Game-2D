@@ -62,5 +62,7 @@ public class ChangeSceneManager : MonoBehaviour
 
         goingToNewScene = true;
         chagingSceneCounter = changeSceneTime;
+
+        ObjectsInGame.PlayerHealth.CheckSpawnPlayer();
     }
 }

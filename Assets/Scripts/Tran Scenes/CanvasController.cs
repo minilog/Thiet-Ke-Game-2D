@@ -15,7 +15,36 @@ public class CanvasController : MonoBehaviour
 
     private bool Changing = false;
 
+    [SerializeField] GameObject keyImage;
+    bool _haveKey = false;
+
+    public bool HaveKey
+    {
+        set
+        {
+            _haveKey = value;
+            keyImage.gameObject.SetActive(_haveKey);
+        }
+
+        get { return _haveKey; }
+    }
+
+    private void Awake()
+    {
+        ObjectsInGame.CanvasController = this;
+    }
+
+    private void Start()
+    {
+        HaveKey = false;
+    }
+
     private void Update()
+    {
+        UpdateScreenColor();
+    }
+
+    private void UpdateScreenColor()
     {
         if (Changing)
         {

@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     [Space]
     public float WalkXVelocity;
     public float JumpXVelocity;
-    public float JumpYVelocity; 
+    public float JumpYVelocity;
 
     private bool readyForDoubleJump;
     public float StrikeTime;

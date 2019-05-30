@@ -13,12 +13,13 @@ public class BatRetreatBehavior : StateMachineBehaviour
         if (rb2D == null) rb2D = animator.GetComponentInParent<Rigidbody2D>();
 
         batMovement.FlipTo(batMovement.retreatDestination);
-        Vector3 vec = batMovement.retreatDestination.transform.position - batMovement.transform.position;
-        rb2D.velocity = (Vector2)vec.normalized * batMovement.ChaseSpeed;
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        Vector3 vec = batMovement.retreatDestination.transform.position - batMovement.transform.position;
+        rb2D.velocity = (Vector2)vec.normalized * batMovement.ChaseSpeed;
+
         if (batMovement.IntoTrigger)
             animator.Play("Bat Fly");
     }

@@ -36,7 +36,8 @@ public class EnemyHealth : MonoBehaviour
         Health -= damage;
         if (Health <= 0)
         {
-            transform.parent.gameObject.SetActive(false);
+            //transform.parent.gameObject.SetActive(false);
+            Destroy(transform.root.gameObject);
             if (DeathFX != null)
                 Instantiate(DeathFX, transform.position, DeathFX.transform.rotation);
         }
@@ -48,4 +49,5 @@ public class EnemyHealth : MonoBehaviour
     {
         //healthSlider.gameObject.SetActive(false);
     }
+
 }

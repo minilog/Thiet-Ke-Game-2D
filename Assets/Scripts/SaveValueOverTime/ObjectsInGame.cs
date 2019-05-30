@@ -4,6 +4,8 @@ using UnityEngine;
 
 public static class ObjectsInGame
 {
+    static public bool Key = true;
+
     static private SoundManager _soundManager;
     static public SoundManager SoundManager
     {
@@ -60,6 +62,17 @@ public static class ObjectsInGame
         {
             if (_changeSceneManager == null)
                 _changeSceneManager = value;
+        }
+    }
+
+    static private CanvasController _canvasController;
+    static public CanvasController CanvasController
+    {
+        get { return _canvasController; }
+        set
+        {
+            if (_canvasController == null)
+                _canvasController = value;
         }
     }
 }

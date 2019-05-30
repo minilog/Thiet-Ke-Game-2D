@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public float MaxHealth = 100;
     float _health;
     public float Health
     {
@@ -31,8 +33,8 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
-        healthSlider.maxValue = 100;
-        Health = 100;
+        healthSlider.maxValue = MaxHealth;
+        Health = MaxHealth;
     }
 
     private void Update()
@@ -74,5 +76,20 @@ public class PlayerHealth : MonoBehaviour
     {
         return (cantTakeDamageCounter <= 0 && !animator.GetCurrentAnimatorStateInfo(0).IsName("Player Strike") &&
             !animator.GetCurrentAnimatorStateInfo(0).IsName("Player Dash"));
+    }
+
+    public void PlayerDieAndRestartLevel()
+    {
+        gameObject.SetActive(false);
+        ObjectsInGame.ChangeSceneManager.ChangeToNextScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void CheckSpawnPlayer()
+    {
+        if (gameObject.activeSelf == false)
+        {
+            gameObject.SetActive(true);
+            Health = MaxHealth;
+        }
     }
 }
