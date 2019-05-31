@@ -9,6 +9,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] GameObject DeathFX;
 
     public float MaxHealth;
+    public bool StartActive = false;
  
     private float _health;
     public float Health
@@ -28,7 +29,7 @@ public class EnemyHealth : MonoBehaviour
     {
         healthSlider.maxValue = MaxHealth;
         Health = MaxHealth;
-        healthSlider.gameObject.SetActive(false);
+        healthSlider.gameObject.SetActive(StartActive);
     }
 
     public void TakeDamage(float damage)

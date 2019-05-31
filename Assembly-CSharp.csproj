@@ -72,6 +72,11 @@
     <Compile Include="Assets\Assets\Assets\Scripts\spawnDoor.cs" />
     <Compile Include="Assets\Assets\Assets\Scripts\sporeController.cs" />
     <Compile Include="Assets\Audio\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
+    <Compile Include="Assets\BossAttack1Behavior.cs" />
+    <Compile Include="Assets\BossIdleBehavior.cs" />
+    <Compile Include="Assets\BossJumpAttackBehavior.cs" />
+    <Compile Include="Assets\BossMovement.cs" />
+    <Compile Include="Assets\BossRunBehavior.cs" />
     <Compile Include="Assets\Scripts\Bounds.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraController.cs" />
     <Compile Include="Assets\Scripts\Destroy\DestroyMe.cs" />
@@ -133,7 +138,6 @@
     <Compile Include="Assets\Scripts\Tran Scenes\NewScene.cs" />
     <Compile Include="Assets\Scripts\Tran Scenes\OpenTheDoor.cs" />
     <None Include="Assets\Environment\(use6)\opp5_castle_tiles\environment\tiles\readme guides IMPORTANT.txt" />
-    <None Include="Assets\Sprites\BOSS\Read Me.txt" />
     <None Include="Assets\Sprites\Gothicvania Cemetery Artwork\about.txt" />
     <None Include="Assets\Audio\explosionsoundslite\readme.txt" />
     <None Include="Assets\Audio\Monster SFX - 111518\Notes.txt" />

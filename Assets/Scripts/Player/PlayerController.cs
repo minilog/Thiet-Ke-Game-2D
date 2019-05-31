@@ -65,10 +65,12 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
 
-        //if (Input.GetKeyDown(KeyCode.Q) && Time.timeScale == 1)
-        //    Time.timeScale = 0;
-        //else if (Input.GetKeyDown(KeyCode.Q) && Time.timeScale == 0)
-        //    Time.timeScale = 1f;
+        if (Input.GetKey(KeyCode.Q))
+        {
+            Time.timeScale = 0.1f;
+        }
+        else
+            Time.timeScale = 1;
 
         //if (DashCooldownCount > 0)
         //    DashCooldownCount -= Time.deltaTime;
