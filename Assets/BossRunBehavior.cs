@@ -43,7 +43,7 @@ public class BossRunBehavior : StateMachineBehaviour
         if (!bossMovement.ChaseZone.PlayerInZone)
             prepareIdle = true;
 
-        if (prepareIdle)
+        if (prepareIdle && prepareJump == false)
         {
             runToIdleCount -= Time.deltaTime;
             if (runToIdleCount <= 0)
@@ -60,19 +60,18 @@ public class BossRunBehavior : StateMachineBehaviour
         // Check Jump
         if (bossMovement.FacingRight && !bossMovement.IsPlayerOnTheRightSide() && bossMovement.DangerMode)
         {
-            animator.SetTrigger("Jump");
+            prepareJump = true;
         }
-        //    prepareJump = true;
 
-        //if (prepareJump)
-        //{
-        //    runToJumpCount -= Time.deltaTime;
-        //    if (runToJumpCount <= 0)
-        //    {
-        //        animator.SetTrigger("Jump");
-        //        animator.SetBool("Running", false);
-        //    }
-        //}
+        if (prepareJump)
+        {
+            runToJumpCount -= Time.deltaTime;
+            if (runToJumpCount <= 0)
+            {
+                animator.SetTrigger("Jump");
+                //animator.SetBool("Running", false);
+            }
+        }
 
         //if (bossMovement.AttackZone.PlayerInZone)
         //    prepareAttack = true;

@@ -1010,7 +1010,7 @@ MonoBehaviour:
   MaxIdleTime: 2
   MinRunToIdleTime: 0.25
   MaxRunToIdleTime: 0.5
-  RunToJumpTime: 0.2
+  RunToJumpTime: 0.08
   RunSpeed: 6
   JumpXSpeed: 4
   JumpYSpeed: 12
