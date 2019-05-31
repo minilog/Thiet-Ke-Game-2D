@@ -15,11 +15,13 @@ public class PlayerHealth : MonoBehaviour
         {
             _health = value;
             healthSlider.value = _health;
+            healthText.text = ((int)value).ToString() + "/" + ((int)MaxHealth).ToString();
         }
     }
 
     [SerializeField] Animator animator;
     [SerializeField] Slider healthSlider;
+    [SerializeField] Text healthText;
 
     public float cantTakeDamageTime;
     float cantTakeDamageCounter = 0;
@@ -90,6 +92,8 @@ public class PlayerHealth : MonoBehaviour
         {
             gameObject.SetActive(true);
             Health = MaxHealth;
+            PlayerStamina playerStamina = GetComponent<PlayerStamina>();
+            playerStamina.Stamina = playerStamina.MaxStamina;
         }
     }
 }

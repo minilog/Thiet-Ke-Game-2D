@@ -7,6 +7,8 @@ public class PlayerDashBehavior : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         ObjectsInGame.PlayerController.IsTrailing = true;
+
+
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

@@ -72,8 +72,6 @@
     <Compile Include="Assets\Assets\Assets\Scripts\spawnDoor.cs" />
     <Compile Include="Assets\Assets\Assets\Scripts\sporeController.cs" />
     <Compile Include="Assets\Audio\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
-    <Compile Include="Assets\HelperOpenBehavior.cs" />
-    <Compile Include="Assets\HelperScript.cs" />
     <Compile Include="Assets\Scripts\Bounds.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraController.cs" />
     <Compile Include="Assets\Scripts\Destroy\DestroyMe.cs" />
@@ -105,6 +103,8 @@
     <Compile Include="Assets\Scripts\Enemy\Skeleton\SkeletonMovement.cs" />
     <Compile Include="Assets\Scripts\Enemy\Skeleton\SkeletonRiseBehavior.cs" />
     <Compile Include="Assets\Scripts\Enemy\Skeleton\SkeletonWalkBehavior.cs" />
+    <Compile Include="Assets\Scripts\HelperOpenBehavior.cs" />
+    <Compile Include="Assets\Scripts\HelperScript.cs" />
     <Compile Include="Assets\Scripts\KeyPickup.cs" />
     <Compile Include="Assets\Scripts\Player\Behavior\PlayerAttackBehavior.cs" />
     <Compile Include="Assets\Scripts\Player\Behavior\PlayerCrouchAttackBehavior.cs" />
@@ -121,8 +121,10 @@
     <Compile Include="Assets\Scripts\Player\PlayerDamage.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerIblast.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerStamina.cs" />
     <Compile Include="Assets\Scripts\PositionInNewScene.cs" />
     <Compile Include="Assets\Scripts\SaveValueOverTime\ObjectsInGame.cs" />
+    <Compile Include="Assets\Scripts\SkillGUI.cs" />
     <Compile Include="Assets\Scripts\Sound\BackgroundMusic.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\Tran Scenes\CanvasController.cs" />
@@ -131,12 +133,12 @@
     <Compile Include="Assets\Scripts\Tran Scenes\NewScene.cs" />
     <Compile Include="Assets\Scripts\Tran Scenes\OpenTheDoor.cs" />
     <None Include="Assets\Environment\(use6)\opp5_castle_tiles\environment\tiles\readme guides IMPORTANT.txt" />
-    <None Include="Assets\Assets\Used in Game\Ninja Files\Read Me.txt" />
+    <None Include="Assets\Sprites\BOSS\Read Me.txt" />
     <None Include="Assets\Sprites\Gothicvania Cemetery Artwork\about.txt" />
     <None Include="Assets\Audio\explosionsoundslite\readme.txt" />
     <None Include="Assets\Audio\Monster SFX - 111518\Notes.txt" />
     <None Include="Assets\Music\Packs\Into the Fire\Into_the_Fire_ReadMe.txt" />
-    <None Include="Assets\Assets\Used in Game\Dragon Warrior Files\Read Me.txt" />
+    <None Include="Assets\Sprites\Dragon Warrior Files\Read Me.txt" />
     <Reference Include="Cinemachine">
       <HintPath>D:/Unity/Thiết Kế Game 2D/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>

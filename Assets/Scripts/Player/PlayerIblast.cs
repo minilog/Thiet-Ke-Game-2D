@@ -15,6 +15,8 @@ public class PlayerIblast : MonoBehaviour
         //Invoke("DestroyGameObject", TimeAlive);
         Destroy(gameObject, TimeAlive);
         ObjectsInGame.SoundManager.PlayPlayerAttackAudioClip();
+        PlayerStamina playerStamina = ObjectsInGame.PlayerController.gameObject.GetComponent<PlayerStamina>();
+        playerStamina.Stamina -= playerStamina.FireStamina;
     }
 
     private void Update()

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 // Movement & Animation
 public class PlayerController : MonoBehaviour
@@ -42,6 +43,12 @@ public class PlayerController : MonoBehaviour
     // About Flip
     public bool IsFacingRight { get; private set; } = false;
 
+    [Space]
+    public float DashCooldown = 2.5f;
+    public float DashCooldownCount = 0f;
+
+    PlayerStamina playerStamina;
+
     private void Awake()
     {
         // To reuse in game
@@ -52,15 +59,19 @@ public class PlayerController : MonoBehaviour
     {
         // Slower animation
         animator.speed = 0.66f;
+        playerStamina = GetComponent<PlayerStamina>();
     }
 
     private void Update()
     {
-        // Time Scale
-        //if (Input.GetKey(KeyCode.Q))
-        //    Time.timeScale = 0.1f;
-        //else
+
+        //if (Input.GetKeyDown(KeyCode.Q) && Time.timeScale == 1)
+        //    Time.timeScale = 0;
+        //else if (Input.GetKeyDown(KeyCode.Q) && Time.timeScale == 0)
         //    Time.timeScale = 1f;
+
+        //if (DashCooldownCount > 0)
+        //    DashCooldownCount -= Time.deltaTime;
 
 
         horizontalAxis = Input.GetAxis("Horizontal");
@@ -69,7 +80,11 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("Crouching", Input.GetKey(CrouchKeyCode));
         animator.SetBool("IsGrounded", checkGround.IsGrounded);
         animator.SetBool("Walking", horizontalAxis != 0);
-        animator.SetBool("Attack", Input.GetKey(AttackKeyCode));
+
+        if (playerStamina.IsEnoughStaminaForFire())
+            animator.SetBool("Attack", Input.GetKey(AttackKeyCode));
+        else
+            animator.SetBool("Attack", false);
 
         // Check flip & Dash, Strike, FlyKick
         if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Player Strike") &&
@@ -82,7 +97,25 @@ public class PlayerController : MonoBehaviour
             // ALway true in this States;
             animator.SetBool("Strike", Input.GetKeyDown(StrikeKeyCode));
             animator.SetBool("FlyKick", Input.GetKeyDown(FlyKickKeyCode));
-            animator.SetBool("Dash", Input.GetKeyDown(DashKeyCode));
+
+            //if (DashCooldownCount <= 0 && Input.GetKeyDown(DashKeyCode))
+            //{
+            //    animator.SetBool("Dash", true);
+            //    DashCooldownCount = DashCooldown;
+            //}
+            //else
+            //{
+            //    animator.SetBool("Dash", false);
+            //}
+
+            if (Input.GetKeyDown(DashKeyCode) && playerStamina.CheckDashStamina())
+            {
+                animator.SetBool("Dash", true);
+            }
+            else
+            {
+                animator.SetBool("Dash", false);
+            }
         }
 
 

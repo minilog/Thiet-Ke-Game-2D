@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 48943197602259307}
   - component: {fileID: 48943197602259316}
   - component: {fileID: 48943197602259317}
+  - component: {fileID: 7665044319471023118}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -201,7 +202,7 @@ MonoBehaviour:
   normalBoxCollider: {fileID: 48943197602259304}
   crouchBoxCollider: {fileID: 48943197602259305}
   trailRenderer: {fileID: 7706314988067081575}
-  WalkXVelocity: 5.5
+  WalkXVelocity: 7
   JumpXVelocity: 5.5
   JumpYVelocity: 12.2
   StrikeTime: 0.42
@@ -216,6 +217,8 @@ MonoBehaviour:
   StrikeKeyCode: 101
   FlyKickKeyCode: 102
   DashKeyCode: 324
+  DashCooldown: 2
+  DashCooldownCount: 0
 --- !u!114 &48943197602259316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,6 +251,23 @@ MonoBehaviour:
     type: 3}
   ShootPoint: {fileID: 7706314987447895243}
   CrouchShootPoint: {fileID: 7706314988350061232}
+--- !u!114 &7665044319471023118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48943197602259318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16a21fd7dad478b42ba1a13027d66e6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  staminaSlider: {fileID: 0}
+  MaxStamina: 100
+  DashStamina: 50
+  FireStamina: 10
+  StaminaPerSecs: 15
 --- !u!1 &7706314986959682864
 GameObject:
   m_ObjectHideFlags: 0
