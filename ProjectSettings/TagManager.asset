@@ -46,6 +46,9 @@ TagManager:
   - name: Trail
     uniqueID: 3790085479
     locked: 0
+  - name: Stuff
+    uniqueID: 1732912735
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

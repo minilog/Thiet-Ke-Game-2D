@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HelperScript : MonoBehaviour
 {
-    [SerializeField] GameObject ImageGO;
+    //[SerializeField] GameObject ImageGO;
     Animator animator;
 
     private void Start()

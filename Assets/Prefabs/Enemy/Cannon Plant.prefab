@@ -1012,11 +1012,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4262749977485103152, guid: f308e1d728c255644bc74d14a09f480f,
         type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4262749977485103152, guid: f308e1d728c255644bc74d14a09f480f,
-        type: 3}
       propertyPath: InitialModule.startSpeed.minMaxState
       value: 3
       objectReference: {fileID: 0}
@@ -1029,6 +1024,11 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4262749977485103152, guid: f308e1d728c255644bc74d14a09f480f,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f308e1d728c255644bc74d14a09f480f, type: 3}
@@ -1053,12 +1053,12 @@ PrefabInstance:
     - target: {fileID: 1060747480038401967, guid: 90b206bd66c5f2644b8fba098cb8451c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 1060747480038401967, guid: 90b206bd66c5f2644b8fba098cb8451c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.29
       objectReference: {fileID: 0}
     - target: {fileID: 1060747480038401967, guid: 90b206bd66c5f2644b8fba098cb8451c,
         type: 3}

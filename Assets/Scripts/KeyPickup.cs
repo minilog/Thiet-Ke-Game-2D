@@ -10,7 +10,7 @@ public class KeyPickup : MonoBehaviour
     private void Start()
     {
         if (ObjectsInGame.Key == false)
-            gameObject.SetActive(false);
+            gameObject.transform.parent.gameObject.SetActive(false);
     }
 
     void Update()
@@ -22,7 +22,7 @@ public class KeyPickup : MonoBehaviour
                 ObjectsInGame.CanvasController.HaveKey = true;
                 ObjectsInGame.Key = false;
 
-                Destroy(gameObject);
+                gameObject.transform.parent.gameObject.SetActive(false);
             }
         }
     }
