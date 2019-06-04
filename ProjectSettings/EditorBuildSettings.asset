@@ -20,9 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Lv.02.1.unity
     guid: fb302f4512e050c4aaa6f5f382e714a8
-  - enabled: 1
-    path: Assets/Lv.02.2.unity
-    guid: 01f1156f46e3f3b4a9f3d9b2fd24a895
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Lv.03.unity
     guid: dacfadde2961ead4c874ba52c2b06531
@@ -32,9 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Lv.04.1.unity
     guid: 896405bab04e26849817e39902276a4d
-  - enabled: 1
-    path: Assets/Lv.04.2.unity
-    guid: 56a36284007d0754d86733ae5307be77
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Lv.05.unity
     guid: e9ac817225df5ea4daa4b42754366b8b

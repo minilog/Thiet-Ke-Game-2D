@@ -46,9 +46,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.16400743, y: 0.19127941}
+  m_Offset: {x: 0.027831435, y: -0.10212225}
   serializedVersion: 2
-  m_Radius: 1.080548
+  m_Radius: 0.59530854
 --- !u!114 &1060747480038401969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,4 +75,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 0}
-  MaxHealth: 100
+  DeathFX: {fileID: 39488856548963548, guid: bd15931010c86ca49a1fab1068c405fb, type: 3}
+  MaxHealth: 30
+  StartActive: 0

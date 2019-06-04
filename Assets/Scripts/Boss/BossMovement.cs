@@ -44,10 +44,6 @@ public class BossMovement : MonoBehaviour
             DangerMode = true;
         }
 
-        if (Input.GetKey(KeyCode.Q))
-            Time.timeScale = 0.1f;
-        else
-            Time.timeScale = 1f;
     }
 
     public void Flip()

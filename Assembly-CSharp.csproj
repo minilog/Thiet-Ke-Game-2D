@@ -72,6 +72,7 @@
     <Compile Include="Assets\Assets\Assets\Scripts\spawnDoor.cs" />
     <Compile Include="Assets\Assets\Assets\Scripts\sporeController.cs" />
     <Compile Include="Assets\Audio\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
+    <Compile Include="Assets\HelperScript3.cs" />
     <Compile Include="Assets\Scripts\Boss\BossAttack1Behavior.cs" />
     <Compile Include="Assets\Scripts\Boss\BossIdleBehavior.cs" />
     <Compile Include="Assets\Scripts\Boss\BossJumpAttackBehavior.cs" />
@@ -140,12 +141,13 @@
     <Compile Include="Assets\Scripts\Tran Scenes\DontDestroyOnLoad.cs" />
     <Compile Include="Assets\Scripts\Tran Scenes\NewScene.cs" />
     <Compile Include="Assets\Scripts\Tran Scenes\OpenTheDoor.cs" />
+    <Compile Include="Assets\Spike.cs" />
     <None Include="Assets\Sprites\ENVIRONMENT\(use6)\opp5_castle_tiles\environment\tiles\readme guides IMPORTANT.txt" />
     <None Include="Assets\Sprites\Gothicvania Cemetery Artwork\about.txt" />
     <None Include="Assets\Audio\explosionsoundslite\readme.txt" />
     <None Include="Assets\Audio\Monster SFX - 111518\Notes.txt" />
     <None Include="Assets\Music\Packs\Into the Fire\Into_the_Fire_ReadMe.txt" />
-    <None Include="Assets\Sprites\Dragon Warrior Files\Read Me.txt" />
+    <None Include="Assets\Sprites\Player\Read Me.txt" />
     <Reference Include="Cinemachine">
       <HintPath>D:/Unity/Thiết Kế Game 2D/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>

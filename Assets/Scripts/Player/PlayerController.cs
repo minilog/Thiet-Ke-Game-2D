@@ -68,6 +68,7 @@ public class PlayerController : MonoBehaviour
         //    DashCooldownCount -= Time.deltaTime;
 
 
+
         horizontalAxis = Input.GetAxis("Horizontal");
 
         // Set Animation Parameters
