@@ -73,7 +73,16 @@ public class PlayerController : MonoBehaviour
 
         // Set Animation Parameters
         animator.SetBool("Crouching", Input.GetKey(CrouchKeyCode));
-        animator.SetBool("IsGrounded", checkGround.IsGrounded);
+
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player Jump") && Rb2D.velocity.y > 0)
+        {
+            animator.SetBool("IsGrounded", false);
+        }
+        else
+        {
+            animator.SetBool("IsGrounded", checkGround.IsGrounded);
+        }
+
         animator.SetBool("Walking", horizontalAxis != 0);
 
         if (playerStamina.IsEnoughStaminaForFire())
@@ -129,7 +138,9 @@ public class PlayerController : MonoBehaviour
             Rb2D.velocity = new Vector2(horizontalAxis * WalkXVelocity, Rb2D.velocity.y);
         // Jump
         else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player Jump"))
+        {
             Rb2D.velocity = new Vector2(horizontalAxis * JumpXVelocity, Rb2D.velocity.y);
+        }
         // Jump Attack
         else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player Jump Attack"))
             Rb2D.velocity = new Vector2(horizontalAxis * JumpXVelocity, Rb2D.velocity.y);
