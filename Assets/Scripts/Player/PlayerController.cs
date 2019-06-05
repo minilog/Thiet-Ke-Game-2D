@@ -51,6 +51,13 @@ public class PlayerController : MonoBehaviour
 
     PlayerStamina playerStamina;
 
+    [Space]
+    [SerializeField] GameObject cameraTarget;
+    public float MaxTargetX = 4;
+    public float TargetMoveAddition = 2;
+    public float TargetMoveAddition2 = 1;
+    public float TargetMoveSpeed = 2f;
+
     private void Awake()
     {
         // To reuse in game
@@ -68,6 +75,18 @@ public class PlayerController : MonoBehaviour
     {
         //if (DashCooldownCount > 0)
         //    DashCooldownCount -= Time.deltaTime;
+        //if (Input.GetKey(KeyCode.Q))
+        //    Time.timeScale = 0.01f;
+        //else
+        //    Time.timeScale = 1;
+
+        // TARGET
+        Vector3 targetPos = cameraTarget.transform.localPosition;
+        targetPos.x += Mathf.Abs(Input.GetAxisRaw("Horizontal")) * (MaxTargetX -  targetPos.x) * TargetMoveSpeed * Time.deltaTime;
+        if (targetPos.x > MaxTargetX)
+            targetPos.x = MaxTargetX;
+
+        cameraTarget.transform.localPosition = targetPos;
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -203,18 +222,30 @@ public class PlayerController : MonoBehaviour
         if (horizontalAxis < 0 && IsFacingRight)
         {
             IsFacingRight = false;
-            Vector3 scale = transform.localScale;
-            scale.x = -scale.x;
-            transform.localScale = scale;
+            Flip();
         }
         else if (horizontalAxis > 0 && !IsFacingRight)
         {
             IsFacingRight = true;
-            Vector3 scale = transform.localScale;
-            scale.x = -scale.x;
-            transform.localScale = scale;
+            Flip();
         }
     } 
+
+    void Flip()
+    {
+        Vector3 scale = transform.localScale;
+        scale.x = -scale.x;
+        transform.localScale = scale;
+
+        // TARGET
+        Vector3 targetPos = cameraTarget.transform.localPosition;
+        targetPos.x = -targetPos.x;
+        if (targetPos.x < 0)
+            targetPos.x += TargetMoveAddition;
+        else
+            targetPos.x += TargetMoveAddition2;
+        cameraTarget.transform.localPosition = targetPos;
+    }
 
     // Use for Crouching
     public void EnableNormalBoxCollider()

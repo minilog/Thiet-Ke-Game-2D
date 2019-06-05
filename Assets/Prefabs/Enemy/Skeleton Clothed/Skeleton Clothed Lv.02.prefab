@@ -388,9 +388,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.12835073, y: -0.594182}
+  m_Offset: {x: 0.12835073, y: -0.7660693}
   serializedVersion: 2
-  m_Radius: 0.94383025
+  m_Radius: 0.771943
 --- !u!1 &9164954495743269663
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,11 +530,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6020529410600972707, guid: f42a9c45ad001644eaaa7070d3fa69e2,
         type: 3}
-      propertyPath: m_Size.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6020529410600972707, guid: f42a9c45ad001644eaaa7070d3fa69e2,
-        type: 3}
       propertyPath: m_Offset.x
       value: -5
       objectReference: {fileID: 0}
@@ -542,6 +537,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Offset.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020529410600972707, guid: f42a9c45ad001644eaaa7070d3fa69e2,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f42a9c45ad001644eaaa7070d3fa69e2, type: 3}
@@ -574,22 +574,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy Damage & Health
-      objectReference: {fileID: 0}
-    - target: {fileID: 1060747480038401968, guid: 90b206bd66c5f2644b8fba098cb8451c,
-        type: 3}
-      propertyPath: healthSlider
-      value: 
-      objectReference: {fileID: 401789764083174981}
-    - target: {fileID: 1060747480038401968, guid: 90b206bd66c5f2644b8fba098cb8451c,
-        type: 3}
-      propertyPath: DeathFX
-      value: 
-      objectReference: {fileID: 39488856548963548, guid: bd15931010c86ca49a1fab1068c405fb,
-        type: 3}
-    - target: {fileID: 1060747480038401968, guid: 90b206bd66c5f2644b8fba098cb8451c,
-        type: 3}
-      propertyPath: MaxHealth
-      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 1060747480038401967, guid: 90b206bd66c5f2644b8fba098cb8451c,
         type: 3}
@@ -646,30 +630,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1060747480038401967, guid: 90b206bd66c5f2644b8fba098cb8451c,
+    - target: {fileID: 1060747480038401966, guid: 90b206bd66c5f2644b8fba098cb8451c,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1060747480038401967, guid: 90b206bd66c5f2644b8fba098cb8451c,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
+      propertyPath: m_Offset.x
+      value: 0.026871085
       objectReference: {fileID: 0}
     - target: {fileID: 1060747480038401966, guid: 90b206bd66c5f2644b8fba098cb8451c,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.53426886
+      value: -0.19049436
       objectReference: {fileID: 0}
     - target: {fileID: 1060747480038401966, guid: 90b206bd66c5f2644b8fba098cb8451c,
         type: 3}
       propertyPath: m_Radius
-      value: 0.59116226
+      value: 0.88024503
       objectReference: {fileID: 0}
-    - target: {fileID: 1060747480038401966, guid: 90b206bd66c5f2644b8fba098cb8451c,
+    - target: {fileID: 1060747480038401968, guid: 90b206bd66c5f2644b8fba098cb8451c,
         type: 3}
-      propertyPath: m_Offset.x
-      value: 0.08156282
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 401789764083174981}
+    - target: {fileID: 1060747480038401968, guid: 90b206bd66c5f2644b8fba098cb8451c,
+        type: 3}
+      propertyPath: MaxHealth
+      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90b206bd66c5f2644b8fba098cb8451c, type: 3}
@@ -755,21 +739,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Value
       value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 1691829051547132782, guid: e258a613f19edc347898214fda7c1f87,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8045640187060451319, guid: e258a613f19edc347898214fda7c1f87,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8045640187060451319, guid: e258a613f19edc347898214fda7c1f87,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e258a613f19edc347898214fda7c1f87, type: 3}

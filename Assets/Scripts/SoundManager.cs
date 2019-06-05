@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    [SerializeField] GameObject theCamera;
+    //[SerializeField] GameObject theCamera;
 
     [Space]
     [SerializeField] AudioSource backgroundAS;
@@ -41,9 +41,9 @@ public class SoundManager : MonoBehaviour
         soundEffectAS.volume = soundEffectVolume;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
-        transform.position = theCamera.transform.position;
+        //transform.position = theCamera.transform.position;
     }
 
     public void PlayPlayerJumpAudioClip()

@@ -672,16 +672,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Damage & Health
       objectReference: {fileID: 0}
-    - target: {fileID: 1060747480038401968, guid: 90b206bd66c5f2644b8fba098cb8451c,
-        type: 3}
-      propertyPath: healthSlider
-      value: 
-      objectReference: {fileID: 3140114972576611161}
-    - target: {fileID: 1060747480038401968, guid: 90b206bd66c5f2644b8fba098cb8451c,
-        type: 3}
-      propertyPath: MaxHealth
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 1060747480038401967, guid: 90b206bd66c5f2644b8fba098cb8451c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -745,12 +735,22 @@ PrefabInstance:
     - target: {fileID: 1060747480038401966, guid: 90b206bd66c5f2644b8fba098cb8451c,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.53426886
+      value: -0.21372318
       objectReference: {fileID: 0}
     - target: {fileID: 1060747480038401966, guid: 90b206bd66c5f2644b8fba098cb8451c,
         type: 3}
       propertyPath: m_Radius
-      value: 0.59116226
+      value: 0.9117079
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060747480038401968, guid: 90b206bd66c5f2644b8fba098cb8451c,
+        type: 3}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 3140114972576611161}
+    - target: {fileID: 1060747480038401968, guid: 90b206bd66c5f2644b8fba098cb8451c,
+        type: 3}
+      propertyPath: MaxHealth
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90b206bd66c5f2644b8fba098cb8451c, type: 3}
