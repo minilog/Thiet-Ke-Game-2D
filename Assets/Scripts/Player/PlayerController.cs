@@ -67,6 +67,9 @@ public class PlayerController : MonoBehaviour
         //if (DashCooldownCount > 0)
         //    DashCooldownCount -= Time.deltaTime;
 
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
 
 
         horizontalAxis = Input.GetAxis("Horizontal");

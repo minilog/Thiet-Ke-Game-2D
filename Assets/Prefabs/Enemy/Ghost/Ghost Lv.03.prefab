@@ -365,7 +365,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 7539935254566083337}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8ec4560bf356b4149b4bb6abd6c6b124, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -489,16 +489,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Damage & Health
       objectReference: {fileID: 0}
-    - target: {fileID: 1060747480038401968, guid: 90b206bd66c5f2644b8fba098cb8451c,
-        type: 3}
-      propertyPath: healthSlider
-      value: 
-      objectReference: {fileID: 4723441019430078144}
-    - target: {fileID: 1060747480038401968, guid: 90b206bd66c5f2644b8fba098cb8451c,
-        type: 3}
-      propertyPath: MaxHealth
-      value: 40
-      objectReference: {fileID: 0}
     - target: {fileID: 1060747480038401967, guid: 90b206bd66c5f2644b8fba098cb8451c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -553,6 +543,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060747480038401968, guid: 90b206bd66c5f2644b8fba098cb8451c,
+        type: 3}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 4723441019430078144}
+    - target: {fileID: 1060747480038401968, guid: 90b206bd66c5f2644b8fba098cb8451c,
+        type: 3}
+      propertyPath: MaxHealth
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90b206bd66c5f2644b8fba098cb8451c, type: 3}
@@ -638,6 +638,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Value
       value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 8045640187060451319, guid: e258a613f19edc347898214fda7c1f87,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8045640187060451319, guid: e258a613f19edc347898214fda7c1f87,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e258a613f19edc347898214fda7c1f87, type: 3}

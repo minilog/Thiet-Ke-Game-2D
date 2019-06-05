@@ -5001,7 +5001,7 @@ PrefabInstance:
     - target: {fileID: 7665044319471023118, guid: 1b656fac8b2d7594d9231c9de7cf21e5,
         type: 3}
       propertyPath: DashStamina
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 48943197602259311, guid: 1b656fac8b2d7594d9231c9de7cf21e5,
         type: 3}
