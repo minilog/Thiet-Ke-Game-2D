@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     public float FlyKickAttackXVelocity;
     public float DashXVelocity = 20f;
 
+    public float MaxFallSpeed = 20f;
+
     [Space]
     // Keycode
     public KeyCode JumpKeyCode,
@@ -70,7 +72,10 @@ public class PlayerController : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
 
-
+        if (Rb2D.velocity.y <= -MaxFallSpeed)
+        {
+            Rb2D.velocity = new Vector2(Rb2D.velocity.x, -MaxFallSpeed);
+        }
 
         horizontalAxis = Input.GetAxis("Horizontal");
 

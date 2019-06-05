@@ -17,13 +17,13 @@ public class KeyPickup : MonoBehaviour
     {
         if (playerInRange)
         {
-            if (Input.GetKeyDown(PickupKeyCode))
-            {
-                ObjectsInGame.CanvasController.HaveKey = true;
-                ObjectsInGame.Key = false;
+            //if (Input.GetKeyDown(PickupKeyCode))
+            //{
+            ObjectsInGame.CanvasController.HaveKey = true;
+            ObjectsInGame.Key = false;
 
-                gameObject.transform.parent.gameObject.SetActive(false);
-            }
+            gameObject.transform.parent.gameObject.SetActive(false);
+            //}
         }
     }
 

@@ -12,7 +12,12 @@ public class PositionInNewScene : MonoBehaviour
     void Start()
     {
         if (Point == PlayerAppearPoint)
+        {
             ObjectsInGame.PlayerController.transform.position = transform.position + PositionOffset;
+
+            Vector3 playerPos = ObjectsInGame.PlayerController.transform.position;
+            Camera.main.transform.position = new Vector3(playerPos.x, playerPos.y, Camera.main.transform.position.z);
+        }
     }
 
     static public void SetValueForNewScene(int point, Vector3 offset)

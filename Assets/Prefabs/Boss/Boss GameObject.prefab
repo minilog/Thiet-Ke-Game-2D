@@ -337,19 +337,20 @@ MonoBehaviour:
   checkGround: {fileID: 2317901536568489175}
   animator: {fileID: 2317901536177524532}
   enemyHealth: {fileID: 3355849246320293424}
-  WaitingToAttackTime: 0.25
+  WaitingToAttackTime: 0.1
   MinIdleTime: 0.5
-  MaxIdleTime: 1
+  MaxIdleTime: 0.75
   MinRunToIdleTime: 0.25
   MaxRunToIdleTime: 0.4
   RunToJumpTime: 0
-  StrikeRate: 50
+  StrikeRate: 45
   RunSpeed: 6
+  RunSpeedDangerMode: 9
   JumpXSpeed: 3.5
   JumpYSpeed: 12
   DangerMode: 1
-  HPDangerMode: 50
-  StrikeSpeed: 18
+  HPDangerMode: 66
+  StrikeSpeed: 19
 --- !u!1 &2317901536478804461
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,7 +995,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 2317901535986758534}
   DeathFX: {fileID: 39488856548963548, guid: bd15931010c86ca49a1fab1068c405fb, type: 3}
-  MaxHealth: 100
+  MaxHealth: 320
   StartActive: 1
 --- !u!1 &8333876695457722667
 GameObject:

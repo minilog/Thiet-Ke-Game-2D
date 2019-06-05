@@ -21,9 +21,11 @@ public class BossMovement : MonoBehaviour
 
     [Space]
     public float RunSpeed = 4f;
+    public float RunSpeedDangerMode = 7f;
     public float JumpXSpeed = 6f;
     public float JumpYSpeed = 6f;
     public bool DangerMode = true;
+    [Range(0, 100)]
     public float HPDangerMode = 50;
     public float StrikeSpeed = 10f;
 
@@ -39,9 +41,10 @@ public class BossMovement : MonoBehaviour
     {
         animator.SetBool("IsGround", checkGround.IsGrounded);
 
-        if (enemyHealth.Health <= HPDangerMode)
+        if (enemyHealth.Health <= (HPDangerMode / 100f) * enemyHealth.MaxHealth)
         {
             DangerMode = true;
+            RunSpeed = RunSpeedDangerMode;
         }
 
     }

@@ -6,8 +6,6 @@ public class CameraController : MonoBehaviour
 {
     // FOLLOW PLAYER
     [SerializeField] GameObject followTarget;
-    public float boundX = 2.0f;
-    public float boundY = 1.5f;
 
     // BOUNDS
     private BoxCollider2D boundBox;
@@ -17,6 +15,11 @@ public class CameraController : MonoBehaviour
     private float halfHeight;
     private float halfWidth;
 
+    Rigidbody2D rb2D;
+    [Space]
+    public float SpeedFollow = 2f;
+    public float SpeedFollowY = 2f;
+
     private void Start()
     {
         FindBounds();
@@ -25,6 +28,8 @@ public class CameraController : MonoBehaviour
         theCamera = GetComponent<Camera>();
         halfHeight = theCamera.orthographicSize;
         halfWidth = halfHeight * Screen.width / Screen.height;
+
+        rb2D = GetComponent<Rigidbody2D>();
     }
 
     private void LateUpdate()
@@ -38,6 +43,9 @@ public class CameraController : MonoBehaviour
         float clampedY = Mathf.Clamp(transform.position.y, minBounds.y + halfHeight, maxBounds.y - halfHeight);
         if (clampedY < minBounds.y + halfHeight)
             clampedY = minBounds.y + halfHeight;
+
+        //if (clampedX )
+
         transform.position = new Vector3(clampedX, clampedY, transform.position.z);
     }
 
@@ -45,37 +53,10 @@ public class CameraController : MonoBehaviour
     {
         Vector3 targetPos = new Vector3(followTarget.transform.position.x, followTarget.transform.position.y, transform.position.z);
 
-        //Vector3 delta = Vector2.zero;
+        Vector3 v = targetPos - transform.position;
+        rb2D.velocity = new Vector2(v.x * SpeedFollow, v.y * SpeedFollowY);
 
-        //float dx = targetPos.x - transform.position.x;
-        //if (dx > boundX || dx < -boundX)
-        //{
-        //    if (transform.position.x < targetPos.x)
-        //    {
-        //        delta.x = dx - boundX;
-        //    }
-        //    else
-        //    {
-        //        delta.x = dx + boundX;
-        //    }
-        //}
-
-        //float dy = targetPos.y - transform.position.y;
-        //if (dy > boundY || dy < -boundY)
-        //{
-        //    if (transform.position.y < targetPos.y)
-        //    {
-        //        delta.y = dy - boundY;
-        //    }
-        //    else
-        //    {
-        //        delta.y = dy + boundY;
-        //    }
-        //}
-
-        //transform.position = transform.position + delta;
-
-        transform.position = targetPos;
+        //transform.position = targetPos;
     }
 
     private void FindBounds()

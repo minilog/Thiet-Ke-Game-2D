@@ -43,9 +43,19 @@ public class PlayerHealth : MonoBehaviour
     {
         // Update -> Animation -> TriggerEnter
 
+        if (Input.GetKeyDown(KeyCode.F10))
+        {
+            CheckTakeDamage(100, true);
+        }
+
         if (cantTakeDamageCounter > 0)
         {
             cantTakeDamageCounter -= Time.deltaTime;
+        }
+
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            Health = MaxHealth;
         }
 
         if (Health <= 0)
@@ -53,7 +63,7 @@ public class PlayerHealth : MonoBehaviour
             animator.Play("Player Die");
         else
             // Change to animation Hurt
-            animator.SetFloat("CanNotTakeDamage", cantTakeDamageCounter);
+            animator.SetFloat("CanNotTakeDamage", cantTakeDamageCounter);   
     }
 
     public void CheckTakeDamage(float damage, bool isFromTheRightSide)
