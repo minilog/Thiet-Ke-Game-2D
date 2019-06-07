@@ -12,15 +12,16 @@ public class GhostRetreatBehavior : StateMachineBehaviour
         if (ghostMovement == null) ghostMovement = animator.GetComponentInParent<GhostMovement>();
         if (rb2D == null) rb2D = animator.GetComponentInParent<Rigidbody2D>();
 
+        ghostMovement.Destination.position = ghostMovement.FirstPosition;
         ghostMovement.FlipTo(ghostMovement.Destination);
 
-        Vector3 vec = ghostMovement.Destination.position - animator.transform.parent.transform.position;
-        rb2D.velocity = (Vector2)vec.normalized * ghostMovement.ChaseSpeed;
+ 
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
+        Vector3 vec = ghostMovement.Destination.position - animator.transform.parent.transform.position;
+        rb2D.velocity = (Vector2)vec.normalized * ghostMovement.ChaseSpeed;
 
         if (ghostMovement.IntoTrigger)
         {

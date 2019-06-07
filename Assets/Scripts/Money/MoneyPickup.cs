@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class MoneyPickup : MonoBehaviour
 {
-
-
     [SerializeField] Object floatingMoneyPrefab;
     [SerializeField] Rigidbody2D rb2D;
     [Space]

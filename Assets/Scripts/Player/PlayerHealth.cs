@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public class PlayerHealth : MonoBehaviour
 {
+    [SerializeField] GameObject FloatingNumberPrefab;
+    [Space]
     public float MaxHealth = 100;
     float _health;
     public float Health
@@ -27,6 +30,11 @@ public class PlayerHealth : MonoBehaviour
     float cantTakeDamageCounter = 0;
 
     public Vector2 HurtDirection { get; private set; }
+
+    private void OnValidate()
+    {
+        FloatingNumberPrefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Effect/Player Floating Number.prefab", typeof(GameObject)) as GameObject;
+    }
 
     private void Awake()
     {
@@ -70,6 +78,8 @@ public class PlayerHealth : MonoBehaviour
     {
         if (CanTakeDamage())
         {
+            damage = (int)Random.Range(damage - 1, damage + 2);
+
             // set Animation Player Hurt
             animator.SetTrigger("TakeDamage");
             // Set Time for animation Player Flicker
@@ -77,17 +87,20 @@ public class PlayerHealth : MonoBehaviour
             // Lost Health
             Health -= damage;
 
+            StartCoroutine(WaitForFloatingNumber(0, damage, isFromTheRightSide));
+
             if (isFromTheRightSide)
-                HurtDirection = new Vector2(-10f, 5f);
+                HurtDirection = new Vector2(-7f, 5f);
             else
-                HurtDirection = new Vector2(10f, 5f);
+                HurtDirection = new Vector2(7f, 5f);
         }
     }
 
     public bool CanTakeDamage()
     {
         return (cantTakeDamageCounter <= 0 && !animator.GetCurrentAnimatorStateInfo(0).IsName("Player Strike") &&
-            !animator.GetCurrentAnimatorStateInfo(0).IsName("Player Dash"));
+            !animator.GetCurrentAnimatorStateInfo(0).IsName("Player Dash") &&
+            !animator.GetCurrentAnimatorStateInfo(0).IsName("Player Die"));
     }
 
     public void PlayerDieAndRestartLevel()
@@ -106,4 +119,14 @@ public class PlayerHealth : MonoBehaviour
             playerStamina.Stamina = playerStamina.MaxStamina;
         }
     }
+
+    private IEnumerator WaitForFloatingNumber(float waitTime, float damage, bool isFromTheRightSide)
+    {
+        yield return new WaitForSeconds(waitTime);
+
+        GameObject GO = Instantiate(FloatingNumberPrefab, transform.position + new Vector3(0f, -0.45f, 0f), Quaternion.identity);
+        GO.GetComponent<FloatingNumber>().RightDirection = !isFromTheRightSide;
+        GO.GetComponent<FloatingNumber>().Number = damage;
+    }
+
 }

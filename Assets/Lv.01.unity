@@ -5302,6 +5302,21 @@ PrefabInstance:
       propertyPath: m_Text
       value: 50 / 100
       objectReference: {fileID: 0}
+    - target: {fileID: 5461011272550661754, guid: 5a16cc2016976da448d0995798c5a45c,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5461011272550661754, guid: 5a16cc2016976da448d0995798c5a45c,
+        type: 3}
+      propertyPath: m_Text
+      value: X 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5461011272550661754, guid: 5a16cc2016976da448d0995798c5a45c,
+        type: 3}
+      propertyPath: m_FontData.m_RichText
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1039854757, guid: 5a16cc2016976da448d0995798c5a45c, type: 3}
       propertyPath: moneyText
       value: 
@@ -5522,21 +5537,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -197
-      objectReference: {fileID: 0}
-    - target: {fileID: 5461011272550661754, guid: 5a16cc2016976da448d0995798c5a45c,
-        type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5461011272550661754, guid: 5a16cc2016976da448d0995798c5a45c,
-        type: 3}
-      propertyPath: m_Text
-      value: X 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5461011272550661754, guid: 5a16cc2016976da448d0995798c5a45c,
-        type: 3}
-      propertyPath: m_FontData.m_RichText
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a16cc2016976da448d0995798c5a45c, type: 3}

@@ -47,7 +47,7 @@ public class GhostFlyBehavior : StateMachineBehaviour
             waitingToChaseCounter -= Time.deltaTime;
             if (waitingToChaseCounter <= 0)
             {
-                ghostMovement.Destination.position = ObjectsInGame.PlayerController.transform.position;
+
                 animator.Play("Ghost Chase");
             }
         }

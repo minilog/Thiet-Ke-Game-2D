@@ -15,6 +15,8 @@ public class GhostChaseBehavior : StateMachineBehaviour
         if (ghostMovement == null) ghostMovement = animator.GetComponentInParent<GhostMovement>();
         if (rb2D == null) rb2D = animator.GetComponentInParent<Rigidbody2D>();
 
+        ghostMovement.Destination.position = ObjectsInGame.PlayerController.transform.position;
+
         ghostMovement.FlipTo(ghostMovement.Destination);
 
         Vector3 vec = ghostMovement.Destination.position - animator.transform.parent.transform.position;
@@ -38,7 +40,6 @@ public class GhostChaseBehavior : StateMachineBehaviour
             waitingToRetreatCounter -= Time.deltaTime;
             if (waitingToRetreatCounter <= 0)
             {
-                ghostMovement.Destination.position = ghostMovement.FirstPosition;
                 animator.Play("Ghost Retreat");
             }
         }
