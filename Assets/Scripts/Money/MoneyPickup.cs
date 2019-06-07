@@ -13,10 +13,10 @@ public class MoneyPickup : MonoBehaviour
     public bool ExistOnlyOne;
     public float FloatID;
 
-    private float MinY = 3f;
-    private float MaxY = 4f;
-    private float MinX = -1.5f;
-    private float MaxX = 1.5f;
+    private float MinY = 4.5f;
+    private float MaxY = 5.5f;
+    private float MinX = -2f;
+    private float MaxX = 2f;
 
     private void Start()
     {

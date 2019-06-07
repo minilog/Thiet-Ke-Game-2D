@@ -78,7 +78,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (CanTakeDamage())
         {
-            damage = (int)Random.Range(damage - 1, damage + 2);
+            //damage = (int)Random.Range(damage - 1, damage + 2);
 
             // set Animation Player Hurt
             animator.SetTrigger("TakeDamage");
@@ -87,7 +87,9 @@ public class PlayerHealth : MonoBehaviour
             // Lost Health
             Health -= damage;
 
-            StartCoroutine(WaitForFloatingNumber(0, damage, isFromTheRightSide));
+            //GameObject GO = Instantiate(FloatingNumberPrefab, transform.position + new Vector3(0f, -0.45f, 0f), Quaternion.identity);
+            //GO.GetComponent<FloatingNumber>().RightDirection = !isFromTheRightSide;
+            //GO.GetComponent<FloatingNumber>().Number = damage;
 
             if (isFromTheRightSide)
                 HurtDirection = new Vector2(-7f, 5f);
@@ -118,15 +120,6 @@ public class PlayerHealth : MonoBehaviour
             PlayerStamina playerStamina = GetComponent<PlayerStamina>();
             playerStamina.Stamina = playerStamina.MaxStamina;
         }
-    }
-
-    private IEnumerator WaitForFloatingNumber(float waitTime, float damage, bool isFromTheRightSide)
-    {
-        yield return new WaitForSeconds(waitTime);
-
-        GameObject GO = Instantiate(FloatingNumberPrefab, transform.position + new Vector3(0f, -0.45f, 0f), Quaternion.identity);
-        GO.GetComponent<FloatingNumber>().RightDirection = !isFromTheRightSide;
-        GO.GetComponent<FloatingNumber>().Number = damage;
     }
 
 }
