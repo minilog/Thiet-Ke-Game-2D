@@ -60,18 +60,18 @@ public class BossRunBehavior : StateMachineBehaviour
         // Check Jump
         if (bossMovement.FacingRight && !bossMovement.IsPlayerOnTheRightSide() && bossMovement.DangerMode)
         {
-            prepareJump = true;
+            animator.SetTrigger("Jump");
+            //prepareJump = true;
         }
 
-        if (prepareJump)
-        {
-            runToJumpCount -= Time.deltaTime;
-            if (runToJumpCount <= 0)
-            {
-                animator.SetTrigger("Jump");
-                //animator.SetBool("Running", false);
-            }
-        }
+        //if (prepareJump)
+        //{
+        //    runToJumpCount -= Time.deltaTime;
+        //    if (runToJumpCount <= 0)
+        //    {
+        //        animator.SetTrigger("Jump");
+        //    }
+        //}
 
         //if (bossMovement.AttackZone.PlayerInZone)
         //    prepareAttack = true;

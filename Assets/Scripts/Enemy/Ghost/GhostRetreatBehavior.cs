@@ -14,13 +14,13 @@ public class GhostRetreatBehavior : StateMachineBehaviour
 
         ghostMovement.FlipTo(ghostMovement.Destination);
 
-
+        Vector3 vec = ghostMovement.Destination.position - animator.transform.parent.transform.position;
+        rb2D.velocity = (Vector2)vec.normalized * ghostMovement.ChaseSpeed;
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Vector3 vec = ghostMovement.Destination.position - animator.transform.parent.transform.position;
-        rb2D.velocity = (Vector2)vec.normalized * ghostMovement.ChaseSpeed;
+
 
         if (ghostMovement.IntoTrigger)
         {

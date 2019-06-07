@@ -584,6 +584,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.7
       objectReference: {fileID: 0}
+    - target: {fileID: 8045640187060451319, guid: e258a613f19edc347898214fda7c1f87,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8045640187060451319, guid: e258a613f19edc347898214fda7c1f87,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e258a613f19edc347898214fda7c1f87, type: 3}
 --- !u!114 &4689710858389527458 stripped

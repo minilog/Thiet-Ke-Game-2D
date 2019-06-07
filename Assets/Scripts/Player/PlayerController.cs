@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
 
         // TARGET
         Vector3 targetPos = cameraTarget.transform.localPosition;
-        targetPos.x += Mathf.Abs(Input.GetAxisRaw("Horizontal")) * (MaxTargetX -  targetPos.x) * TargetMoveSpeed * Time.deltaTime;
+        targetPos.x += Mathf.Abs(/*Input.GetAxisRaw("Horizontal")*/Rb2D.velocity.x) * (MaxTargetX -  targetPos.x) * TargetMoveSpeed * Time.deltaTime;
         if (targetPos.x > MaxTargetX)
             targetPos.x = MaxTargetX;
 

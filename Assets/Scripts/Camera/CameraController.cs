@@ -17,8 +17,9 @@ public class CameraController : MonoBehaviour
 
     Rigidbody2D rb2D;
     [Space]
-    public float SpeedFollow = 2f;
+    public float SpeedFollowX = 2f;
     public float SpeedFollowY = 2f;
+    public float LerpSpeed = 15;
 
     private void Start()
     {
@@ -54,8 +55,8 @@ public class CameraController : MonoBehaviour
         Vector3 targetPos = new Vector3(followTarget.transform.position.x, followTarget.transform.position.y, transform.position.z);
 
         Vector3 v = targetPos - transform.position;
-        rb2D.velocity = new Vector2(v.x * SpeedFollow, v.y * SpeedFollowY);
-
+        rb2D.velocity = new Vector2(v.x * SpeedFollowX, v.y * SpeedFollowY);
+        //rb2D.velocity = Vector2.Lerp(rb2D.velocity, vel, LerpSpeed);
         //transform.position = targetPos;
     }
 

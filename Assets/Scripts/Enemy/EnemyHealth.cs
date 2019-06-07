@@ -9,6 +9,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] Slider healthSlider;
     [SerializeField] GameObject DeathFX;
     [SerializeField] Object FloatingNumerPrefab;
+    [SerializeField] Transform FloatingNumberTransform;
     [Space]
 
     public float MaxHealth;
@@ -31,6 +32,9 @@ public class EnemyHealth : MonoBehaviour
     private void OnValidate()
     {
         FloatingNumerPrefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Effect/Enemy Floating Number.prefab", typeof(GameObject));
+        FloatingNumberTransform = transform.GetChild(0);
+
+        healthSlider = transform.root.GetComponentInChildren<Slider>();
     }
 
     private void Start()
@@ -43,11 +47,11 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(float damage, bool fromRightSide = true)
     {
         Health -= damage;
-        
-        GameObject fGO = Instantiate(FloatingNumerPrefab, transform.position, Quaternion.identity) as GameObject;
-        FloatingNumber fNum = fGO.GetComponent<FloatingNumber>();
-        fNum.RightDirection = fromRightSide;
 
+        GameObject fGO = Instantiate(FloatingNumerPrefab, FloatingNumberTransform.position, Quaternion.identity) as GameObject;
+        FloatingNumber fNum = fGO.GetComponent<FloatingNumber>();
+        fNum.RightDirection = !fromRightSide;
+        fNum.Number = damage;
 
         if (Health <= 0)
         {

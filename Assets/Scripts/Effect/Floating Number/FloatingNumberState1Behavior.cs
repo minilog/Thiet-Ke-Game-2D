@@ -20,6 +20,12 @@ public class FloatingNumberState1Behavior : StateMachineBehaviour
         positionOffset = new Vector3(0, Random.Range(floatingNumber.MinYOffset_State1, floatingNumber.MaxYOffset_State1), 0);
         animator.transform.position += positionOffset;
 
+    }
+
+    // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
+    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+
         xVelocity = Random.Range(floatingNumber.MinXVelocity_State1, floatingNumber.MaxXVelocity_State1);
         if (!floatingNumber.RightDirection)
             xVelocity = -xVelocity;
@@ -28,12 +34,6 @@ public class FloatingNumberState1Behavior : StateMachineBehaviour
 
         rb2D.velocity = new Vector2(xVelocity, yVelocity);
     }
-
-    // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

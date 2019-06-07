@@ -254,6 +254,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2000460534861338810, guid: 9f34ffd6f9a18e04ab28a381cfe50216,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000460535131464282, guid: 9f34ffd6f9a18e04ab28a381cfe50216,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.98
+      objectReference: {fileID: 0}
     - target: {fileID: 2000460534812188981, guid: 9f34ffd6f9a18e04ab28a381cfe50216,
         type: 3}
       propertyPath: WalkSpeed
@@ -268,16 +278,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000460534861338810, guid: 9f34ffd6f9a18e04ab28a381cfe50216,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.43
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000460535131464282, guid: 9f34ffd6f9a18e04ab28a381cfe50216,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.98
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f34ffd6f9a18e04ab28a381cfe50216, type: 3}
@@ -779,16 +779,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3839809740338427171, guid: 9f34ffd6f9a18e04ab28a381cfe50216,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3839809740338427171, guid: 9f34ffd6f9a18e04ab28a381cfe50216,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2000460534861338810, guid: 9f34ffd6f9a18e04ab28a381cfe50216,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -798,6 +788,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839809740338427171, guid: 9f34ffd6f9a18e04ab28a381cfe50216,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839809740338427171, guid: 9f34ffd6f9a18e04ab28a381cfe50216,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f34ffd6f9a18e04ab28a381cfe50216, type: 3}
@@ -10953,7 +10953,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: Lv.04
-  PlayerApearPoint: 3
+  PlayerApearPoint: 2
 --- !u!61 &4924122561118580791
 BoxCollider2D:
   m_ObjectHideFlags: 0

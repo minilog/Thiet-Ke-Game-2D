@@ -8,21 +8,21 @@ public class FloatingNumber : MonoBehaviour
     public Rigidbody2D rb2D;
     public Text text;
     [Space]
+    public float Number;
     public bool RightDirection;
     public float MaxFloatingSpeed;
     public float AliveTime;
     [Range(0, 1)]
     public float ThresholdToChangeColor;
+    public float MinScale;
+    public float MaxScale;
     //public float MaxOffsetWhenStart;
+
     public float MaxXVelocity_State1;
     public float MinXVelocity_State1;
-    [Range(-10, 0)]
     public float MinYVelocity_State1;
-    [Range(0, 10)]
     public float MaxYVelocity_State1;
-    [Range(-2, 0)]
     public float MinYOffset_State1;
-    [Range(0, 2)]
     public float MaxYOffset_State1;
     [Range(0, 10)]
     public float MinGravityScale_State2;
@@ -43,11 +43,14 @@ public class FloatingNumber : MonoBehaviour
         text = GetComponentInChildren<Text>();
     }
 
-    private void Start()
+    private void Start()    
     {
         changeColorTime = AliveTime * ThresholdToChangeColor;
         speedChangeColor = 1 / (AliveTime - changeColorTime);
         increCount = 0;
+        float scale = Random.Range(MinScale, MaxScale);
+        text.rectTransform.localScale = new Vector3(scale, scale, 1);
+        text.text = Number.ToString();
     }
 
     private void Update()

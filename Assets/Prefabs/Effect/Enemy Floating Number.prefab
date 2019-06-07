@@ -28,7 +28,7 @@ RectTransform:
   m_GameObject: {fileID: 5210965475137995520}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children:
   - {fileID: 5210965476618415365}
   m_Father: {fileID: 5210965476497863135}
@@ -37,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2, y: 2}
+  m_SizeDelta: {x: 20, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &5210965475137995583
 Canvas:
@@ -168,22 +168,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb2D: {fileID: 5210965476497863133}
   text: {fileID: 5210965476618415362}
+  Number: 0
   RightDirection: 1
   MaxFloatingSpeed: 0.4
-  AliveTime: 1.25
-  ThresholdToChangeColor: 0.8
-  MaxXVelocity_State1: 10
-  MinXVelocity_State1: 12
-  MinYVelocity_State1: -7.5
+  AliveTime: 1.9
+  ThresholdToChangeColor: 0.66
+  MinScale: 1.1
+  MaxScale: 1.3
+  MaxXVelocity_State1: 8
+  MinXVelocity_State1: 11
+  MinYVelocity_State1: 3
   MaxYVelocity_State1: 10
-  MinYOffset_State1: -0.15
-  MaxYOffset_State1: 0.15
+  MinYOffset_State1: -0.1
+  MaxYOffset_State1: 0.1
   MinGravityScale_State2: 1
   MaxGravityScale_State2: 2
   GraviryLessThan0Percent: 30
-  GraviryGreaterThan0Percent: 0
-  GraviryEqual0Percent: 0
-  LerpSpeedVelocity_State2: 26
+  GraviryGreaterThan0Percent: 10
+  GraviryEqual0Percent: 10
+  LerpSpeedVelocity_State2: 11
 --- !u!95 &7558695573563621264
 Animator:
   serializedVersion: 3
@@ -230,7 +233,7 @@ RectTransform:
   m_GameObject: {fileID: 5210965476618415364}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 5210965475137995580}
   m_RootOrder: 0
@@ -261,8 +264,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.99587834, b: 0.8726415, a: 1}
-  m_RaycastTarget: 1
+  m_Color: {r: 0.991589, g: 1, b: 0.8254717, a: 1}
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
