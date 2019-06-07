@@ -374,7 +374,7 @@ MonoBehaviour:
   MaxRunToIdleTime: 0.4
   RunToJumpTime: 0
   StrikeRate: 0
-  RunSpeed: 8
+  RunSpeed: 7
   RunSpeedDangerMode: 10
   JumpXSpeed: 2.35
   JumpYSpeed: 15
