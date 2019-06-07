@@ -118,6 +118,8 @@
     <Compile Include="Assets\Scripts\Helper\HelperScript3.cs" />
     <Compile Include="Assets\Scripts\Helper\KeyPickup.cs" />
     <Compile Include="Assets\Scripts\MachineInitialized.cs" />
+    <Compile Include="Assets\Scripts\Money\FloatingMoney.cs" />
+    <Compile Include="Assets\Scripts\Money\MoneyPickup.cs" />
     <Compile Include="Assets\Scripts\Player\Behavior\PlayerAttackBehavior.cs" />
     <Compile Include="Assets\Scripts\Player\Behavior\PlayerCrouchAttackBehavior.cs" />
     <Compile Include="Assets\Scripts\Player\Behavior\PlayerCrounchBehavior.cs" />

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public static class ObjectsInGame
 {
+    public static List<float> WasTakenFloatIDs = new List<float>();
+
     static public bool Key = true;
 
     static private SoundManager _soundManager;

@@ -18,6 +18,16 @@ public class CanvasController : MonoBehaviour
     [SerializeField] GameObject keyImage;
     bool _haveKey = false;
 
+    [Space]
+    // Money
+    [SerializeField] Text moneyText;
+    private float _money;
+    public float Money
+    {
+        get { return _money; }
+        set { _money = value; moneyText.text = "X " + _money.ToString(); }
+    }
+
     public bool HaveKey
     {
         set
@@ -27,6 +37,13 @@ public class CanvasController : MonoBehaviour
         }
 
         get { return _haveKey; }
+    }
+
+    private void OnValidate()
+    {
+        Text[] texts = GetComponentsInChildren<Text>();
+        moneyText = texts[1];
+        Money = 0;
     }
 
     private void Awake()

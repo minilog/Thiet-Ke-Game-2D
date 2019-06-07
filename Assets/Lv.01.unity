@@ -324,6 +324,18 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &170848418 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5461011272550661754, guid: 5a16cc2016976da448d0995798c5a45c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6222507943975604049}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &199340646
 GameObject:
   m_ObjectHideFlags: 0
@@ -5286,6 +5298,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 167929736, guid: 5a16cc2016976da448d0995798c5a45c, type: 3}
+      propertyPath: m_Text
+      value: 50 / 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1039854757, guid: 5a16cc2016976da448d0995798c5a45c, type: 3}
+      propertyPath: moneyText
+      value: 
+      objectReference: {fileID: 170848418}
     - target: {fileID: 1039854756, guid: 5a16cc2016976da448d0995798c5a45c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5493,6 +5513,30 @@ PrefabInstance:
     - target: {fileID: 1039854759, guid: 5a16cc2016976da448d0995798c5a45c, type: 3}
       propertyPath: m_ReferenceResolution.y
       value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 821505329, guid: 5a16cc2016976da448d0995798c5a45c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -204
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045765979046365999, guid: 5a16cc2016976da448d0995798c5a45c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -197
+      objectReference: {fileID: 0}
+    - target: {fileID: 5461011272550661754, guid: 5a16cc2016976da448d0995798c5a45c,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5461011272550661754, guid: 5a16cc2016976da448d0995798c5a45c,
+        type: 3}
+      propertyPath: m_Text
+      value: X 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5461011272550661754, guid: 5a16cc2016976da448d0995798c5a45c,
+        type: 3}
+      propertyPath: m_FontData.m_RichText
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a16cc2016976da448d0995798c5a45c, type: 3}
