@@ -61,7 +61,7 @@ public class CanvasController : MonoBehaviour
 
     private void Start()
     {
-        HaveKey = true;
+        HaveKey = false;
         HavePotion = false;
     }
 

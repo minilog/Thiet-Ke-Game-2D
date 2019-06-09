@@ -5291,7 +5291,7 @@ PrefabInstance:
       objectReference: {fileID: 6506690286063590970}
     - target: {fileID: 1039854757, guid: 5a16cc2016976da448d0995798c5a45c, type: 3}
       propertyPath: _money
-      value: 500
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1039854756, guid: 5a16cc2016976da448d0995798c5a45c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5601,7 +5601,7 @@ PrefabInstance:
     - target: {fileID: 7665044319471023118, guid: 1b656fac8b2d7594d9231c9de7cf21e5,
         type: 3}
       propertyPath: StaminaPerSecs
-      value: 20
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 7665044319471023118, guid: 1b656fac8b2d7594d9231c9de7cf21e5,
         type: 3}
