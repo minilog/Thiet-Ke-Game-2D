@@ -440,7 +440,7 @@ MonoBehaviour:
   ProjectTile: {fileID: 2323725869180437630, guid: cabd7bf973658fb45923b9df5b2a3ee9,
     type: 3}
   ShootPoint: {fileID: 2000460533833739521}
-  AttackDelay: 0.66
+  AttackDelay: 0
 --- !u!1 &2000460534861338811
 GameObject:
   m_ObjectHideFlags: 0
