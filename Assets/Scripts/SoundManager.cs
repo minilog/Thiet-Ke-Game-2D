@@ -60,4 +60,20 @@ public class SoundManager : MonoBehaviour
     {
         soundEffectAS.PlayOneShot(ExplosionAudioClip, ExplosionVolume);
     }
+
+    public AudioClip CoinClip;
+    [Range(0, 1)]
+    public float CoinVolume;
+    public void PlayCoinCLip()
+    {
+        soundEffectAS.PlayOneShot(CoinClip, CoinVolume);
+    }
+
+    public AudioClip GameOverClip;
+    [Range(0, 1)]
+    public float GameOverVolume;
+    public void PlayGameOverCLip()
+    {
+        soundEffectAS.PlayOneShot(GameOverClip, GameOverVolume);
+    }
 }

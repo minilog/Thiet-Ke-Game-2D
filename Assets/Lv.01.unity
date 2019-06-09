@@ -5498,6 +5498,61 @@ PrefabInstance:
       propertyPath: theCamera
       value: 
       objectReference: {fileID: 690858140}
+    - target: {fileID: 7637888034588846886, guid: 2084e67ed86cf4b4187d2032351c9b6e,
+        type: 3}
+      propertyPath: PlayerJumpVolume
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637888034588846886, guid: 2084e67ed86cf4b4187d2032351c9b6e,
+        type: 3}
+      propertyPath: PlayerAttackVolume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637888034588846886, guid: 2084e67ed86cf4b4187d2032351c9b6e,
+        type: 3}
+      propertyPath: ExplosionVolume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637888034588846886, guid: 2084e67ed86cf4b4187d2032351c9b6e,
+        type: 3}
+      propertyPath: backgroundVolume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637888034588846886, guid: 2084e67ed86cf4b4187d2032351c9b6e,
+        type: 3}
+      propertyPath: GameOverClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b02a1f300efeefa4ab8f3a3c6ebf6e98, type: 3}
+    - target: {fileID: 7637888034588846886, guid: 2084e67ed86cf4b4187d2032351c9b6e,
+        type: 3}
+      propertyPath: CoinClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6a8c60075137cfd4399c724d469adb9f, type: 3}
+    - target: {fileID: 7637888034588846886, guid: 2084e67ed86cf4b4187d2032351c9b6e,
+        type: 3}
+      propertyPath: CoinVolume
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637888034588846886, guid: 2084e67ed86cf4b4187d2032351c9b6e,
+        type: 3}
+      propertyPath: GameOverVolume
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637888034588846886, guid: 2084e67ed86cf4b4187d2032351c9b6e,
+        type: 3}
+      propertyPath: PlayerJumpAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 47aaf891f325aae4fbe5a89951129a99, type: 3}
+    - target: {fileID: 7637888033982642950, guid: 2084e67ed86cf4b4187d2032351c9b6e,
+        type: 3}
+      propertyPath: audioClips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637888033982642950, guid: 2084e67ed86cf4b4187d2032351c9b6e,
+        type: 3}
+      propertyPath: audioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: fa12cfe749020c74aab8f5e147582c30, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2084e67ed86cf4b4187d2032351c9b6e, type: 3}
 --- !u!1001 &7706314987462137211

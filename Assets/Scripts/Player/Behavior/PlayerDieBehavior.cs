@@ -7,6 +7,7 @@ public class PlayerDieBehavior : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.SetBool("Die", true);
+        ObjectsInGame.SoundManager.PlayGameOverCLip();
     }
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)

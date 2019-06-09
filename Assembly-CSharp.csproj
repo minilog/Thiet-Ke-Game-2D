@@ -150,6 +150,7 @@
     <Compile Include="Assets\Scripts\Tran Scenes\OpenTheDoor.cs" />
     <Compile Include="Assets\Scripts\Tran Scenes\PositionInNewScene.cs" />
     <Compile Include="Assets\Sounds\Audio\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
+    <Compile Include="Assets\StartScript.cs" />
     <None Include="Assets\Sprites\ENVIRONMENT\(use6)\opp5_castle_tiles\environment\tiles\readme guides IMPORTANT.txt" />
     <None Include="Assets\Sprites\Gothicvania Cemetery Artwork\about.txt" />
     <None Include="Assets\Sounds\Audio\explosionsoundslite\readme.txt" />

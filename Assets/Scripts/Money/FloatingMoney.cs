@@ -31,6 +31,8 @@ public class FloatingMoney : MonoBehaviour
         if (Number != 0)
             text.text = "+" + Number.ToString();
         increCount = 0;
+
+        ObjectsInGame.SoundManager.PlayCoinCLip();
     }
 
     private void Update()

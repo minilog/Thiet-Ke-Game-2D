@@ -68,7 +68,7 @@ public class EnemyHealth : MonoBehaviour
             if (DeathFX != null)
                 Instantiate(DeathFX, transform.position, DeathFX.transform.rotation);
 
-            if (Random.Range(0, 100) <= 66)
+            if (Random.Range(0, 100) <= 75)
                 DropItem();
         }
         healthSlider.gameObject.SetActive(true);
