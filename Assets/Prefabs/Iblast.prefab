@@ -98,7 +98,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 102
+  m_SortingOrder: 99
   m_Sprite: {fileID: 21300000, guid: b5591859471ec5043a8d9b0823b8e199, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -203,7 +203,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 25
-  Damage: 10
+  MinDamage: 8
+  MaxDamage: 12
   ExplosionFXPrefab: {fileID: 8230089621446362605, guid: f653eb471ab7e0645a071176070fcc8a,
     type: 3}
   ExplosionTransfrom: {fileID: 6031864522648865766}

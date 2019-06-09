@@ -37,7 +37,7 @@ public class CameraController : MonoBehaviour
     {
         FollowPlayer();
 
-        FindBounds();
+        FindBounds();   
 
         // Keep camera inside
         float clampedX = Mathf.Clamp(transform.position.x, minBounds.x + halfWidth, maxBounds.x - halfWidth);

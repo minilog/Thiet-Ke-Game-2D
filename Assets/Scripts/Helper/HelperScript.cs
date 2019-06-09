@@ -6,6 +6,7 @@ public class HelperScript : MonoBehaviour
 {
     //[SerializeField] GameObject ImageGO;
     Animator animator;
+    public bool DestroyAfterClose { get; private set; } = false;
 
     private void Start()
     {
@@ -34,7 +35,12 @@ public class HelperScript : MonoBehaviour
             //ImageGO.SetActive(false);
             animator.Play("New State");
             animator.SetBool("PlayerInRange", false);
-        }
+        }   
+    }
+
+    public void DestroyWhenPlayerLelf()
+    {
+        DestroyAfterClose = true;
     }
 }
 

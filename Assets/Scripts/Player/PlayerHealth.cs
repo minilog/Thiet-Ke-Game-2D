@@ -25,9 +25,12 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] Slider healthSlider;
     [SerializeField] Text healthText;
+    [SerializeField] GameObject floatingPostionPrefab;
 
     public float cantTakeDamageTime;
     float cantTakeDamageCounter = 0;
+
+    public KeyCode DeathKeyCode = KeyCode.P;
 
     public Vector2 HurtDirection { get; private set; }
 
@@ -61,14 +64,29 @@ public class PlayerHealth : MonoBehaviour
             cantTakeDamageCounter -= Time.deltaTime;
         }
 
-        if (Input.GetKeyDown(KeyCode.H))
+        //if (Input.GetKeyDown(KeyCode.H))
+        //{
+        //    Health = MaxHealth;
+        //}
+
+        if (Input.GetKeyDown(DeathKeyCode))
         {
-            Health = MaxHealth;
+            animator.Play("Player Die");
         }
 
         if (Health <= 0)
-            // At the end this Behavior, destroy gameObject
-            animator.Play("Player Die");
+        // At the end this Behavior, destroy gameObject
+        {
+            if (ObjectsInGame.CanvasController.HavePotion)
+            {
+                Health = MaxHealth;
+                ObjectsInGame.CanvasController.HavePotion = false;
+                Instantiate(floatingPostionPrefab, transform.position + new Vector3(0f, -0.4f, 0f), Quaternion.identity);
+            }
+            else
+                animator.Play("Player Die");
+        }
+
         else
             // Change to animation Hurt
             animator.SetFloat("CanNotTakeDamage", cantTakeDamageCounter);   
@@ -87,11 +105,11 @@ public class PlayerHealth : MonoBehaviour
             // Lost Health
             Health -= damage;
 
-            //GameObject GO = Instantiate(FloatingNumberPrefab, transform.position + new Vector3(0f, -0.45f, 0f), Quaternion.identity);
-            //GO.GetComponent<FloatingNumber>().RightDirection = !isFromTheRightSide;
-            //GO.GetComponent<FloatingNumber>().Number = damage;
+            GameObject GO = Instantiate(FloatingNumberPrefab, transform.position + new Vector3(0f, -0.45f, 0f), Quaternion.identity);
+            GO.GetComponent<FloatingNumber>().RightDirection = !isFromTheRightSide;
+            GO.GetComponent<FloatingNumber>().Number = damage;
 
-            if (isFromTheRightSide)
+            if (isFromTheRightSide) 
                 HurtDirection = new Vector2(-7f, 5f);
             else
                 HurtDirection = new Vector2(7f, 5f);
@@ -108,7 +126,14 @@ public class PlayerHealth : MonoBehaviour
     public void PlayerDieAndRestartLevel()
     {
         gameObject.SetActive(false);
-        ObjectsInGame.ChangeSceneManager.ChangeToNextScene(SceneManager.GetActiveScene().name);
+
+        if (SceneManager.GetActiveScene().name != "Final Level")
+            ObjectsInGame.ChangeSceneManager.ChangeToNextScene(SceneManager.GetActiveScene().name);
+        else
+        {
+            ObjectsInGame.ChangeSceneManager.ChangeToNextScene("Lv.07");
+            PositionInNewScene.SetValueForNewScene(0, Vector3.zero);
+        }
     }
 
     public void CheckSpawnPlayer()
@@ -119,6 +144,7 @@ public class PlayerHealth : MonoBehaviour
             Health = MaxHealth;
             PlayerStamina playerStamina = GetComponent<PlayerStamina>();
             playerStamina.Stamina = playerStamina.MaxStamina;
+
         }
     }
 

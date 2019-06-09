@@ -58,7 +58,9 @@ public class PlayerController : MonoBehaviour
     public float TargetMoveAddition2 = 1;
     public float TargetMoveSpeed = 2f;
 
-    private void Awake()
+    public bool DoubleJumpAtive = false;
+
+    private void Awake()    
     {
         // To reuse in game
         ObjectsInGame.PlayerController = this;
@@ -75,8 +77,9 @@ public class PlayerController : MonoBehaviour
     {
         //if (DashCooldownCount > 0)
         //    DashCooldownCount -= Time.deltaTime;
+        // WARNING
         //if (Input.GetKey(KeyCode.Q))
-        //    Time.timeScale = 0.01f;
+        //    Time.timeScale = 0.1f;
         //else
         //    Time.timeScale = 1;
 
@@ -195,6 +198,9 @@ public class PlayerController : MonoBehaviour
 
     private void CheckJump()
     {
+        if (!DoubleJumpAtive)
+            readyForDoubleJump = false;
+
         if (checkGround.IsGrounded)
         {
             readyForDoubleJump = true;

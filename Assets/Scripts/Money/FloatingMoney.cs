@@ -28,7 +28,8 @@ public class FloatingMoney : MonoBehaviour
     private void Start()
     {
         rb2D.velocity = new Vector2(0, StartYVelocity);
-        text.text = "+" + Number.ToString();
+        if (Number != 0)
+            text.text = "+" + Number.ToString();
         increCount = 0;
     }
 

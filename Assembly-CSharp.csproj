@@ -72,6 +72,9 @@
     <Compile Include="Assets\Assets\Assets\Scripts\spawnDoor.cs" />
     <Compile Include="Assets\Assets\Assets\Scripts\sporeController.cs" />
     <Compile Include="Assets\Audio\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
+    <Compile Include="Assets\BuyItem.cs" />
+    <Compile Include="Assets\DoubleJumpActive.cs" />
+    <Compile Include="Assets\HelperCloseBehavior.cs" />
     <Compile Include="Assets\Scripts\Boss\BossAttack1Behavior.cs" />
     <Compile Include="Assets\Scripts\Boss\BossIdleBehavior.cs" />
     <Compile Include="Assets\Scripts\Boss\BossJumpAttackBehavior.cs" />

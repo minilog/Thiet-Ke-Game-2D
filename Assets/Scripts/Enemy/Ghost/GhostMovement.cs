@@ -17,9 +17,13 @@ public class GhostMovement : MonoBehaviour
     public float WaitingToChaseTime = 0.8f;
     public float WaitingToRetreat = 0.4f;
 
+    public bool StartFlip;
+
     private void Start()
     {
         FirstPosition = Destination.position;
+        if (StartFlip)
+            Flip();
     }
 
     public void Flip()

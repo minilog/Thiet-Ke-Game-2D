@@ -4,26 +4,39 @@ using UnityEngine;
 
 public class KeyPickup : MonoBehaviour
 {
-    public KeyCode PickupKeyCode = KeyCode.S;
     bool playerInRange = false;
+    public enum PickupType
+    {
+        Key,
+        Health
+    }
+    public PickupType Type;
 
     private void Start()
     {
-        if (ObjectsInGame.Key == false)
-            gameObject.transform.parent.gameObject.SetActive(false);
+        if (Type == PickupType.Key)
+        {
+            if (ObjectsInGame.Key == false)
+                gameObject.transform.parent.gameObject.SetActive(false);
+        }
     }
 
     void Update()
     {
         if (playerInRange)
         {
-            //if (Input.GetKeyDown(PickupKeyCode))
-            //{
-            ObjectsInGame.CanvasController.HaveKey = true;
-            ObjectsInGame.Key = false;
+            if (Type == PickupType.Key)
+            {
+                ObjectsInGame.CanvasController.HaveKey = true;
+                ObjectsInGame.Key = false;
+                gameObject.transform.parent.gameObject.SetActive(false);
+            }
+            else
+            {
+                ObjectsInGame.PlayerHealth.Health = ObjectsInGame.PlayerHealth.MaxHealth;
+            }
 
-            gameObject.transform.parent.gameObject.SetActive(false);
-            //}
+
         }
     }
 

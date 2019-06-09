@@ -10,6 +10,7 @@ public class PlayerIblast : MonoBehaviour
     public GameObject ExplosionFXPrefab;
     public Transform ExplosionTransfrom;
     public float TimeAlive;
+    public float ConsumeStamina = 10;
 
     private void Start()
     {
@@ -17,7 +18,7 @@ public class PlayerIblast : MonoBehaviour
         Destroy(gameObject, TimeAlive);
         ObjectsInGame.SoundManager.PlayPlayerAttackAudioClip();
         PlayerStamina playerStamina = ObjectsInGame.PlayerController.gameObject.GetComponent<PlayerStamina>();
-        playerStamina.Stamina -= playerStamina.FireStamina;
+        playerStamina.Stamina -= ConsumeStamina;
     }
 
     private void Update()

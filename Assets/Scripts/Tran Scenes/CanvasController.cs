@@ -17,33 +17,41 @@ public class CanvasController : MonoBehaviour
 
     [SerializeField] GameObject keyImage;
     bool _haveKey = false;
+    public bool HaveKey
+    {
+        get { return _haveKey; }
+        set { _haveKey = value; keyImage.gameObject.SetActive(_haveKey); }
+    }
+
+    [Space]
+    [SerializeField] GameObject potionImage;
+    bool _havePotion = false;
+    public bool HavePotion
+    {
+        get { return _havePotion; }
+        set { _havePotion = value; potionImage.gameObject.SetActive(_havePotion); }
+    }
+
 
     [Space]
     // Money
     [SerializeField] Text moneyText;
-    private float _money;
+    public float _money;
     public float Money
     {
         get { return _money; }
         set { _money = value; moneyText.text = "X " + _money.ToString(); }
     }
 
-    public bool HaveKey
-    {
-        set
-        {
-            _haveKey = value;
-            keyImage.gameObject.SetActive(_haveKey);
-        }
-
-        get { return _haveKey; }
-    }
 
     private void OnValidate()
     {
         Text[] texts = GetComponentsInChildren<Text>();
         moneyText = texts[1];
-        Money = 0;
+        moneyText.text = "X " + _money.ToString();
+
+        //HaveKey = false;
+        //HavePotion = false;
     }
 
     private void Awake()
@@ -54,6 +62,7 @@ public class CanvasController : MonoBehaviour
     private void Start()
     {
         HaveKey = false;
+        HavePotion = false;
     }
 
     private void Update()

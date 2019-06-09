@@ -116,6 +116,10 @@ MonoBehaviour:
   FloatingNumerPrefab: {fileID: 5210965476497863134, guid: cb98a505c12d0a64d8d04acf9175f553,
     type: 3}
   FloatingNumberTransform: {fileID: 6287705895091651427}
+  ItemGameObjects:
+  - {fileID: 452464447579206636, guid: fd60718c59a5618478ffe8b369caa25d, type: 3}
+  - {fileID: 4270610956553473840, guid: d0e0fe24635c0c749bd40531ef948cf4, type: 3}
+  ItemDropPack: 0
   MaxHealth: 40
   StartActive: 0
 --- !u!1 &2000460533037404195
@@ -433,7 +437,7 @@ MonoBehaviour:
   FacingRight: 1
   LeftLimit: {fileID: 2000460534861338810}
   RightLimit: {fileID: 2000460535131464282}
-  ProjectTile: {fileID: 8191952044641603892, guid: 6da1ebd976deba94f818481947af6cd0,
+  ProjectTile: {fileID: 2323725869180437630, guid: cabd7bf973658fb45923b9df5b2a3ee9,
     type: 3}
   ShootPoint: {fileID: 2000460533833739521}
   AttackDelay: 0.66

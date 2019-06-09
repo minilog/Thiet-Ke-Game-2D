@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossMovement : MonoBehaviour
 {
@@ -31,10 +32,12 @@ public class BossMovement : MonoBehaviour
 
     public bool FacingRight { get; private set; } = true;
 
+    [SerializeField] Text TheEndText;
 
     private void Start()
     {
         DangerMode = false;
+        TheEndText.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -74,5 +77,9 @@ public class BossMovement : MonoBehaviour
     public bool IsPlayerOnTheRightSide()
     {
         return transform.position.x < ObjectsInGame.PlayerController.transform.position.x;
+    }
+    private void OnDestroy()
+    {
+        TheEndText.gameObject.SetActive(true);
     }
 }

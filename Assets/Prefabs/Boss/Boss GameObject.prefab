@@ -855,7 +855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c6b07ece45de504ab80158161acb6b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 15
+  Damage: 20
 --- !u!1 &2317901537812274087
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,7 +1011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c6b07ece45de504ab80158161acb6b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 10
+  Damage: 15
 --- !u!114 &3355849246320293424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1029,6 +1029,10 @@ MonoBehaviour:
   FloatingNumerPrefab: {fileID: 5210965476497863134, guid: cb98a505c12d0a64d8d04acf9175f553,
     type: 3}
   FloatingNumberTransform: {fileID: 3113525641757026260}
+  ItemGameObjects:
+  - {fileID: 452464447579206636, guid: fd60718c59a5618478ffe8b369caa25d, type: 3}
+  - {fileID: 4270610956553473840, guid: d0e0fe24635c0c749bd40531ef948cf4, type: 3}
+  ItemDropPack: 0
   MaxHealth: 320
   StartActive: 1
 --- !u!1 &8333876695457722667
