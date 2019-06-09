@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 583, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 3270
+  controlID: 1151
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_MinSize: {x: 306, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 3155
+  controlID: 1017
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_MinSize: {x: 306, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 3130
+  controlID: 985
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -209,14 +209,14 @@ MonoBehaviour:
     height: 419
   m_PersistentViewDataDictionary: {fileID: 0}
   m_WindowGUID: 844351cf66d65914b9142e63990069e0
-  m_SceneLighting: 0
+  m_SceneLighting: 1
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.77535045, y: -3.5539656, z: -0.009765625}
+    m_Target: {x: -6.2854853, y: -18.308945, z: 0.070561565}
     speed: 2
-    m_Value: {x: -0.77535045, y: -3.5539656, z: -0.009765625}
+    m_Value: {x: -6.2854853, y: -18.308945, z: 0.070561565}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -248,9 +248,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 8.0252075
+    m_Target: 13.65403
     speed: 2
-    m_Value: 8.0252075
+    m_Value: 13.65403
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -566,8 +566,8 @@ MonoBehaviour:
     y: 0
     width: 232
     height: 439
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 224}
+  m_MaxSize: {x: 4004, y: 4024}
   m_ActualView: {fileID: 9}
   m_Panes:
   - {fileID: 9}
@@ -604,7 +604,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 2c7100004e710000567100006671000070710000
+      m_ExpandedIDs: 4c7efffffa84ffffaa87ffff248fffffac8fffff9a90ffff2092ffffd2fbffff4a880000189200009c920000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -655,7 +655,7 @@ MonoBehaviour:
   - {fileID: 12}
   - {fileID: 13}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -694,20 +694,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Enemy/Goblin
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 46
   m_LastFolders:
-  - Assets/Prefabs/Enemy/Goblin
+  - Assets
   m_LastFoldersGridSize: 46
   m_LastProjectPath: D:\Unity\Thiet Ke Game 2D
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 313}
-    m_SelectedIDs: be3a0000
-    m_LastClickedID: 15038
-    m_ExpandedIDs: 000000000c290000ec2b0000dc2c0000a42d0000da2f000084300000ea30000032310000b8310000e4310000da320000c6330000f4330000b6360000f036000096380000a8390000083b0000343b0000c23b0000e03b0000583c00009c3c0000804000005e42000032430000b243000000440000224800002e4800008c4900005c4e00006a51000058520000b6520000fa5200004e560000125800007058000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 08290000
+    m_LastClickedID: 10504
+    m_ExpandedIDs: 0000000008290000e82b0000d82c0000a02d0000d42f00007e300000e43000002c310000b2310000de310000d4320000c0330000ee33000040360000b2360000ec3600000237000092380000a4390000043b0000303b0000be3b0000dc3b0000543c0000983c00007c4000005a4200002e43000078430000ae430000fc4300008a4400001e4800002a48000088490000584e00006651000054520000b2520000f65200004a5600000e5800006c58000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -735,7 +735,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000c290000ec2b0000dc2c0000a42d0000da2f000084300000ea30000032310000b8310000e4310000da320000c6330000f4330000b6360000f036000096380000a8390000083b0000343b0000c23b0000e03b0000583c00009c3c0000804000005e42000032430000b243000000440000224800002e4800008c4900005c4e00006a51000058520000b6520000fa5200004e560000125800007058000000ca9a3b
+    m_ExpandedIDs: 0000000008290000e82b0000d82c0000a02d0000d42f00007e300000e43000002c310000b2310000de310000d4320000c0330000ee33000040360000b2360000ec3600000237000092380000a4390000043b0000303b0000be3b0000dc3b0000543c0000983c00007c4000005a4200002e43000078430000ae430000fc4300008a4400001e4800002a48000088490000584e00006651000054520000b2520000f65200004a5600000e5800006c58000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -760,8 +760,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 82c3ffff
-    m_LastClickedInstanceID: -15486
+    m_SelectedInstanceIDs: 02970000
+    m_LastClickedInstanceID: 38658
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 324a0000e68d0000648d0000868d000006190100b801ffffa6380000c85200008434000068330000f68c000082330000863f000094c402005e41000006410000363b00002a38000086a2ffff74540000b8320000883c0000582e00000843000080460000aef203000000000058130500f03c00000a4e0000e02c000020330000fc54000024770000c8490000c035000094510000c6530000663f0000683f0000
     m_RenameOverlay:
@@ -844,7 +844,7 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 29040
+  m_LastSelectedObjectID: 38704
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -866,10 +866,10 @@ MonoBehaviour:
     y: 0
     width: 419
     height: 771
-  m_MinSize: {x: 277, y: 274}
-  m_MaxSize: {x: 4002, y: 8024}
+  m_MinSize: {x: 277, y: 298}
+  m_MaxSize: {x: 4002, y: 8048}
   vertical: 1
-  controlID: 3271
+  controlID: 1152
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -889,8 +889,8 @@ MonoBehaviour:
     y: 0
     width: 419
     height: 421
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 74}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -930,7 +930,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewResizer:
-    m_CachedPref: 109
+    m_CachedPref: 251
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}

@@ -4728,7 +4728,7 @@ PrefabInstance:
     - target: {fileID: 3515566922686043413, guid: 5dae29bdc4bfb8f49b887dc895523445,
         type: 3}
       propertyPath: SpeedFollowY
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3515566922686043413, guid: 5dae29bdc4bfb8f49b887dc895523445,
         type: 3}
@@ -5291,7 +5291,7 @@ PrefabInstance:
       objectReference: {fileID: 6506690286063590970}
     - target: {fileID: 1039854757, guid: 5a16cc2016976da448d0995798c5a45c, type: 3}
       propertyPath: _money
-      value: 0
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1039854756, guid: 5a16cc2016976da448d0995798c5a45c, type: 3}
       propertyPath: m_LocalPosition.x
