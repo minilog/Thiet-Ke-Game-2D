@@ -5,11 +5,15 @@ using UnityEngine;
 public class GoblinIdleBehabvior : StateMachineBehaviour
 {
     EnemyZone enemyZone;
+    Rigidbody2D rb2D;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if (enemyZone == null) enemyZone = animator.transform.parent.transform.GetChild(3).GetComponent<EnemyZone>();
+        if (rb2D == null) rb2D = animator.GetComponentInParent<Rigidbody2D>();
+
+        rb2D.velocity = new Vector2(0, rb2D.velocity.y);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

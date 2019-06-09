@@ -71,16 +71,13 @@
     <Compile Include="Assets\Assets\Assets\Scripts\shootSpore.cs" />
     <Compile Include="Assets\Assets\Assets\Scripts\spawnDoor.cs" />
     <Compile Include="Assets\Assets\Assets\Scripts\sporeController.cs" />
-    <Compile Include="Assets\Audio\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
-    <Compile Include="Assets\BuyItem.cs" />
-    <Compile Include="Assets\DoubleJumpActive.cs" />
-    <Compile Include="Assets\HelperCloseBehavior.cs" />
     <Compile Include="Assets\Scripts\Boss\BossAttack1Behavior.cs" />
     <Compile Include="Assets\Scripts\Boss\BossIdleBehavior.cs" />
     <Compile Include="Assets\Scripts\Boss\BossJumpAttackBehavior.cs" />
     <Compile Include="Assets\Scripts\Boss\BossMovement.cs" />
     <Compile Include="Assets\Scripts\Boss\BossRunBehavior.cs" />
     <Compile Include="Assets\Scripts\Boss\BossStrikeBehavior.cs" />
+    <Compile Include="Assets\Scripts\BuyItem.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraController.cs" />
     <Compile Include="Assets\Scripts\Destroy\DestroyMe.cs" />
     <Compile Include="Assets\Scripts\Effect\Decoration2.cs" />
@@ -115,6 +112,8 @@
     <Compile Include="Assets\Scripts\Enemy\Skeleton\SkeletonRiseBehavior.cs" />
     <Compile Include="Assets\Scripts\Enemy\Skeleton\SkeletonWalkBehavior.cs" />
     <Compile Include="Assets\Scripts\Enemy\Spike.cs" />
+    <Compile Include="Assets\Scripts\Helper\DoubleJumpActive.cs" />
+    <Compile Include="Assets\Scripts\Helper\HelperCloseBehavior.cs" />
     <Compile Include="Assets\Scripts\Helper\HelperOpenBehavior.cs" />
     <Compile Include="Assets\Scripts\Helper\HelperScript.cs" />
     <Compile Include="Assets\Scripts\Helper\HelperScript2.cs" />
@@ -150,11 +149,12 @@
     <Compile Include="Assets\Scripts\Tran Scenes\NewScene.cs" />
     <Compile Include="Assets\Scripts\Tran Scenes\OpenTheDoor.cs" />
     <Compile Include="Assets\Scripts\Tran Scenes\PositionInNewScene.cs" />
+    <Compile Include="Assets\Sounds\Audio\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
     <None Include="Assets\Sprites\ENVIRONMENT\(use6)\opp5_castle_tiles\environment\tiles\readme guides IMPORTANT.txt" />
     <None Include="Assets\Sprites\Gothicvania Cemetery Artwork\about.txt" />
-    <None Include="Assets\Audio\explosionsoundslite\readme.txt" />
-    <None Include="Assets\Audio\Monster SFX - 111518\Notes.txt" />
-    <None Include="Assets\Music\Packs\Into the Fire\Into_the_Fire_ReadMe.txt" />
+    <None Include="Assets\Sounds\Audio\explosionsoundslite\readme.txt" />
+    <None Include="Assets\Sounds\Audio\Monster SFX - 111518\Notes.txt" />
+    <None Include="Assets\Sounds\Music\Packs\Into the Fire\Into_the_Fire_ReadMe.txt" />
     <None Include="Assets\Sprites\Player\Read Me.txt" />
     <Reference Include="Cinemachine">
       <HintPath>D:/Unity/Thiet Ke Game 2D/Library/ScriptAssemblies/Cinemachine.dll</HintPath>

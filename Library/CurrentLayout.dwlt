@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 548}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 821
-  m_MinSize: {x: 950, y: 548}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 583, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 4710
+  controlID: 77
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 306, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 4630
+  controlID: 131
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 306, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 4631
+  controlID: 132
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -211,8 +211,8 @@ MonoBehaviour:
     y: 0
     width: 232
     height: 439
-  m_MinSize: {x: 204, y: 224}
-  m_MaxSize: {x: 4004, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_MinSize: {x: 277, y: 274}
   m_MaxSize: {x: 4002, y: 8024}
   vertical: 1
-  controlID: 4711
+  controlID: 78
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -438,9 +438,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -10.370726, y: 0.97627604, z: 0.033927325}
+    m_Target: {x: -3.4613624, y: 0.0850168, z: 0.027868142}
     speed: 2
-    m_Value: {x: -10.370726, y: 0.97627604, z: 0.033927325}
+    m_Value: {x: -3.4613624, y: 0.0850168, z: 0.027868142}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -472,9 +472,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 25.455462
+    m_Target: 26.332714
     speed: 2
-    m_Value: 25.455462
+    m_Value: 26.332714
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -737,14 +737,14 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 0.8582508
+    - e00: 0.5944071
       e01: 0
       e02: 0
-      e03: -169.78508
+      e03: -45.243866
       e10: 0
-      e11: 0.8582508
+      e11: 0.5944071
       e12: 0
-      e13: 112.47475
+      e13: 197.83955
       e20: 0
       e21: 0
       e22: 1
@@ -800,9 +800,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 24b6fffffab9ffff0cbaffff4cd7ffffb8e5ffff3ee7ffffcae8ffff4aeaffffceebffffd2fbffff
+      m_SelectedIDs: 68720000
+      m_LastClickedID: 29288
+      m_ExpandedIDs: 00ebffffc6eeffff0cefffffcef2ffffd2fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -864,20 +864,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Enemy/Goblin
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 46
   m_LastFolders:
-  - Assets/Prefabs/Enemy/Goblin
+  - Assets
   m_LastFoldersGridSize: 46
   m_LastProjectPath: D:\Unity\Thiet Ke Game 2D
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 313}
-    m_SelectedIDs: be3a0000
-    m_LastClickedID: 15038
-    m_ExpandedIDs: 000000000c290000ec2b0000dc2c0000a42d0000da2f000084300000ea30000032310000b8310000e4310000da320000c6330000f4330000b6360000f036000096380000a8390000083b0000343b0000c23b0000e03b0000583c00009c3c0000804000005e42000032430000b243000000440000224800002e4800008c4900005c4e00006a51000058520000b6520000fa5200004e560000125800007058000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 0e290000
+    m_LastClickedID: 10510
+    m_ExpandedIDs: 000000000e290000ee2b0000de2c0000a62d0000dc2f000086300000ec30000034310000ba310000e6310000dc320000c8330000f6330000b8360000f23600000837000098380000aa3900000a3b0000363b0000c43b0000e23b00005a3c00009e3c00008240000060420000344300007e430000b4430000024400009044000024480000304800008e4900005e4e00006c5100005a520000b8520000fc520000505600001458000072580000b65e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -905,7 +905,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000c290000ec2b0000dc2c0000a42d0000da2f000084300000ea30000032310000b8310000e4310000da320000c6330000f4330000b6360000f036000096380000a8390000083b0000343b0000c23b0000e03b0000583c00009c3c0000804000005e42000032430000b243000000440000224800002e4800008c4900005c4e00006a51000058520000b6520000fa5200004e560000125800007058000000ca9a3b
+    m_ExpandedIDs: 000000000e290000ee2b0000de2c0000a62d0000dc2f000086300000ec30000034310000ba310000e6310000dc320000c8330000f6330000b8360000f236000098380000aa3900000a3b0000363b0000c43b0000e23b00005a3c00009e3c0000824000006042000034430000b44300000244000024480000304800008e4900005e4e00006c5100005a520000b8520000fc520000505600001458000072580000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -932,7 +932,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 324a0000e68d0000648d0000868d000006190100b801ffffa6380000c85200008434000068330000f68c000082330000863f000094c402005e41000006410000363b00002a38000086a2ffff74540000b8320000883c0000582e00000843000080460000aef203000000000058130500f03c00000a4e0000e02c000020330000fc54000024770000c8490000c035000094510000c6530000663f0000683f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1014,7 +1014,7 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 381654
+  m_LastSelectedObjectID: 29040
 --- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1046,7 +1046,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewResizer:
-    m_CachedPref: 109
+    m_CachedPref: 251
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}

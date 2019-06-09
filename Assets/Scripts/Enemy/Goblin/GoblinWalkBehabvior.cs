@@ -53,6 +53,8 @@ public class GoblinWalkBehabvior : StateMachineBehaviour
             count -= Time.deltaTime;
             if (count < 0)
                 animator.SetBool("Attacking", true);
+
+          
         }
     }
 
