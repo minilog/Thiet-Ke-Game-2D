@@ -77,4 +77,13 @@ public class SoundManager : MonoBehaviour
     {
         soundEffectAS.PlayOneShot(GameOverClip, GameOverVolume);
     }
+
+
+    public AudioClip HitClip;
+    [Range(0, 1)]
+    public float HitVolume;
+    public void PlayHitCLip()
+    {
+        soundEffectAS.PlayOneShot(HitClip, HitVolume);
+    }
 }
