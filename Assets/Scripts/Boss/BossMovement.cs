@@ -80,6 +80,7 @@ public class BossMovement : MonoBehaviour
     }
     private void OnDestroy()
     {
+        if (TheEndText != null)
         TheEndText.gameObject.SetActive(true);
     }
 }

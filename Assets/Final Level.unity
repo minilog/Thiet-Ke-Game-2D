@@ -257,23 +257,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2317901536364542683, guid: 418bfd3840bc3394184e28cfc307d289,
         type: 3}
-      propertyPath: StrikeRate
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 2317901536364542683, guid: 418bfd3840bc3394184e28cfc307d289,
-        type: 3}
       propertyPath: TheEndText
       value: 
       objectReference: {fileID: 1679376995}
-    - target: {fileID: 3355849246320293424, guid: 418bfd3840bc3394184e28cfc307d289,
+    - target: {fileID: 2317901536364542683, guid: 418bfd3840bc3394184e28cfc307d289,
         type: 3}
-      propertyPath: MaxHealth
-      value: 700
-      objectReference: {fileID: 0}
-    - target: {fileID: 2317901537593774645, guid: 418bfd3840bc3394184e28cfc307d289,
-        type: 3}
-      propertyPath: Damage
-      value: 25
+      propertyPath: HPDangerMode
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 418bfd3840bc3394184e28cfc307d289, type: 3}

@@ -43,6 +43,7 @@ public class SoundManager : MonoBehaviour
 
     private void LateUpdate()
     {
+
         //transform.position = theCamera.transform.position;
     }
 

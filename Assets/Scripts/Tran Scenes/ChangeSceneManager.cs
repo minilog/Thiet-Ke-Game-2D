@@ -52,6 +52,12 @@ public class ChangeSceneManager : MonoBehaviour
 
         removingOldScene = true;
         chagingSceneCounter = changeSceneTime;
+
+        // Change Musuc
+        BackgroundMusic BMusic = ObjectsInGame.SoundManager.GetComponentInChildren<BackgroundMusic>();
+        if (SceneManager.GetActiveScene().name == "Final Level" ||
+            sceneName == "Final Level")
+        BMusic.ChangeMusic();
     }
 
     void NewScene()

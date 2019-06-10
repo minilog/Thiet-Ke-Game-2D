@@ -58,7 +58,8 @@ public class BossRunBehavior : StateMachineBehaviour
         }
         
         // Check Jump
-        if (bossMovement.FacingRight && !bossMovement.IsPlayerOnTheRightSide() && bossMovement.DangerMode)
+        if (bossMovement.FacingRight && !bossMovement.IsPlayerOnTheRightSide() && bossMovement.DangerMode ||
+            !bossMovement.FacingRight && bossMovement.IsPlayerOnTheRightSide() && bossMovement.DangerMode)
         {
             animator.SetTrigger("Jump");
             //prepareJump = true;

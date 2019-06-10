@@ -5,29 +5,44 @@ using UnityEngine;
 public class BackgroundMusic : MonoBehaviour
 {
     [SerializeField] AudioSource audioSource;
-    [SerializeField] AudioClip[] audioClips;
-    AudioClip currentAudioClip;
-    float currentAudioClipCounter;
+    [SerializeField] AudioClip NormalMusic;
+    [SerializeField] AudioClip BossMusic;
+    float count = 0;
+
+    private void Start()
+    {
+        //audioSource.PlayOneShot(NormalMusic);
+    }
 
     void Update()
     {
-        // count the music, if it end, play another music
-        currentAudioClipCounter -= Time.deltaTime;
-        if (currentAudioClipCounter <= 0)
-            PlayerAudioClipRandom();
     }
 
     void PlayerAudioClipRandom()
     {
-        int rand = Random.Range(0, audioClips.Length);
+        //int rand = Random.Range(0, audioClips.Length);
 
-        while (currentAudioClip == audioClips[rand])
+        //while (currentAudioClip == audioClips[rand])
+        //{
+        //    rand = Random.Range(0, audioClips.Length);
+        //}
+        //currentAudioClip = audioClips[rand];
+
+        //audioSource.PlayOneShot(currentAudioClip);
+        //currentAudioClipCounter = currentAudioClip.length;
+    }
+
+    public void ChangeMusic()
+    {
+        if (audioSource.clip == NormalMusic)
         {
-            rand = Random.Range(0, audioClips.Length);
+            audioSource.clip = BossMusic;
+            audioSource.Play();
         }
-        currentAudioClip = audioClips[rand];
-
-        audioSource.PlayOneShot(currentAudioClip);
-        currentAudioClipCounter = currentAudioClip.length;
+        else
+        {
+            audioSource.clip = NormalMusic;
+            audioSource.Play();
+        }
     }
 }

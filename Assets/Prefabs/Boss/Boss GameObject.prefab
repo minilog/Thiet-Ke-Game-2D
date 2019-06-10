@@ -373,7 +373,7 @@ MonoBehaviour:
   MinRunToIdleTime: 0.25
   MaxRunToIdleTime: 0.4
   RunToJumpTime: 0
-  StrikeRate: 0
+  StrikeRate: 40
   RunSpeed: 7
   RunSpeedDangerMode: 10
   JumpXSpeed: 2.35
@@ -381,6 +381,7 @@ MonoBehaviour:
   DangerMode: 1
   HPDangerMode: 66
   StrikeSpeed: 19
+  TheEndText: {fileID: 0}
 --- !u!1 &2317901536478804461
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,7 +856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c6b07ece45de504ab80158161acb6b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 20
+  Damage: 25
 --- !u!1 &2317901537812274087
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,7 +1034,7 @@ MonoBehaviour:
   - {fileID: 452464447579206636, guid: fd60718c59a5618478ffe8b369caa25d, type: 3}
   - {fileID: 4270610956553473840, guid: d0e0fe24635c0c749bd40531ef948cf4, type: 3}
   ItemDropPack: 0
-  MaxHealth: 320
+  MaxHealth: 700
   StartActive: 1
 --- !u!1 &8333876695457722667
 GameObject:

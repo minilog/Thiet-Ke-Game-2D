@@ -5516,7 +5516,7 @@ PrefabInstance:
     - target: {fileID: 7637888034588846886, guid: 2084e67ed86cf4b4187d2032351c9b6e,
         type: 3}
       propertyPath: backgroundVolume
-      value: 0.1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7637888034588846886, guid: 2084e67ed86cf4b4187d2032351c9b6e,
         type: 3}
@@ -5543,6 +5543,11 @@ PrefabInstance:
       propertyPath: PlayerJumpAudioClip
       value: 
       objectReference: {fileID: 8300000, guid: 47aaf891f325aae4fbe5a89951129a99, type: 3}
+    - target: {fileID: 7637888034588846886, guid: 2084e67ed86cf4b4187d2032351c9b6e,
+        type: 3}
+      propertyPath: soundEffectVolume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7637888033982642950, guid: 2084e67ed86cf4b4187d2032351c9b6e,
         type: 3}
       propertyPath: audioClips.Array.size
@@ -5553,6 +5558,31 @@ PrefabInstance:
       propertyPath: audioClips.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: fa12cfe749020c74aab8f5e147582c30, type: 3}
+    - target: {fileID: 7637888033982642950, guid: 2084e67ed86cf4b4187d2032351c9b6e,
+        type: 3}
+      propertyPath: NormalMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: fa12cfe749020c74aab8f5e147582c30, type: 3}
+    - target: {fileID: 7637888033982642950, guid: 2084e67ed86cf4b4187d2032351c9b6e,
+        type: 3}
+      propertyPath: BossMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 58373c397420bf243b32d274a38f72c8, type: 3}
+    - target: {fileID: 7637888033982642949, guid: 2084e67ed86cf4b4187d2032351c9b6e,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637888033982642949, guid: 2084e67ed86cf4b4187d2032351c9b6e,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: fa12cfe749020c74aab8f5e147582c30, type: 3}
+    - target: {fileID: 7637888033982642949, guid: 2084e67ed86cf4b4187d2032351c9b6e,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2084e67ed86cf4b4187d2032351c9b6e, type: 3}
 --- !u!1001 &7706314987462137211
@@ -5656,7 +5686,7 @@ PrefabInstance:
     - target: {fileID: 7665044319471023118, guid: 1b656fac8b2d7594d9231c9de7cf21e5,
         type: 3}
       propertyPath: StaminaPerSecs
-      value: 200
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7665044319471023118, guid: 1b656fac8b2d7594d9231c9de7cf21e5,
         type: 3}
