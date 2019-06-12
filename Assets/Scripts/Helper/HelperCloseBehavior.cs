@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HelperCloseBehavior : StateMachineBehaviour
 {
-    HelperScript helperScript;
+    [SerializeField] HelperScript helperScript;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -19,7 +19,7 @@ public class HelperCloseBehavior : StateMachineBehaviour
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //if (helperScript != null)
+        if (helperScript != null)
         if (helperScript.DestroyAfterClose)
         {
             Destroy(animator.gameObject);
