@@ -33,16 +33,16 @@ public class EnemyHealth : MonoBehaviour
 
     private void OnValidate()
     {
-        FloatingNumerPrefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Effect/Enemy Floating Number.prefab", typeof(GameObject));
-        FloatingNumberTransform = transform.GetChild(0);
+        //FloatingNumerPrefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Effect/Enemy Floating Number.prefab", typeof(GameObject));
+        //FloatingNumberTransform = transform.GetChild(0);
 
-        healthSlider = transform.root.GetComponentInChildren<Slider>();
+        //healthSlider = transform.root.GetComponentInChildren<Slider>();
 
-        ItemGameObjects.Clear();
-        GameObject Money1 = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Money/Money 1.prefab", typeof(GameObject)) as GameObject;
-        GameObject Money2 = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Money/Money 2.prefab", typeof(GameObject)) as GameObject;
-        ItemGameObjects.Add(Money1);
-        ItemGameObjects.Add(Money2);
+        //ItemGameObjects.Clear();
+        //GameObject Money1 = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Money/Money 1.prefab", typeof(GameObject)) as GameObject;
+        //GameObject Money2 = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Money/Money 2.prefab", typeof(GameObject)) as GameObject;
+        //ItemGameObjects.Add(Money1);
+        //ItemGameObjects.Add(Money2);
     }
 
     private void Start()

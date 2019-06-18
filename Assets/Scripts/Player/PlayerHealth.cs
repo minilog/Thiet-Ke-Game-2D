@@ -34,10 +34,10 @@ public class PlayerHealth : MonoBehaviour
 
     public Vector2 HurtDirection { get; private set; }
 
-    private void OnValidate()
-    {
-        FloatingNumberPrefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Effect/Player Floating Number.prefab", typeof(GameObject)) as GameObject;
-    }
+    //private void OnValidate()
+    //{
+    //    FloatingNumberPrefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Effect/Player Floating Number.prefab", typeof(GameObject)) as GameObject;
+    //}
 
     private void Awake()
     {

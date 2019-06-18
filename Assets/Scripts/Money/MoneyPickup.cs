@@ -37,8 +37,8 @@ public class MoneyPickup : MonoBehaviour
 
     private void OnValidate()
     {
-        floatingMoneyPrefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Money/Floating Money.prefab", typeof(GameObject));
-        rb2D = GetComponent<Rigidbody2D>();
+        //floatingMoneyPrefab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Money/Floating Money.prefab", typeof(GameObject));
+        //rb2D = GetComponent<Rigidbody2D>();
         //FloatID = Random.Range(-999f, 999f);
     }
 

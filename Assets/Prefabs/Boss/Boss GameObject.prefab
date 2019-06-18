@@ -379,7 +379,7 @@ MonoBehaviour:
   JumpXSpeed: 2.35
   JumpYSpeed: 15
   DangerMode: 1
-  HPDangerMode: 66
+  HPDangerMode: 60
   StrikeSpeed: 19
   TheEndText: {fileID: 0}
 --- !u!1 &2317901536478804461

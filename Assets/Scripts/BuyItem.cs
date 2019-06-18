@@ -11,6 +11,7 @@ public class BuyItem : MonoBehaviour
     [SerializeField] GameObject Canvas3;
     [SerializeField] HelperScript helperScript;
     [SerializeField] Text moneyText;
+    [SerializeField] GameObject FireBall;
     [Space]
     [SerializeField] KeyCode PressKeyCode = KeyCode.E;
     public float Money;
@@ -28,8 +29,9 @@ public class BuyItem : MonoBehaviour
 
     private void OnValidate()
     {
-        moneyText = GetComponentInChildren<Text>();
-        moneyText.text = Money.ToString();
+        //moneyText = GetComponentInChildren<Text>();
+        //moneyText.text = Money.ToString();
+        //FireBall = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Fire Ball.prefab", typeof(GameObject)) as GameObject;
     }
 
     void Start()
@@ -40,7 +42,7 @@ public class BuyItem : MonoBehaviour
 
         if (Type == ItemType.FireBall)
         {
-            GameObject FireBall = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Fire Ball.prefab", typeof(GameObject)) as GameObject;
+
             if (ObjectsInGame.PlayerDamage.Projectile == FireBall)
             {
                 Destroy(transform.parent.gameObject);
@@ -71,7 +73,6 @@ public class BuyItem : MonoBehaviour
 
                     if (Type == ItemType.FireBall)
                     {
-                        GameObject FireBall = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Fire Ball.prefab", typeof(GameObject)) as GameObject;
                         ObjectsInGame.PlayerDamage.Projectile = FireBall;
                     }
                     else if (Type == ItemType.Health)

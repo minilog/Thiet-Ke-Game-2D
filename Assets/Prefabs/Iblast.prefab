@@ -188,7 +188,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.35, y: 0.91}
+  m_Size: {x: 0.2, y: 0.91}
   m_EdgeRadius: 0
 --- !u!114 &6774005154464680348
 MonoBehaviour:
@@ -209,6 +209,7 @@ MonoBehaviour:
     type: 3}
   ExplosionTransfrom: {fileID: 6031864522648865766}
   TimeAlive: 0.55
+  ConsumeStamina: 10
 --- !u!50 &5989785233203483490
 Rigidbody2D:
   serializedVersion: 4
