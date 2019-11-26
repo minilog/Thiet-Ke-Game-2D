@@ -61,7 +61,7 @@ public class BuyItem : MonoBehaviour
     {
         if (playerInRange)
         {
-            if (Input.GetKeyDown(PressKeyCode))
+            if (PlayerController.IsAttack)
             {
                 if (ObjectsInGame.CanvasController.Money >= Money)
                 {

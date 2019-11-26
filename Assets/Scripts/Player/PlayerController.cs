@@ -60,6 +60,11 @@ public class PlayerController : MonoBehaviour
 
     public bool DoubleJumpAtive = false;
 
+    [SerializeField] Joystick joy;
+    public static bool IsAttack = false,
+        isJump = false,
+        isDash = false;
+
     private void Awake()    
     {
         // To reuse in game
@@ -75,31 +80,27 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        //if (DashCooldownCount > 0)
-        //    DashCooldownCount -= Time.deltaTime;
-        // WARNING
-        //if (Input.GetKey(KeyCode.Q))
-        //    Time.timeScale = 0.1f;
-        //else
-        //    Time.timeScale = 1;
-
-        // TARGET
+        // controll camera
         Vector3 targetPos = cameraTarget.transform.localPosition;
-        targetPos.x += Mathf.Abs(/*Input.GetAxisRaw("Horizontal")*/Rb2D.velocity.x) * (MaxTargetX -  targetPos.x) * TargetMoveSpeed * Time.deltaTime;
+        targetPos.x += Mathf.Abs(Rb2D.velocity.x) * (MaxTargetX -  targetPos.x) * TargetMoveSpeed * Time.deltaTime;
         if (targetPos.x > MaxTargetX)
             targetPos.x = MaxTargetX;
-
         cameraTarget.transform.localPosition = targetPos;
-
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
 
         if (Rb2D.velocity.y <= -MaxFallSpeed)
         {
             Rb2D.velocity = new Vector2(Rb2D.velocity.x, -MaxFallSpeed);
         }
 
-        horizontalAxis = Input.GetAxis("Horizontal");
+        horizontalAxis = joy.Horizontal;
+        if (horizontalAxis < 0)
+        {
+            horizontalAxis = -1;
+        }
+        else if (horizontalAxis > 0)
+        {
+            horizontalAxis = 1;
+        }
 
         // Set Animation Parameters
         animator.SetBool("Crouching", Input.GetKey(CrouchKeyCode));
@@ -116,7 +117,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("Walking", horizontalAxis != 0);
 
         if (playerStamina.IsEnoughStaminaForFire())
-            animator.SetBool("Attack", Input.GetKey(AttackKeyCode));
+            animator.SetBool("Attack", IsAttack);
         else
             animator.SetBool("Attack", false);
 
@@ -132,17 +133,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("Strike", Input.GetKeyDown(StrikeKeyCode));
             animator.SetBool("FlyKick", Input.GetKeyDown(FlyKickKeyCode));
 
-            //if (DashCooldownCount <= 0 && Input.GetKeyDown(DashKeyCode))
-            //{
-            //    animator.SetBool("Dash", true);
-            //    DashCooldownCount = DashCooldown;
-            //}
-            //else
-            //{
-            //    animator.SetBool("Dash", false);
-            //}
-
-            if (Input.GetKeyDown(DashKeyCode) && playerStamina.CheckDashStamina())
+            if (isDash && playerStamina.CheckDashStamina())
             {
                 animator.SetBool("Dash", true);
             }
@@ -180,6 +171,9 @@ public class PlayerController : MonoBehaviour
         else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player Crouch Attack"))
             Rb2D.velocity = new Vector2(0, Rb2D.velocity.y);
         // Strike & Fly Kick is so complex, so I put it in Behavior
+
+        isDash = false;
+        isJump = false;
     }
 
     private void CheckTrailing()
@@ -204,7 +198,7 @@ public class PlayerController : MonoBehaviour
         if (checkGround.IsGrounded)
         {
             readyForDoubleJump = true;
-            if (Input.GetKeyDown(JumpKeyCode))
+            if (isJump)
             {
                 Rb2D.velocity = new Vector2(0, JumpYVelocity);
                 ObjectsInGame.SoundManager.PlayPlayerJumpAudioClip();
@@ -212,7 +206,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (readyForDoubleJump)
         {
-            if (Input.GetKeyDown(JumpKeyCode))
+            if (isJump)
             {
                 if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Player Jump Attack"))
                     animator.Play("Player Jump", 0, 0f);
@@ -264,5 +258,30 @@ public class PlayerController : MonoBehaviour
     {
         normalBoxCollider.enabled = false;
         crouchBoxCollider.enabled = true;
+    }
+
+    public void Button_AttackDown()
+    {
+        IsAttack = true;
+    }
+    public void Button_AttackUp()
+    {
+        IsAttack = false;
+    }
+    public void Button_JumpDown()
+    {
+        isJump = true;
+    }
+    public void Button_JumpUp()
+    {
+        isJump = false;
+    }
+    public void Button_DashDown()
+    {
+        isDash = true;
+    }
+    public void Button_DashUp()
+    {
+        isDash = false;
     }
 }
