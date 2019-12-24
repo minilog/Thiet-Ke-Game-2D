@@ -63,7 +63,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Joystick joy;
     public static bool IsAttack = false,
         isJump = false,
-        isDash = false;
+        isDash = false,
+        IsInteract = false;
 
     private void Awake()    
     {
@@ -92,15 +93,13 @@ public class PlayerController : MonoBehaviour
             Rb2D.velocity = new Vector2(Rb2D.velocity.x, -MaxFallSpeed);
         }
 
-        horizontalAxis = joy.Horizontal;
-        if (horizontalAxis < 0)
-        {
-            horizontalAxis = -1;
-        }
-        else if (horizontalAxis > 0)
-        {
-            horizontalAxis = 1;
-        }
+        float hor = joy.Horizontal;
+        if (hor < 0)
+            hor = -1;
+        if (hor > 0)
+            hor = 1;
+
+        horizontalAxis = Mathf.Lerp(horizontalAxis, hor, 8f * Time.deltaTime);
 
         // Set Animation Parameters
         animator.SetBool("Crouching", Input.GetKey(CrouchKeyCode));
@@ -114,7 +113,10 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsGrounded", checkGround.IsGrounded);
         }
 
-        animator.SetBool("Walking", horizontalAxis != 0);
+        if (horizontalAxis > -0.08f && horizontalAxis < 0.08f)
+            animator.SetBool("Walking", false);
+        else
+            animator.SetBool("Walking", true);
 
         if (playerStamina.IsEnoughStaminaForFire())
             animator.SetBool("Attack", IsAttack);
@@ -283,5 +285,13 @@ public class PlayerController : MonoBehaviour
     public void Button_DashUp()
     {
         isDash = false;
+    }
+    public void Button_InteractUp()
+    {
+        IsInteract = false;
+    }
+    public void Button_InteractDown()
+    {
+        IsInteract = true;
     }
 }

@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 524}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 790
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 524}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -111,10 +111,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 740
-  m_MinSize: {x: 711, y: 474}
-  m_MaxSize: {x: 18006, y: 14048}
+  m_MinSize: {x: 713, y: 474}
+  m_MaxSize: {x: 18008, y: 14048}
   vertical: 0
-  controlID: 16
+  controlID: 3573
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 474}
   m_MaxSize: {x: 14006, y: 14048}
   vertical: 1
-  controlID: 17
+  controlID: 3574
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 304, y: 200}
   m_MaxSize: {x: 8004, y: 4024}
   vertical: 0
-  controlID: 18
+  controlID: 3575
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 274}
   m_MaxSize: {x: 14006, y: 10024}
   vertical: 0
-  controlID: 137
+  controlID: 3654
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -436,9 +436,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 9ae9ffffaee9ffffeeecffffeef0ffff48f3ffff56f4ffff90f4ffff18f6ffff3cf6ffffe6f6ffff18f7ffff2cf7ffffb0f7ffff04f9ffff2af9ffff30f9ffffd2fbffff
+      m_SelectedIDs: 04c10000
+      m_LastClickedID: 49412
+      m_ExpandedIDs: eacbffff54cfffffecd0ffff36d2ffffc0d3ffff82d5ffff96d5ffffd8d8ffffd8dcffff32dfffff40e0ffff7ae0ffff02e2ffff26e2ffffd0e2ffff02e3ffff16e3ffff9ae3ffffece4ffff04e5ffff0ae5ffff52f0ffff54f2ffffdaf3ffffeaf3ffff6cf6ffffc8f8ffffd2fbffff7a760000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -454,7 +454,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 8}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -494,9 +494,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.8401139, y: -0.060174152, z: -9.939453}
+    m_Target: {x: 0.60302776, y: 1.2499591, z: -0.3359375}
     speed: 2
-    m_Value: {x: 1.8401139, y: -0.060174152, z: -9.939453}
+    m_Value: {x: 0.60302776, y: 1.2499591, z: -0.3359375}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -528,9 +528,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 15.713897
+    m_Target: 16.917767
     speed: 2
-    m_Value: 15.713897
+    m_Value: 16.917767
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -925,20 +925,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Player
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 46
   m_LastFolders:
-  - Assets/Scripts/Player
+  - Assets
   m_LastFoldersGridSize: 46
   m_LastProjectPath: D:\Unity\Unity Project\Thiet Ke Game 2D
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 1455}
-    m_SelectedIDs: 14440000
-    m_LastClickedID: 17428
-    m_ExpandedIDs: 0000000026290000762c00007a2d0000662e0000ea300000a03100000a32000060320000ee3200001a3300004e34000066350000983500006637000066380000e4380000263900003c390000023b0000ba3b00004c3c0000ea3d0000163e0000b43e0000d83e0000603f0000b03f0000144400004c460000424700008a4700009a470000dc47000034480000da480000744c0000e04c0000f04c0000064e0000884e000040500000d6530000fe5400000a56000064570000705700007a580000dc5800000059000028590000c85b0000805c0000fa5c0000705e0000fa5e0000585f00000666000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 28290000
+    m_LastClickedID: 10536
+    m_ExpandedIDs: 0000000028290000782c00007c2d0000682e0000ec300000a23100000c32000062320000f03200001c33000050340000683500009a3500006837000068380000e6380000283900003e390000043b0000bc3b00004e3c0000ec3d0000183e0000b63e0000da3e0000623f0000b23f0000164400004e460000444700008c4700009c470000de47000036480000dc480000764c0000e24c0000f24c0000084e00008a4e000042500000d8530000005500000c56000066570000725700007c580000de580000025900002a590000ca5b0000825c0000fc5c0000725e0000fc5e00005a5f00005665000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -966,7 +966,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000026290000762c00007a2d0000662e0000ea300000a03100000a32000060320000ee3200001a3300004e34000066350000983500006637000066380000e4380000263900003c390000023b0000ba3b00004c3c0000ea3d0000163e0000b43e0000d83e0000603f0000b03f0000144400004c460000424700008a4700009a470000dc47000034480000da480000744c0000e04c0000f04c0000064e0000884e000040500000d6530000fe5400000a56000064570000705700007a580000dc5800000059000028590000c85b0000805c0000fa5c0000705e0000fa5e0000585f000006660000
+    m_ExpandedIDs: 0000000028290000782c00007c2d0000682e0000ec300000a23100000c32000062320000f03200001c33000050340000683500009a3500006837000068380000e6380000283900003e390000043b0000bc3b00004e3c0000ec3d0000183e0000b63e0000da3e0000623f0000b23f0000164400004e460000444700008c4700009c470000de47000036480000dc480000764c0000e24c0000f24c0000084e00008a4e000042500000d8530000005500000c56000066570000725700007c580000de580000025900002a590000ca5b0000825c0000fc5c0000725e0000fc5e00005a5f00005665000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1018,7 +1018,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 14.5}
     m_GridSize: 46
   m_DirectoriesAreaWidth: 200
 --- !u!114 &20
@@ -1075,7 +1075,7 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 29842
+  m_LastSelectedObjectID: 49412
 --- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52

@@ -33,11 +33,11 @@ public class CameraController : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
     }
 
-    private void LateUpdate()
+    private void Update()
     {
         FollowPlayer();
 
-        FindBounds();   
+        FindBounds();
 
         // Keep camera inside
         float clampedX = Mathf.Clamp(transform.position.x, minBounds.x + halfWidth, maxBounds.x - halfWidth);
@@ -45,7 +45,18 @@ public class CameraController : MonoBehaviour
         if (clampedY < minBounds.y + halfHeight)
             clampedY = minBounds.y + halfHeight;
 
-        //if (clampedX )
+        transform.position = new Vector3(clampedX, clampedY, transform.position.z);
+    }
+
+    private void LateUpdate()
+    {
+        FindBounds();   
+
+        // Keep camera inside
+        float clampedX = Mathf.Clamp(transform.position.x, minBounds.x + halfWidth, maxBounds.x - halfWidth);
+        float clampedY = Mathf.Clamp(transform.position.y, minBounds.y + halfHeight, maxBounds.y - halfHeight);
+        if (clampedY < minBounds.y + halfHeight)
+            clampedY = minBounds.y + halfHeight;
 
         transform.position = new Vector3(clampedX, clampedY, transform.position.z);
     }
@@ -56,8 +67,6 @@ public class CameraController : MonoBehaviour
 
         Vector3 v = targetPos - transform.position;
         rb2D.velocity = new Vector2(v.x * SpeedFollowX, v.y * SpeedFollowY);
-        //rb2D.velocity = Vector2.Lerp(rb2D.velocity, vel, LerpSpeed);
-        //transform.position = targetPos;
     }
 
     private void FindBounds()
