@@ -20,7 +20,7 @@ public class HelperScript3 : MonoBehaviour
     {
         if (playerInRange)
         {
-            if (Input.GetKeyDown(OpenKeyCode) && !ObjectsInGame.CanvasController.HaveKey)
+            if (PlayerController.IsInteract && !ObjectsInGame.CanvasController.HaveKey)
             {
                 animator.SetBool("PlayerInRange", true);
             }
@@ -32,6 +32,7 @@ public class HelperScript3 : MonoBehaviour
         if (collision.tag == "Player")
         {
             playerInRange = true;
+            PlayerController.IsInteract = false;
         }
     }
 

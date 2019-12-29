@@ -115013,7 +115013,7 @@ GameObject:
   - component: {fileID: 5623060436842978828}
   m_Layer: 0
   m_Name: Door Lv.09
-  m_TagString: Untagged
+  m_TagString: Interactive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

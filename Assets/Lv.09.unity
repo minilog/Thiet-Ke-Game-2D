@@ -2803,7 +2803,7 @@ GameObject:
   - component: {fileID: 1041102161}
   m_Layer: 0
   m_Name: Locked Door GO
-  m_TagString: Untagged
+  m_TagString: Interactive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8741,7 +8741,7 @@ GameObject:
   - component: {fileID: 5357968151633137759}
   m_Layer: 0
   m_Name: Door 2 Lv.06
-  m_TagString: Untagged
+  m_TagString: Interactive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8947,7 +8947,7 @@ GameObject:
   - component: {fileID: 5623060436371940698}
   m_Layer: 0
   m_Name: Door Lv.08
-  m_TagString: Untagged
+  m_TagString: Interactive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

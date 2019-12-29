@@ -21,7 +21,7 @@ public class OpenTheDoor : MonoBehaviour
     {
         if (playerInRange)
         {
-            if (PlayerController.IsAttack)
+            if (PlayerController.IsInteract)
             {
                 if (!RequireKey)
                 {

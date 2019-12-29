@@ -6,6 +6,10 @@ using UnityEngine.UI;
 // Movement & Animation
 public class PlayerController : MonoBehaviour
 {
+    [Header("Buttons")]
+    [SerializeField] GameObject InteractiveButton;
+
+    [Space]
     public Rigidbody2D Rb2D;
     [SerializeField] Animator animator;
     [SerializeField] CheckGround checkGround;
@@ -262,6 +266,23 @@ public class PlayerController : MonoBehaviour
         crouchBoxCollider.enabled = true;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Interactive")
+        {
+            InteractiveButton.SetActive(true);
+            IsInteract = false;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Interactive")
+        {
+            InteractiveButton.SetActive(false);
+        }
+    }
+
     public void Button_AttackDown()
     {
         IsAttack = true;
@@ -293,5 +314,6 @@ public class PlayerController : MonoBehaviour
     public void Button_InteractDown()
     {
         IsInteract = true;
+        InteractiveButton.SetActive(false);
     }
 }

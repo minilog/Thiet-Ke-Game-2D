@@ -33086,7 +33086,7 @@ GameObject:
   - component: {fileID: 1816957310}
   m_Layer: 0
   m_Name: Door GO
-  m_TagString: Untagged
+  m_TagString: Interactive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35682,7 +35682,7 @@ GameObject:
   - component: {fileID: 447421327848491556}
   m_Layer: 0
   m_Name: Buy Item Manager (1)
-  m_TagString: Untagged
+  m_TagString: Interactive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35896,7 +35896,7 @@ GameObject:
   - component: {fileID: 447421328053862267}
   m_Layer: 0
   m_Name: Buy Item
-  m_TagString: Untagged
+  m_TagString: Interactive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35930,7 +35930,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.15, y: 0}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -35941,7 +35941,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.75, y: 1}
+  m_Size: {x: 1.4375, y: 1.15}
   m_EdgeRadius: 0
 --- !u!114 &447421328053862268
 MonoBehaviour:
@@ -35963,7 +35963,7 @@ MonoBehaviour:
   FireBall: {fileID: 4929262760261641069, guid: 1d7cef741776a8b43b1851d22eac6610,
     type: 3}
   PressKeyCode: 101
-  Money: 10
+  Money: 2
   Type: 0
 --- !u!1 &447421328064857096
 GameObject:
@@ -36408,7 +36408,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: 2
 --- !u!222 &447421328768428212
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -36522,7 +36522,7 @@ Transform:
   m_GameObject: {fileID: 447421328812806691}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.93, y: -0.03, z: 0}
-  m_LocalScale: {x: 0.8695652, y: 0.8695652, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 447421327499385638}
   m_RootOrder: 3
@@ -36564,7 +36564,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300016, guid: b55cb8f7e61e10b40aa1585e8a44980b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c66496c0a7a9bbb40bae317a92b9db4a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -64807,7 +64807,7 @@ GameObject:
   - component: {fileID: 2823510005792700603}
   m_Layer: 0
   m_Name: Buy Item
-  m_TagString: Untagged
+  m_TagString: Interactive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64832,7 +64832,7 @@ MonoBehaviour:
   FireBall: {fileID: 4929262760261641069, guid: 1d7cef741776a8b43b1851d22eac6610,
     type: 3}
   PressKeyCode: 101
-  Money: 130
+  Money: 120
   Type: 1
 --- !u!4 &2823510005792700601
 Transform:
@@ -65156,7 +65156,7 @@ GameObject:
   - component: {fileID: 2823510006555776625}
   m_Layer: 0
   m_Name: Buy Item Manager
-  m_TagString: Untagged
+  m_TagString: Interactive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65231,7 +65231,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300016, guid: b55cb8f7e61e10b40aa1585e8a44980b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c66496c0a7a9bbb40bae317a92b9db4a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -65251,7 +65251,7 @@ Transform:
   m_GameObject: {fileID: 2823510006621731486}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.93, y: -0.03, z: 0}
-  m_LocalScale: {x: 0.8695652, y: 0.8695652, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 426425939504446957}
   m_RootOrder: 3
@@ -65334,7 +65334,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 130
+  m_Text: 120
 --- !u!224 &2823510006837808922
 RectTransform:
   m_ObjectHideFlags: 0
@@ -69233,7 +69233,7 @@ GameObject:
   - component: {fileID: 5357968151699878811}
   m_Layer: 0
   m_Name: Door Final Level
-  m_TagString: Untagged
+  m_TagString: Interactive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

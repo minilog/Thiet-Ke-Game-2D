@@ -58,6 +58,7 @@ public class ChangeSceneManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Final Level" ||
             sceneName == "Final Level")
         BMusic.ChangeMusic();
+
     }
 
     void NewScene()

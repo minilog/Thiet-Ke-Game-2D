@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-D:/Unity/Unity Project/Thiet Ke Game 2D/Builds Android/DragonKnight.apk
+D:/Unity/Unity Project/Thiet Ke Game 2D/Builds Android/Dragon_Knight.apk
 SceneListBegin?
 Assets/Lv.00.unity
 Assets/Lv.01.unity
@@ -236,7 +236,7 @@ c4117cf32d2e7797e9e05272a419cd6e Cinemachine.dll:Cinemachine.Timeline.Cinemachin
 e51c09a4cc447f11db225afcd8e3e490 Unity.TextMeshPro.dll:TMPro.TMP_Settings
 df21ffd1864551a3e43410f28754a73e Cinemachine.dll:Cinemachine.CinemachineConfiner
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.BossAttack1Behavior
-2eacecb3ed8a117d9d30162a61a2a88c Assembly-CSharp.dll:.PlayerController
+80b821361085582fbea77a7fded4157e Assembly-CSharp.dll:.PlayerController
 824e8d4cb47ffd88ddf959dbd4526585 Assembly-CSharp.dll:.DynamicJoystick
 1e3d6222ff533d213aab144eb854a53b Cinemachine.dll:.CinemachineTouchInputMapper
 9b65c634afadfec61cc682d640f8a093 Assembly-CSharp.dll:.EnemyActiveZone

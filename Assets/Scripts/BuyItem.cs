@@ -61,7 +61,7 @@ public class BuyItem : MonoBehaviour
     {
         if (playerInRange)
         {
-            if (PlayerController.IsAttack)
+            if (PlayerController.IsInteract)
             {
                 if (ObjectsInGame.CanvasController.Money >= Money)
                 {
@@ -96,6 +96,7 @@ public class BuyItem : MonoBehaviour
             Canvas1.gameObject.SetActive(true);
             Canvas2.gameObject.SetActive(false);
             playerInRange = true;
+            PlayerController.IsInteract = false;
         }
     }
 
